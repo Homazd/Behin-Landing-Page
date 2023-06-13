@@ -1,5 +1,9 @@
-import * as React from "react"
-import Header from "../components/Header"
+import * as React from "react";
+// Components
+import Header from "../components/Header";
+import Navigation from "../components/Navigation";
+// Antd Components
+import { Layout } from 'antd';
 
 // const pageStyles = {
 //   color: "#232129",
@@ -124,14 +128,22 @@ import Header from "../components/Header"
 //   },
 // ]
 
+const { Content } = Layout;
+
 const IndexPage = () => {
   return (
     <>
-<Header />
-</>
-    )
-}
+    <Layout>
+      <Content>
+      <Header />
+      <Navigation />
+      </Content>
+    </Layout>
+     
+    </>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Home Page</title>;
