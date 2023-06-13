@@ -1,9 +1,7 @@
 import * as React from "react";
 // Components
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation";
-// Antd Components
-import { Layout } from 'antd';
 
 // const pageStyles = {
 //   color: "#232129",
@@ -128,18 +126,11 @@ import { Layout } from 'antd';
 //   },
 // ]
 
-const { Content } = Layout;
-
 const IndexPage = () => {
   return (
     <>
-    <Layout>
-      <Content>
       <Header />
       <Navigation />
-      </Content>
-    </Layout>
-     
     </>
   );
 };
