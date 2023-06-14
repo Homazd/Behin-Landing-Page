@@ -43,9 +43,7 @@ const items = [
     getItem("Option 12", "12"),
   ]),
 ];
-const onClick = (e) => {
-  console.log("click", e);
-};
+
 // submenu keys of first level
 const rootSubmenuKeys = ["sub1", "sub2", "sub4"];
 
@@ -57,17 +55,22 @@ function SidebarMenu() {
       setOpenKeys(keys);
     } else {
       setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
-    }};
+    }
+  };
   return (
-    <Menu
-      mode="inline"
-      openKeys={openKeys}
-      onOpenChange={onOpenChange}
-      style={{
-        width: 256,
-      }}
-      items={items}
-    />
+    <div className="mt-1px">
+      <Menu
+        mode="inline"
+        openKeys={openKeys}
+        onOpenChange={onOpenChange}
+        style={{
+          width: '200px',
+          top: "50px",
+          position: "absolute",
+        }}
+        items={items}
+      />
+    </div>
   );
 }
 

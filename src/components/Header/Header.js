@@ -29,7 +29,7 @@ function Header() {
     setPlacement(e.target.value);
   };
   const menu = (
-    <Menu theme="dark" mode="horizontal">
+    <Menu>
       <Row gutter={[16, 16]}>
         <Col span={6}>
           <Menu.Item style={{ fontSize: "25px" }} key="1">
@@ -62,42 +62,52 @@ function Header() {
       </Row>
     </Menu>
   );
-  
+
   return (
-    <div className="flex bg-blue-800 text-slate-50 h-[26.28px]">
-      <div className="w-3/5">
-        <span className="font-bold text-sm text-center invisible tablet:visible">
+    <div className="flex relative bg-sky-500 text-slate-50 h-[28.28px]">
+      <div className="grow relative h-[28.28px] text-center">
+        <span className="font-bold text-sm invisible tablet:visible absolute left-1/3">
           Impossible Just Takes Longer To Design
         </span>
       </div>
-      <div className="w-4/15 items-center border-l border-l-slate-50 px-[13px]">
+      <div className="flex-none w-[100px] h-[28.28px] items-center border-l border-l-slate-50 px-[13px]">
         {isTablet && (
-          <Dropdown placement="bottom" menu={menu} className="bg-blue-800 flex">
-            <a
-              className="ant-dropdown-link text-[12px] font-sans"
-              onClick={(e) => e.preventDefault()}
+          <div className="flex pt-[3px]">
+            <Dropdown
+              placement="bottom"
+              menu={menu}
+              className="grid place-items-center h-[24px]"
             >
-              Company
-              <DownOutlined
-                className="pt-[5px] pl-[8px]"
-                style={{ fontSize: "6px" }}
-              />
-            </a>
-          </Dropdown>
+              <a
+                className="ant-dropdown-link text-[12px] font-sans"
+                onClick={(e) => e.preventDefault()}
+              >
+                Company
+              </a>
+            </Dropdown>
+            <DownOutlined
+              className=" h-[24px] pt-[8px] pl-[8px]"
+              style={{ fontSize: "8px" }}
+            />
+          </div>
         )}
         {!isTablet && (
           <>
-            <Button
-              type="text"
-              className="bg-blue-800 text-slate-50 h-[26.28px] text-[12px] font-sans flex p-0 b-0"
-              onClick={showDrawer}
-            >
-              Company
-            </Button>
-            <DownOutlined
-              className="pt-[5px] pl-[8px]"
-              style={{ fontSize: "6px" }}
-            />
+            <div className="pt-[3px] flex">
+              <Button
+                type="text"
+                className="text-slate-50 h-[26.28px] text-[12px] font-sans flex p-0 b-0"
+                onClick={showDrawer}
+              >
+                <p>Company</p>
+              </Button>
+              <div className="grid place-items-center h-[24px]">
+                <DownOutlined
+                  className="pl-[8px] "
+                  style={{ fontSize: "10px" }}
+                />
+              </div>
+            </div>
           </>
         )}
       </div>
@@ -111,7 +121,7 @@ function Header() {
       >
         <SidebarMenu />
       </Drawer>
-      <div className="w-2/15 text-center border-x border-x-slate-100 px-[5px]">
+      <div className="flex-none w-[74px]  text-center border-x border-x-slate-100 px-[5px]">
         <span className="text-[12px]">Contacts</span>
       </div>
     </div>

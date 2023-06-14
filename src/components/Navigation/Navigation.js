@@ -4,12 +4,14 @@ import { Menu, Divider } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 // Hooks
 import { useState, useEffect } from "react";
+// Images
+import logo from "../../images/logo.png";
 
-const menu = (
-  <Menu className="w-screen h-80 flex content-center justify-center">
-    <div className="w-1">This is the full-width content.</div>
-  </Menu>
-);
+// const menu = (
+//   <Menu className="w-screen h-80 flex content-center justify-center">
+//     <div className="w-1">This is the full-width content.</div>
+//   </Menu>
+// );
 
 function Navigation() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1440);
@@ -21,7 +23,7 @@ function Navigation() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768);
+      setIsDesktop(window.innerWidth >= 1440);
     };
 
     window.addEventListener("resize", handleResize);
@@ -40,25 +42,30 @@ function Navigation() {
       )}
       {!isDesktop && (
         <>
-          <div className="flex items-center justify-between shadow-sm">
-            <div className="flex items-center">
-              <div className="mr-4">
-                <MenuOutlined onClick={toggleCollapsed} />
-              </div>
-              <div className="hidden md:block">
-                <Menu
-                  theme="light"
-                  mode="horizontal"
-                  defaultSelectedKeys={["home"]}
-                >
-                  <Menu.Item key="home">Home</Menu.Item>
-                  <Menu.Item key="about">About</Menu.Item>
-                  <Menu.Item key="contact">Contact</Menu.Item>
-                </Menu>
-              </div>
+          <div className="grid grid-cols-3 h-15 items-center shadow-sm relative mx-[10px] py-[10px]">
+            <div className="mr-4 col-span-1">
+              <MenuOutlined
+                style={{ fontSize: 25 }}
+                onClick={toggleCollapsed}
+              />
             </div>
-            <div className="hidden md:block">Logo</div>
+            <div className="hidden md:block">
+              <Menu
+                theme="light"
+                mode="horizontal"
+                defaultSelectedKeys={["home"]}
+              >
+                <Menu.Item key="home">Home</Menu.Item>
+                <Menu.Item key="about">About</Menu.Item>
+                <Menu.Item key="contact">Contact</Menu.Item>
+              </Menu>
+            </div>
+
+            <div className="text-center col-span-1 grid justify-items-center">
+              <img className="w-15 h-14 text-center" src={logo} alt="logo" />
+            </div>
           </div>
+
           <div className={`md:hidden ${collapsed ? "hidden" : "block"}`}>
             <Menu theme="light" mode="vertical" defaultSelectedKeys={["home"]}>
               <Menu.Item key="home">Home</Menu.Item>
@@ -102,3 +109,11 @@ function Navigation() {
   );
 }
 export default Navigation;
+
+var value1 = 10;
+var value2 = 20;
+(function () {
+  value2 = value1;
+  var value1 = 30;
+})();
+console.log(value2);
