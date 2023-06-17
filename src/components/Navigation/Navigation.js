@@ -34,10 +34,20 @@ function Navigation() {
     <>
       {isDesktop && (
         <>
-          <div className="grow text-center">01</div>
-          <div className="flex-none w-14">02</div>
-          <div className="flex-none w-14">03</div>
-          <div className="flex-none w-14">04</div>
+          <div className="grid grid-cols-7 text-center w-[1170px] h-15 shadow-sm mx-auto">
+            <div className="col-span-1">
+              <img
+                className="w-[100px] h-[70px] text-center"
+                src={logo}
+                alt="logo"
+              />
+            </div>
+            <div className="col-span-6 grid grid-cols-9 gap-6 place-content-center">
+              <div className="col-start-5 col-span-1">Home</div>
+              <div className="col-span-1">About</div>
+              <div className="col-span-1">Contact</div>
+            </div>
+          </div>
         </>
       )}
       {!isDesktop && (
@@ -55,9 +65,9 @@ function Navigation() {
                 mode="horizontal"
                 defaultSelectedKeys={["home"]}
               >
-                <Menu.Item key="home">Home</Menu.Item>
-                <Menu.Item key="about">About</Menu.Item>
-                <Menu.Item key="contact">Contact</Menu.Item>
+                <Menu.Item key="home">For Telecom Carriers</Menu.Item>
+                <Menu.Item key="about">For Enterprises</Menu.Item>
+                <Menu.Item key="contact">For Integrated Safety</Menu.Item>
               </Menu>
             </div>
 
@@ -68,9 +78,9 @@ function Navigation() {
 
           <div className={`md:hidden ${collapsed ? "hidden" : "block"}`}>
             <Menu theme="light" mode="vertical" defaultSelectedKeys={["home"]}>
-              <Menu.Item key="home">Home</Menu.Item>
-              <Menu.Item key="about">About</Menu.Item>
-              <Menu.Item key="contact">Contact</Menu.Item>
+              <Menu.Item key="home">For Telecom Carriers</Menu.Item>
+              <Menu.Item key="about">For Enterprises</Menu.Item>
+              <Menu.Item key="contact">For Integrated Safety</Menu.Item>
             </Menu>
           </div>
         </>
@@ -109,11 +119,3 @@ function Navigation() {
   );
 }
 export default Navigation;
-
-var value1 = 10;
-var value2 = 20;
-(function () {
-  value2 = value1;
-  var value1 = 30;
-})();
-console.log(value2);
