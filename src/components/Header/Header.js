@@ -9,6 +9,7 @@ function Header() {
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState("left");
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
+  const [isLargeLaptop, setIsLargeLaptop] = useState(window.innerWidth >= 1440)
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,6 +20,18 @@ function Header() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeLaptop(window.innerWidth >= 1440);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
+
   const showDrawer = () => {
     setOpen(true);
   };
@@ -64,9 +77,22 @@ function Header() {
   );
 
   return (
-    <div className="flex relative bg-sky-500 text-slate-50 h-[28.28px]">
-      <div className="grow relative h-[28.28px] text-center">
-        <span className="font-bold text-sm invisible tablet:visible absolute left-1/3">
+    <>
+    {isLargeLaptop && (
+      <div className="bg-sky-500 text-slate-50 h-[28.28px]">
+        <div className="w-[1170px] mx-auto grow relative h-[28.28px]">
+        <span className="font-normal text-[14px] invisible tablet:visible absolute left-1/3">
+          Impossible Just Takes Longer To Design
+        </span>
+        
+        </div>
+      </div>
+
+    )}
+    {!isLargeLaptop && (
+      <div className="flex relative bg-sky-500 text-slate-50 h-[28.28px]">
+      <div className="grow relative h-[28.28px]">
+        <span className="font-normal text-[14px] invisible tablet:visible absolute left-1/3">
           Impossible Just Takes Longer To Design
         </span>
       </div>
@@ -125,6 +151,9 @@ function Header() {
         <span className="text-[12px]">Contacts</span>
       </div>
     </div>
+    )}
+    
+    </>
   );
 }
 
