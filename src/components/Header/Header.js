@@ -38,9 +38,6 @@ function Header() {
   const onClose = () => {
     setOpen(false);
   };
-  const onChange = (e) => {
-    setPlacement(e.target.value);
-  };
   const menu = (
     <Menu>
       <Row gutter={[16, 16]}>
