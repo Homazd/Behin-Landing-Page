@@ -1,8 +1,9 @@
 import React from "react";
+import SIEM from "../../images/SIEM-1.png"
 
 function AboutProduct() {
   return (
-    <div className="mt-[56px]">
+    <div className="mt-[56px] tablet:grid tablet:grid-cols-2 tablet:gap-2 tablet:mt-[170px]">
       <div className="px-[15px]">
         <div className="mb-[20px]">
           <p className="font-sans text-[18px] font-normal">
@@ -34,7 +35,11 @@ function AboutProduct() {
         <div className="bg-sky-500 rounded-md flex justify-center h-[50px] mt-[20px]">
           <button className="text-slate-50 text-base font-semibold">About us</button>
         </div>
-      </div>
+        </div>
+        <div className="mt-8 px-[15px] tablet:mt-0 tablet:order-first">
+          <img src={SIEM} alt="SIEM Functions" />
+        </div>
+      
     </div>
   );
 }

@@ -104,6 +104,7 @@ function Header() {
               <a
                 className="ant-dropdown-link text-[12px] font-sans"
                 onClick={(e) => e.preventDefault()}
+                href="www.google.com"
               >
                 Company
               </a>

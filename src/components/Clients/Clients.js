@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
 // Antd Components
-import { Carousel, Button } from "antd";
+import { Carousel } from "antd";
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 
-const contentStyle = {
-  margin: 0,
-  height: "160px",
-  color: "white",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
 const settings = {
   dots: false,
   infinite: true,
@@ -39,7 +31,7 @@ function Clients() {
 
   return (
     <div className="mt-[50px] px-[15px]">
-      <h2 className="text-[22px] font-bold">Our Clients</h2>
+      <h2 className="text-[22px] tablet:text-[30px] font-bold">Our Clients</h2>
       <Carousel
         {...settings}
         autoplay

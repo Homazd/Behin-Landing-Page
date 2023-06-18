@@ -7,12 +7,6 @@ import { useState, useEffect } from "react";
 // Images
 import logo from "../../images/logo.png";
 
-// const menu = (
-//   <Menu className="w-screen h-80 flex content-center justify-center">
-//     <div className="w-1">This is the full-width content.</div>
-//   </Menu>
-// );
-
 function Navigation() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1440);
   const [collapsed, setCollapsed] = useState(true);

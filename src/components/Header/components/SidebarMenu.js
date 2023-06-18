@@ -14,27 +14,38 @@ function getItem(label, key, children, type) {
 const items = [
   getItem("Solutions", "sub1", [
     getItem(
-      "Item 1",
+      <a href="www.google.com" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">For Mobile Operators</a>,
       null,
       null,
       [getItem("Option 1", "1"), getItem("Option 2", "2")],
       "group"
     ),
     getItem(
-      "Item 2",
+      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">For Fixed Line Operators</a>,
       null,
       null,
       [getItem("Option 3", "3"), getItem("Option 4", "4")],
       "group"
     ),
+    getItem(
+      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">For MVNO/MVNE</a>,
+    ),
+    getItem(
+      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">Smart City</a>,
+    ),
+    getItem(
+      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">NGN/IMS Solutions</a>,
+    ),
+    getItem(
+      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">Private LTE/5G</a>,
+    ),
+    getItem(
+      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">Enterprise UC solutions</a>,
+    ),
   ]),
   getItem("Company", "sub2", [
     getItem("Option 5", "5"),
     getItem("Option 6", "6"),
-    getItem("Submenu", "sub3", null, [
-      getItem("Option 7", "7"),
-      getItem("Option 8", "8"),
-    ]),
   ]),
   getItem("News", "sub4", [
     getItem("Option 9", "9"),
@@ -64,8 +75,9 @@ function SidebarMenu() {
         openKeys={openKeys}
         onOpenChange={onOpenChange}
         style={{
-          width: '200px',
+          width: "230px",
           top: "50px",
+          left: "15px",
           position: "absolute",
         }}
         items={items}
