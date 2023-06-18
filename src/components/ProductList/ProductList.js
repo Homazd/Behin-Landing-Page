@@ -13,11 +13,7 @@ const elements = [
         </div>
       </>
     ),
-    items: (
-      <>
-        <p>Equipment Identity Register</p>
-      </>
-    ),
+    items: <p>Equipment Identity Register</p>,
   },
   {
     key: "2",
