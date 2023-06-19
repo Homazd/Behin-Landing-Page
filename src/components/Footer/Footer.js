@@ -5,6 +5,9 @@ import { CaretRightOutlined, CaretDownOutlined } from "@ant-design/icons";
 import MyIcon from "../../images/logo.svg";
 import Phone from "../../images/call-outline.svg";
 import Mail from "../../images/mail-outline.svg";
+import Pexel1 from "../../images/pexels1.jpg"
+// import LazyBGImage from "./LazyBackgroundImage/LazyBGImage";
+
 const items = [
   {
     key: "1",
@@ -36,7 +39,18 @@ function Footer() {
   };
   return (
     <>
-      <footer className="mt-[85px] pt-[36px] bg-blue-700">
+      {/* <LazyBGImage src="../../images/pexels1.jpg">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-2xl font-bold mb-2">
+            Footer Heading
+          </div>
+          <div className="text-gray-400 mb-4">
+            This is a paragraph of text that can provide more information about my website.
+          </div>
+          <a className="text-white hover:text-gray-400" href="#">Learn more</a>
+        </div>
+      </LazyBGImage> */}
+      <footer className="bg-local bg-cover bg-center mt-[85px] pt-[36px]" style={{backgroundImage: `url(${Pexel1})` }}>
         <div className="px-[15px]">
           <Collapse
             ghost
@@ -70,7 +84,6 @@ function Footer() {
           <p className="underline text-slate-50 ml-[56px] mt-[21px]">
             All contacts
           </p>
-        <Divider className="pt-[10px]" style={{ colorText: '#fffff' }} />
         </div>
       </footer>
       {/* <div className="mt-[65px]">

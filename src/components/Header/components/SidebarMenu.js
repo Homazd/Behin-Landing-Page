@@ -21,26 +21,26 @@ const items = [
       "group"
     ),
     getItem(
-      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">For Fixed Line Operators</a>,
+      <a href="www.google.com" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">For Fixed Line Operators</a>,
       null,
       null,
       [getItem("Option 3", "3"), getItem("Option 4", "4")],
       "group"
     ),
     getItem(
-      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">For MVNO/MVNE</a>,
+      <a href="www.google.com" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">For MVNO/MVNE</a>,
     ),
     getItem(
-      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">Smart City</a>,
+      <a href="www.google.com" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">Smart City</a>,
     ),
     getItem(
-      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">NGN/IMS Solutions</a>,
+      <a href="www.google.com" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">NGN/IMS Solutions</a>,
     ),
     getItem(
-      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">Private LTE/5G</a>,
+      <a href="www.google.com" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">Private LTE/5G</a>,
     ),
     getItem(
-      <a href="" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">Enterprise UC solutions</a>,
+      <a href="www.google.com" className="text-slate-500 text-[14px] block font-sans font-normal hover:text-sky-600">Enterprise UC solutions</a>,
     ),
   ]),
   getItem("Company", "sub2", [
