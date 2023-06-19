@@ -66,7 +66,7 @@ function Navigation() {
             </div>
 
             <div className="text-center col-span-1 grid justify-items-center">
-              <img className="w-15 h-14 text-center" src={logo} alt="logo" />
+              <img className="w-15 h-14 text-center tablet:w-20 tablet:h-16" src={logo} alt="logo" />
             </div>
           </div>
 
@@ -79,35 +79,6 @@ function Navigation() {
           </div>
         </>
       )}
-      {/* <div className="flex mx-auto"> */}
-
-      {/* <div className="h-20 bg-slate-100 py-5 mx-auto">
-        <Row justify="center" className="my-auto">
-          <Col span={8}>
-            <div className="text-xl font-sans">Hounam Data</div>
-          </Col>
-          <div className="flex justify-end">
-          <Col span={2}>
-            <Dropdown overlay={menu}>
-              <a
-                className="ant-dropdown-link font-sans px-2"
-                onClick={(e) => e.preventDefault()}
-              >
-                For Telecom Carriers
-              </a>
-            </Dropdown>
-          </Col>
-          <Col span={2}>
-            {" "}
-            <div className="font-sans">For Enterprises</div>
-          </Col>
-          <Col span={2}>
-            {" "}
-            <div className="font-sans">For Integrated Safety</div>
-          </Col>
-          </div>
-        </Row>
-      </div> */}
       <Divider className="m-0 p-0" />
     </>
   );

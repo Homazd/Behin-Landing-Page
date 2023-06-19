@@ -1,11 +1,14 @@
 import * as React from "react";
-import { Collapse, Divider } from "antd";
+import { useState, useEffect } from "react";
+// Antd Components
+import { Collapse } from "antd";
 import { CaretRightOutlined, CaretDownOutlined } from "@ant-design/icons";
+import { Divider } from "antd";
+import Contact from "./components/ContactFooter";
 // Images
-import MyIcon from "../../images/logo.svg";
-import Phone from "../../images/call-outline.svg";
-import Mail from "../../images/mail-outline.svg";
-import Pexel1 from "../../images/pexels1.jpg"
+import logo from "../../images/logo-dark.png";
+
+import Pexel1 from "../../images/pexels1.jpg";
 // import LazyBGImage from "./LazyBackgroundImage/LazyBGImage";
 
 const items = [
@@ -25,8 +28,46 @@ const items = [
     children: <p className="text-slate-50">Content of Panel 1</p>,
   },
 ];
+const products = [
+  {
+    header: "Solutions",
+    groupSubs: [
+      "For Mobile Operators",
+      "For Fixed Line Operators",
+      "For MVNO/IMS Solutions",
+      "Smart City",
+      "NGN/IMS Solutions",
+    ],
+  },
+  {
+    header: "Products",
+    groupSubs: [
+      "CS Core",
+      "Intelligent Network & VAS",
+      "Messaging",
+      "NGN/IMS Equipment",
+      "Roaming",
+      "Customer Care",
+    ],
+  },
+  {
+    header: "Company",
+    groupSubs: ["About Us", "Our Partners"],
+  },
+];
 function Footer() {
+  const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
   const { Panel } = Collapse;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsTablet(window.innerWidth >= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const customExpandIcon = ({ isActive }) => {
     return isActive ? (
@@ -37,6 +78,7 @@ function Footer() {
       />
     );
   };
+
   return (
     <>
       {/* <LazyBGImage src="../../images/pexels1.jpg">
@@ -50,45 +92,59 @@ function Footer() {
           <a className="text-white hover:text-gray-400" href="#">Learn more</a>
         </div>
       </LazyBGImage> */}
-      <footer className="bg-local bg-cover bg-center mt-[85px] pt-[36px]" style={{backgroundImage: `url(${Pexel1})` }}>
-        <div className="px-[15px]">
-          <Collapse
-            ghost
-            expandIconPosition="left"
-            expandIcon={customExpandIcon}
-          >
-            {items.map((item) => (
-              <Panel header={item.header} key={item.key}>
-                {item.children}
-              </Panel>
+      {!isTablet && (
+        <footer
+          className="bg-local bg-cover bg-center mt-[85px] pt-[36px]"
+          style={{ backgroundImage: `url(${Pexel1})` }}
+        >
+          <div className="px-[15px]">
+            <Collapse
+              ghost
+              expandIconPosition="left"
+              expandIcon={customExpandIcon}
+            >
+              {items.map((item) => (
+                <Panel header={item.header} key={item.key}>
+                  {item.children}
+                </Panel>
+              ))}
+            </Collapse>
+            <Contact />
+             <p className="mt-[50px] text-sm text-white">
+              ©️BBDH, 2023. All rights reserved
+            </p>
+          </div>
+        </footer>
+      )}
+
+      {isTablet && (
+        <footer
+          className="bg-local bg-cover bg-center mt-[85px] pt-[36px]"
+          style={{ backgroundImage: `url(${Pexel1})` }}
+        >
+          <div className="grid grid-cols-2 gap-2  px-[15px] laptop:grid-cols-4">
+            {products.map((product) => (
+              <div className="mt-[10px] leading-loose">
+                <p className="text-[20px] text-white font-bold font-sans mb-[10px]">
+                  {product.header}
+                </p>
+                {product.groupSubs.map((item) => (
+                  <a
+                    href="#"
+                    className="block text-[14px] underline text-white font-normal font-sans"
+                  >
+                    {item}
+                  </a>
+                ))}
+              </div>
             ))}
-          </Collapse>
-          <h3 className="mt-[17px] pb-[27px] text-slate-50 font-bold text-[22px]">
-            Contacts
-          </h3>
-          <div className="flex">
-            <Phone className="w-6 h-6 mt-[5px] text-slate-50" />
-            <span className="text-slate-50 ml-[15px] text-[22px] font-bold">
-              +98 21 33104958
-            </span>
+            <Contact />
+            <p className="mt-[50px] text-sm text-white">
+              ©️BBDH, 2023. All rights reserved
+            </p>
           </div>
-          <div className="flex mt-[38px]">
-            <Mail className="w-6 h-6 mt-[5px] text-slate-50" />
-            <span className="text-slate-50 ml-[15px] text-[22px] font-bold underline">
-              sales@bbdh.com
-            </span>
-          </div>
-          <p className="text-slate-50 underline mt-[20px] ml-[56px]">
-            LinkedIN
-          </p>
-          <p className="underline text-slate-50 ml-[56px] mt-[21px]">
-            All contacts
-          </p>
-        </div>
-      </footer>
-      {/* <div className="mt-[65px]">
-        <MyIcon className="w-10 h-10" opacity="0.8" fill="#2563eb" />
-      </div> */}
+        </footer>
+      )}
     </>
   );
 }
