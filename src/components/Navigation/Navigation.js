@@ -10,7 +10,6 @@ import telecom from "../../images/telecom.png";
 import enterprise from "../../images/enterprise.png";
 import safety from "../../images/safety.png";
 
-import Pointer from "./components/Pointer";
 function Navigation() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1440);
   const [collapsed, setCollapsed] = useState(true);
@@ -51,9 +50,7 @@ function Navigation() {
                 <div className="relative">
                   <Dropdown
                     dropdownRender={(menu) => (
-                      <div className="w-screen h-64 bg-slate-100 absolute left-[-950px] top-[25px] px-[80px]">
-                        <Pointer />
-                      </div>
+                  <p>Hello World!</p>
                     )}
                   >
                     <a href="www.google.com" onClick={(e) => e.preventDefault()}>
