@@ -3,11 +3,8 @@ import { useState, useEffect } from "react";
 // Antd Components
 import { Collapse } from "antd";
 import { CaretRightOutlined, CaretDownOutlined } from "@ant-design/icons";
-import { Divider } from "antd";
 import Contact from "./components/ContactFooter";
-// Images
-import logo from "../../images/logo-dark.png";
-
+// Footer Image
 import Pexel1 from "../../images/pexels1.jpg";
 // import LazyBGImage from "./LazyBackgroundImage/LazyBGImage";
 
@@ -130,7 +127,7 @@ function Footer() {
                 </p>
                 {product.groupSubs.map((item) => (
                   <a
-                    href="#"
+                    href="www.google.com"
                     className="block text-[14px] underline text-white font-normal font-sans"
                   >
                     {item}
