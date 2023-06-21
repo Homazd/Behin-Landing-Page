@@ -1,14 +1,18 @@
 import * as React from "react";
+import wave from "../../images/wave.png";
 
 function Hero() {
   return (
-    <div className="pt-[56px] text-left">
+    <div
+      className="pt-[56px] text-left  bg-center bg-cover"
+      style={{ backgroundImage: `url(${wave})` }}
+    >
       <div className="px-[15px] tablet:text-center">
-        <p className="font-bold text-[24px] tablet:text-[38px] font-sans text-sky-500 mb-[24px]">
+        <p className="font-bold text-center text-[26px] tablet:text-[38px] font-sans text-sky-500 mb-[24px]">
           BBDH
         </p>
         <div className="mb-[24px]">
-          <p className="text-[12px] tablet:text-[16px] text-gray-500">
+          <p className="text-[14px] tablet:text-[18px] pt-[20px] font-semibold text-gray-800">
             Innovative Software and Hardware solutions for telecommunications
           </p>
         </div>
