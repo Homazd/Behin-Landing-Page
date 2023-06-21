@@ -6,16 +6,16 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'mobile': "320px",
+      mobile: "320px",
       // => @media (min-width: 320px) { ... }
 
-      'tablet': "768px",
+      tablet: "768px",
       // => @media (min-width: 768px) { ... }
 
-      'laptop': "1024px",
+      laptop: "1024px",
       // => @media (min-width: 1024px) { ... }
 
-      'desktop': "1440px",
+      desktop: "1440px",
       // => @media (min-width: 1440px) { ... }
     },
     // fontSize: {
@@ -27,10 +27,11 @@ module.exports = {
     //   '4xl': '2.441rem',
     //   '5xl': '3.052rem',
     // }
-  },
-  fontFamily: {
-    sans: ["Open Sans", "sans-serif"],
-    serif: ["Merriweather", "serif"],
+    extend: {
+      fontFamily: {
+        "my-font": ["MyCustomFont", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

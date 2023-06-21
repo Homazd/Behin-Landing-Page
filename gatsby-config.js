@@ -15,6 +15,13 @@ module.exports = {
         rule: {
           include: /\.svg$/,
         },
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false,
+          },
+        },
       },
     },
   ],

@@ -122,7 +122,7 @@ function Footer() {
           <div className="grid grid-cols-2 gap-2  px-[15px] laptop:grid-cols-4">
             {products.map((product) => (
               <div className="mt-[10px] leading-loose">
-                <p className="text-[20px] text-white font-bold font-sans mb-[10px]">
+                <p className="text-[20px] text-white font-bold font-myFont mb-[10px]">
                   {product.header}
                 </p>
                 {product.groupSubs.map((item) => (
