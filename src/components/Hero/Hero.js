@@ -4,7 +4,7 @@ import wave from "../../images/wave.png";
 function Hero() {
   return (
     <div
-      className="pt-[56px] text-left  bg-center bg-cover"
+      className="pt-[56px] bg-center bg-cover desktop:w-[1170px] desktop:mx-auto desktop:rounded-lg"
       style={{ backgroundImage: `url(${wave})` }}
     >
       <div className="px-[15px] tablet:text-center">
@@ -12,7 +12,7 @@ function Hero() {
           BBDH
         </p>
         <div className="mb-[24px]">
-          <p className="text-[14px] tablet:text-[18px] pt-[20px] font-semibold text-gray-800">
+          <p className="text-[14px] tablet:text-[18px] laptop:text-[20px] pt-[20px] font-semibold text-gray-800">
             Innovative Software and Hardware solutions for telecommunications
           </p>
         </div>

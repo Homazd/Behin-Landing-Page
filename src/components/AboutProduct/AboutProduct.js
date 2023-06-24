@@ -6,7 +6,7 @@ function AboutProduct() {
     <div className="mt-[56px] tablet:grid tablet:grid-cols-2 tablet:gap-2 tablet:mt-[170px] desktop:w-[1170px] desktop:mx-auto" >
       <div className="px-[15px]">
         <div className="mb-[20px]">
-          <p className="font-sans text-[18px] font-normal">
+          <p className=" text-[18px] font-normal">
             <span className="text-sky-500 font-bold">
               BBDH/Behin Baygan Dade Hoonam{" "}
             </span>
@@ -19,7 +19,7 @@ function AboutProduct() {
             <span className="text-[38px] font-bold mr-[10px] text-sky-500">
               2
             </span>
-            <span className="text-xs font-sans">Countries</span>
+            <span className="text-xs ">Countries</span>
           </div>
           <div className="col-span-1 grid grid-cols-2">
             <span className="col-span-1 text-[38px] font-bold mr-[10px] text-sky-500">

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 // Components
 import SidebarMenu from "./components/SidebarMenu";
 // antd components
-import { Dropdown, Menu, Drawer, Button, Space } from "antd";
+import { Dropdown, Drawer, Button, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 function Header() {
@@ -101,10 +101,52 @@ function Header() {
     <>
       {isLargeLaptop && (
         <div className="bg-sky-500 text-slate-50 h-[28.28px]">
-          <div className="w-[1170px] mx-auto grow h-[28.28px] text-center">
-            <span className="font-normal text-[14px] invisible laptop:visible">
+          <div className="flex w-[1170px] mx-auto h-[28.28px] text-center relative">
+            <span className="font-normal text-[14px] invisible laptop:visible absolute inset-x-0">
               Behin Baygan Dade Hounam
             </span>
+            <div className="absolute right-0 flex">
+            <div className="relative border-l border-l-slate-50 px-3">
+              <Dropdown
+                dropdownRender={(menu) => (
+                  <div className="w-screen h-screen bg-white absolute left-[-620px] laptop:left-[-900px] top-[80px] px-[80px]">
+                    <div className="grid grid-cols-4 gap-4">
+                      {products.map((product) => (
+                        <div className="mt-[50px] leading-loose">
+                          <p className="text-[16px] font-bold mb-[20px]">
+                            {product.header}
+                            {product.groupSubs.map((item) => (
+                              <a
+                                href="www.google.com"
+                                className="block text-[12px] underline text-gray-400 font-normal font-sans"
+                              >
+                                {item}
+                              </a>
+                            ))}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              >
+                <a href="www.google.com" onClick={(e) => e.preventDefault()}>
+                  <Space className="text-[14px]">
+                    Company
+                    <DownOutlined
+                      className="pb-[5px]"
+                      style={{ fontSize: "10px" }}
+                    />
+                  </Space>
+                </a>
+              </Dropdown>
+            </div>
+            <div className="w-[74px]  text-center border-x border-x-slate-100 px-[10px]">
+              <span className="text-[12px] tablet:text-[14px]">
+                <Link to="/contact">Contacts</Link>
+              </span>
+            </div>
+            </div>
           </div>
         </div>
       )}
@@ -124,7 +166,7 @@ function Header() {
                       <div className="grid grid-cols-4 gap-4">
                         {products.map((product) => (
                           <div className="mt-[50px] leading-loose">
-                            <p className="text-[16px] font-bold font-sans mb-[20px]">
+                            <p className="text-[16px] font-bold mb-[20px]">
                               {product.header}
                               {product.groupSubs.map((item) => (
                                 <a
@@ -158,7 +200,7 @@ function Header() {
                 <div className="pt-[3px] flex">
                   <Button
                     type="text"
-                    className="text-slate-50 h-[26.28px] text-[12px] font-sans flex p-0 b-0"
+                    className="text-slate-50 h-[26.28px] text-[12px] flex p-0 b-0"
                     onClick={showDrawer}
                   >
                     <p>Company</p>
@@ -184,7 +226,7 @@ function Header() {
             <SidebarMenu />
           </Drawer>
           <div className="flex-none w-[74px]  text-center border-x border-x-slate-100 px-[5px]">
-            <span className="text-[12px] tablet:text-[14px]">
+            <span className="text-[14px] tablet:text-[14px]">
               <Link to="/contact">Contacts</Link>
             </span>
           </div>

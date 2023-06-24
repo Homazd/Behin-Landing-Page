@@ -18,7 +18,6 @@ function Navigation() {
     setCollapsed(!collapsed);
   };
 
-
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 1440);
@@ -48,45 +47,67 @@ function Navigation() {
                   alt="telecom"
                 />
                 <div className="relative">
-                  <Dropdown
-                    dropdownRender={(menu) => (
-                  <p>Hello World!</p>
-                    )}
-                  >
-                    <a href="www.google.com" onClick={(e) => e.preventDefault()}>
-                      <Space className="pt-[15px] text-[15px] font-sans font-normal text-gray-700 cursor-pointer">
+                  <Dropdown dropdownRender={(menu) => <p>Hello World!</p>}>
+                    <a
+                      href="www.google.com"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <Space className="pt-[15px] text-[15px] font-normal text-gray-700 cursor-pointer">
                         For Telecom Carriers
                         <DownOutlined
                           className="pb-[20px]"
-                          style={{ fontSize: "14px" }}
+                          style={{ fontSize: "10px" }}
                         />
                       </Space>
                     </a>
                   </Dropdown>
                 </div>
-                {/* <span className="pt-[15px] text-[15px] font-sans font-normal text-gray-700">
-                  For Telecom Carriers
-                </span> */}
               </div>
               <div className="col-span-2 flex">
                 <img
-                  className="w-[50px] h-[50px] text-center mx-2 pt-2"
+                  className="w-[40px] h-[40px] text-center mx-2 mt-2"
                   src={enterprise}
                   alt="enterprise"
                 />
-                <span className="pt-[15px] text-[15px] font-sans font-normal text-gray-700">
-                  For Enterprises
-                </span>
+                <div className="relative">
+                  <Dropdown dropdownRender={(menu) => <p>Hello World!</p>}>
+                    <a
+                      href="www.google.com"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <Space className="pt-[15px] text-[15px] font-normal text-gray-700 cursor-pointer">
+                        For Enterprises
+                        <DownOutlined
+                          className="pb-[10px]"
+                          style={{ fontSize: "10px" }}
+                        />
+                      </Space>
+                    </a>
+                  </Dropdown>
+                </div>
               </div>
               <div className="col-span-2 flex">
                 <img
-                  className="w-[40px] h-[40px] text-center mx-[3px] pt-2"
+                  className="w-[40px] h-[40px] text-center mx-[3px] mt-2"
                   src={safety}
                   alt="safety"
                 />
-                <span className="pt-[12px] text-[15px] font-sans font-normal text-gray-700">
-                  For Integrated Safety
-                </span>
+                <div className="relative">
+                  <Dropdown dropdownRender={(menu) => <p>Hello World!</p>}>
+                    <a
+                      href="www.google.com"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <Space className="pt-[15px] text-[15px] font-normal text-gray-700 cursor-pointer">
+                        For Integrated Safety
+                        <DownOutlined
+                          className="pb-[10px]"
+                          style={{ fontSize: "10px" }}
+                        />
+                      </Space>
+                    </a>
+                  </Dropdown>
+                </div>
               </div>
             </div>
           </div>

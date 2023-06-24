@@ -15,7 +15,7 @@ const elements = [
         </div>
       </>
     ),
-    items: <p>Equipment Identity Register</p>,
+    items: ["Equipment Identity Register (EIR)", "Gateway Mobile Switching Center", "Home Location Register"],
   },
   {
     key: "2",
