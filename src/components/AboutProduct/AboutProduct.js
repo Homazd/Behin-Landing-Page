@@ -32,8 +32,8 @@ function AboutProduct() {
             </div>
           </div>
         </div>
-        <div className="bg-sky-500 rounded-md flex justify-center h-[50px] mt-[20px] tablet:w-[225px]">
-          <button className="text-slate-50 text-base font-semibold">About us</button>
+        <div className="bg-sky-500 rounded-md flex justify-center h-[50px] mt-[20px] tablet:w-[225px] hover:shadow-lg hover:shadow-sky-500/40">
+          <button className="text-slate-50 text-base font-semibold ">About us</button>
         </div>
         </div>
         <div className="mt-8 px-[15px] tablet:mt-0 tablet:order-first">

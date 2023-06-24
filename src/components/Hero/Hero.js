@@ -12,7 +12,7 @@ function Hero() {
           BBDH
         </p>
         <div className="mb-[24px]">
-          <p className="text-[14px] tablet:text-[18px] laptop:text-[20px] pt-[20px] font-semibold text-gray-800">
+          <p className="text-[14px] tablet:text-[18px] laptop:text-[20px] pt-[20px] font-normal text-sky-800">
             Innovative Software and Hardware solutions for telecommunications
           </p>
         </div>
@@ -22,7 +22,7 @@ function Hero() {
               Products
             </p>
           </div>
-          <div className="bg-slate-50 text-sky-500 h-[54px] text-md mb-[15px] shadow-xl rounded-lg font-semibold border-2 border-sky-600 tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0">
+          <div className="bg-slate-50 text-sky-500 hover:bg-sky-500 hover:text-white h-[54px] text-md mb-[15px] shadow-xl rounded-lg font-semibold border-2 border-sky-600 tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0">
             <p className="text-[16px] py-[15px] px-[20px] b-1 text-center tablet:pt-[12px]">
               About us
             </p>

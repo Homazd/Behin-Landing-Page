@@ -52,6 +52,17 @@ const products = [
     groupSubs: ["About Us", "Our Partners"],
   },
 ];
+
+const customHeader = (panelProps) => {
+  const { children } = panelProps;
+  const headerStyles = `text-slate-50 text-[22px]`;
+  return (
+    <div className={headerStyles}>
+      {children}
+    </div>
+  );
+};
+
 function Footer() {
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
   const { Panel } = Collapse;
@@ -100,9 +111,14 @@ function Footer() {
               expandIconPosition="left"
               expandIcon={customExpandIcon}
             >
-              {items.map((item) => (
-                <Panel header={item.header} key={item.key}>
-                  {item.children}
+              {products.map((item, index) => (
+                <Panel header={item.header} key={index} header={customHeader}>
+                  {
+                    item.groupSubs.map(element => (
+                      
+                      <p className="text-slate-50 underline hover:no-underline">{element}</p>
+                    ))
+                  }
                 </Panel>
               ))}
             </Collapse>
