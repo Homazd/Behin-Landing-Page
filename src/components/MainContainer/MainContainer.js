@@ -1,54 +1,76 @@
 import React from "react";
-import backgroundImage from "../../images/bts.png";
+// Images
+import epc from "../../images/EPC.webp";
+import ims from "../../images/ims.webp";
+import fiveG from "../../images/5g.webp";
+// Hooks
+import { useState, useEffect } from "react";
 
 function MainContainer() {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1440);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1440);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
-    <div className="px-[15px] mt-[60px]  desktop:px-0 desktop:mx-auto">
-      <div className="tablet:grid tablet:grid-cols-2 tablet:gap-1 tablet:place-content-center  laptop:w-[984px] laptop:gap-2 laptop:mx-auto desktop:w-[1170px] ">
-        <div className="animate__animated animate__slideInDown tablet:col-span-1 h-[380px] relative bg-gradient-to-t from-sky-400 to-sky-600 rounded-lg shadow-lg tablet:w-[369px] laptop:w-[476px] laptop:mr-[30px] desktop:w-[569px]">
-          <div className="pl-[20px] pt-[55px]">
-            <span className="text-[24px] font-bold text-slate-100">
-              For Telecom Carriers
-            </span>
-            <ol className="list-inside list-disc text-slate-100 leading-loose mt-[20px]">
-              <li className="underline hover:no-underline">For Mobile Operators</li>
-              <li className="underline hover:no-underline">For Fixed Line Operators</li>
-              <li className="underline hover:no-underline">For MVNO/MVNE</li>
-            </ol>
-          </div>
-          <img
-            src={backgroundImage}
-            alt="Operator"
-            className="h-[180px] w-[85px] tablet:w-[110px] tablet:h-[220px] laptop:w-[140px] laptop:h-[280px]  absolute bottom-0 right-0 pr-[20px]"
-          />
-        </div>
-        <div className="animate__animated animate__slideInDown tablet:col-span-1 h-[380px] bg-gradient-to-t from-violet-400 to-violet-600 mt-[30px] tablet:mt-0 rounded-lg tablet:w-[369px] laptop:w-[476px] desktop:w-[569px]">
-          <div className="pl-[20px] pt-[55px]">
-            <span className="text-[24px] font-bold text-slate-100 ">
-              For Enterprises
-            </span>
-            <ol className="list-inside list-disc text-slate-100 leading-loose mt-[20px] ">
-              <li className="underline hover:no-underline">NGN/IMS Solutions</li>
-              <li className="underline hover:no-underline">Call Center</li>
-              <li className="underline hover:no-underline">Enterprise UC solutions</li>
-            </ol>
-          </div>
-        </div>
-        <div className="animate__animated animate__fadeInUp animate__delay-1s h-[380px] bg-gradient-to-t from-indigo-400 to-indigo-600 mobile:mt-[30px] tablet:mt-0 rounded-lg tablet:w-[369px] laptop:w-[476px] desktop:w-[569px]">
-          <div className="pl-[20px] pt-[55px]">
-            <span className="text-[24px] font-bold text-slate-100 ">
-              For Integrated Safety
-            </span>
-            <ol className="list-inside list-disc text-slate-100 leading-loose mt-[20px]">
-              <li className="underline">
-                112/911 Emergency Services Response System
-              </li>
-              <li className="underline hover:no-underline">Smart City</li>
-              <li className="underline hover:no-underline">Public Warning Alert</li>
-              <li className="underline hover:no-underline">Cell Broadcast Center</li>
-            </ol>
-          </div>
-        </div>
+    <div className="px-[15px] mt-[47px] tablet:text-center">
+      <h1 className="text-center text-[23px] desktop:text-[46px] font-bold">
+        Core Network Products
+      </h1>
+      <div className="w-[1200px] mx-auto px-[220px]">
+      <span className="text-[12px] desktop:text-[22px] mt-[10px] text-gray-500">
+        As a Prominent Core Network Provider, BBDH is commited to delivering the
+        highly customizable Core Network and best customer experience.
+      </span>
+      </div>
+      <div className="desktop:w-[1170px] mx-auto desktop:grid desktop:grid-cols-3 gap-0">
+      <div className="desktop:col-span-1 w-[226px] h-[293px] mx-auto tablet:w-[531px] tablet:h-[297px] desktop:w-[361px] desktop:h-[352px] rounded-md animate__animated animate__bounceInLeft shadow-xl bg-slate-10 mt-[28px] grid justify-items-center pt-[46px] px-[26px]">
+        <img
+          src={epc}
+          className="w-[67px] h-[61px] tablet:w-[133px] tablet:h-[120px] self-center"
+        />
+        <span className="block font-semibold text-[15px]">
+          Evolved Packet Core(EPC)
+        </span>
+        <span className="text-[12px] text-gray-500">
+          High scalable 4G LTE EPC Core Network platform, Easy to deploy for a
+          wide range of application
+        </span>
+        <button className="cursor-pointer text-[12px]">Learn More</button>
+      </div>
+      <div className="desktop:col-span-1 w-[226px] h-[293px] tablet:w-[531px] tablet:h-[297px] desktop:w-[361px] desktop:h-[352px] animate__animated animate__bounce mx-auto rounded-md shadow-xl bg-slate-10 mt-[28px] grid justify-items-center pt-[46px] px-[26px]">
+        <img
+          src={ims}
+          className="w-[67px] h-[61px] self-center tablet:w-[133px] tablet:h-[120px]"
+        />
+        <span className="block font-semibold text-[15px]">
+          IP Multimedia Subsystem
+        </span>
+        <span className="text-[12px] text-gray-500">
+          An agile and virtualized session vIMS core, support variety of voice
+          applications such as VoLTE, ...
+        </span>
+        <button className="cursor-pointer text-[12px]">Learn More</button>
+      </div>
+      <div className="desktop:col-span-1 w-[226px] h-[293px] tablet:w-[531px] tablet:h-[297px] desktop:w-[361px] desktop:h-[352px] mx-auto animate__animated animate__bounceInRight rounded-md shadow-xl bg-slate-10 mt-[28px] grid justify-items-center pt-[46px] px-[26px]">
+        <img
+          src={fiveG}
+          className="w-[67px] h-[61px] self-center tablet:w-[133px] tablet:h-[120px]"
+        />
+        <span className="block font-semibold text-[15px]">
+          5G Core Network(5GC)
+        </span>
+        <span className="text-[12px] text-gray-500">
+          Cloud-native, Highly integrated and Simplified design 5GC for mobile
+          industry
+        </span>
+        <button className="cursor-pointer text-[12px]">Learn More</button>
+      </div>
       </div>
     </div>
   );

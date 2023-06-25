@@ -100,7 +100,7 @@ function Header() {
   return (
     <>
       {isLargeLaptop && (
-        <div className="bg-sky-500 text-slate-50 h-[28.28px]">
+        <div className="bg-blue-900 text-slate-50 h-[28.28px]">
           <div className="flex w-[1170px] mx-auto h-[28.28px] text-center relative">
             <span className="font-normal text-[14px] invisible laptop:visible absolute inset-x-0 place-content-center pt-1">
               Behin Baygan Dade Hounam
@@ -141,7 +141,7 @@ function Header() {
                 </a>
               </Dropdown>
             </div>
-            <div className="w-[74px] hover:bg-sky-400 text-center border-x border-x-slate-100 px-[10px]">
+            <div className="w-[74px] hover:bg-blue-900 text-center border-x border-x-slate-100 px-[10px]">
               <span className="text-[12px] tablet:text-[14px]">
                 <Link to="/contact">Contacts</Link>
               </span>
@@ -151,7 +151,7 @@ function Header() {
         </div>
       )}
       {!isLargeLaptop && (
-        <div className="flex relative bg-sky-500 text-slate-50 h-[28.28px]">
+        <div className="flex relative bg-blue-900 text-slate-50 h-[28.28px]">
           <div className="grow relative h-[28.28px]">
             <span className="font-normal text-[14px] invisible tablet:visible tablet:absolute left-1/2">
               Behin Baygan Dade Hounam

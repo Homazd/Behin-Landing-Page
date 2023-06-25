@@ -7,7 +7,7 @@ function AboutProduct() {
       <div className="px-[15px]">
         <div className="mb-[20px]">
           <p className=" text-[18px] font-normal">
-            <span className="text-sky-500 font-bold">
+            <span className="text-blue-900 font-bold">
               BBDH/Behin Baygan Dade Hoonam{" "}
             </span>
             develops and provides innovative software and hardware solutions for
@@ -16,13 +16,13 @@ function AboutProduct() {
         </div>
         <div className="grid grid-cols-2">
           <div className="col-span-1">
-            <span className="text-[38px] font-bold mr-[10px] text-sky-500">
+            <span className="text-[38px] font-bold mr-[10px] text-blue-900">
               2
             </span>
             <span className="text-xs ">Countries</span>
           </div>
           <div className="col-span-1 grid grid-cols-2">
-            <span className="col-span-1 text-[38px] font-bold mr-[10px] text-sky-500">
+            <span className="col-span-1 text-[38px] font-bold mr-[10px] text-blue-900">
               250
             </span>
             <div className="relative">
@@ -32,7 +32,7 @@ function AboutProduct() {
             </div>
           </div>
         </div>
-        <div className="bg-sky-500 rounded-md flex justify-center h-[50px] mt-[20px] tablet:w-[225px] hover:shadow-lg hover:shadow-sky-500/40">
+        <div className="bg-blue-900 rounded-md flex justify-center h-[50px] mt-[20px] tablet:w-[225px] hover:shadow-lg hover:shadow-blue-900/40">
           <button className="text-slate-50 text-base font-semibold ">About us</button>
         </div>
         </div>

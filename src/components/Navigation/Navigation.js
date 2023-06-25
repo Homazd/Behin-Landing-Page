@@ -1,14 +1,11 @@
 import * as React from "react";
 // Antd Components
-import { Menu, Divider, Dropdown, Space } from "antd";
-import { MenuOutlined, DownOutlined } from "@ant-design/icons";
+import { Menu, Divider } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
 // Hooks
 import { useState, useEffect } from "react";
 // Images
-import logo from "../../images/logo.png";
-import telecom from "../../images/telecom.png";
-import enterprise from "../../images/enterprise.png";
-import safety from "../../images/safety.png";
+import logo from "../../images/logo.jpeg";
 
 function Navigation() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1440);
@@ -31,83 +28,25 @@ function Navigation() {
     <>
       {isDesktop && (
         <>
-          <div className="grid grid-cols-9 text-center w-[1170px] h-15 shadow-sm mx-auto">
-            <div className="col-span-1">
+          <div className="grid grid-cols-9 place-content-center w-[1170px] h-[80px] shadow-sm mx-auto">
+            <div className="col-start-1 col-end-4 flex">
               <img
-                className="w-[100px] h-[70px] text-center"
+                className="w-[70px] h-[70px] text-center"
                 src={logo}
                 alt="logo"
               />
+              <Divider type="vertical"/>
+              <span className="text-blue-800 text-[14px] font-bold self-center">end-to-end Network Solution</span>
             </div>
-            <div className="col-span-8 grid grid-cols-10 gap-4 place-content-center">
-              <div className="col-start-5 col-span-2 flex">
-                <img
-                  className="w-[50px] h-[50px] text-center mx-1 pt-2"
-                  src={telecom}
-                  alt="telecom"
-                />
-                <div className="relative">
-                  <Dropdown dropdownRender={(menu) => <p>Hello World!</p>}>
-                    <a
-                      href="www.google.com"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <Space className="pt-[15px] text-[15px] font-normal text-gray-700 cursor-pointer">
-                        For Telecom Carriers
-                        <DownOutlined
-                          className="pb-[20px]"
-                          style={{ fontSize: "10px" }}
-                        />
-                      </Space>
-                    </a>
-                  </Dropdown>
-                </div>
+            <div className="col-end-10 col-span-3 grid grid-cols-5 gap-4 place-content-center text-blue-800 font-semibold ">
+              <div className="col-start-3 col-span-1 hover:text-cyan-400 ">
+                <span>5G</span>
               </div>
-              <div className="col-span-2 flex">
-                <img
-                  className="w-[40px] h-[40px] text-center mx-2 mt-2"
-                  src={enterprise}
-                  alt="enterprise"
-                />
-                <div className="relative">
-                  <Dropdown dropdownRender={(menu) => <p>Hello World!</p>}>
-                    <a
-                      href="www.google.com"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <Space className="pt-[15px] text-[15px] font-normal text-gray-700 cursor-pointer">
-                        For Enterprises
-                        <DownOutlined
-                          className="pb-[10px]"
-                          style={{ fontSize: "10px" }}
-                        />
-                      </Space>
-                    </a>
-                  </Dropdown>
-                </div>
+              <div className="col-span-1 flex hover:text-cyan-400 ">
+                <span>Home</span>
               </div>
-              <div className="col-span-2 flex">
-                <img
-                  className="w-[40px] h-[40px] text-center mx-[3px] mt-2"
-                  src={safety}
-                  alt="safety"
-                />
-                <div className="relative">
-                  <Dropdown dropdownRender={(menu) => <p>Hello World!</p>}>
-                    <a
-                      href="www.google.com"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <Space className="pt-[15px] text-[15px] font-normal text-gray-700 cursor-pointer">
-                        For Integrated Safety
-                        <DownOutlined
-                          className="pb-[10px]"
-                          style={{ fontSize: "10px" }}
-                        />
-                      </Space>
-                    </a>
-                  </Dropdown>
-                </div>
+              <div className="col-span-1 flex hover:text-cyan-400 ">
+                <span>Blog</span>
               </div>
             </div>
           </div>
@@ -128,7 +67,7 @@ function Navigation() {
                 mode="horizontal"
                 defaultSelectedKeys={["home"]}
               >
-                <Menu.Item key="home">For Telecom Carriers</Menu.Item>
+                <Menu.Item key="home">Blog</Menu.Item>
                 <Menu.Item key="about">For Enterprises</Menu.Item>
                 <Menu.Item key="contact">For Integrated Safety</Menu.Item>
               </Menu>
@@ -136,7 +75,7 @@ function Navigation() {
 
             <div className="text-center col-span-1 grid justify-items-center">
               <img
-                className="w-15 h-14 text-center tablet:w-20 tablet:h-16"
+                className="w-15 h-14 text-center tablet:w-[60px] tablet:h-[60px]"
                 src={logo}
                 alt="logo"
               />
@@ -145,9 +84,9 @@ function Navigation() {
 
           <div className={`md:hidden ${collapsed ? "hidden" : "block"}`}>
             <Menu theme="light" mode="vertical" defaultSelectedKeys={["home"]}>
-              <Menu.Item key="home">For Telecom Carriers</Menu.Item>
-              <Menu.Item key="about">For Enterprises</Menu.Item>
-              <Menu.Item key="contact">For Integrated Safety</Menu.Item>
+              <Menu.Item key="home">5G</Menu.Item>
+              <Menu.Item key="about">Home</Menu.Item>
+              <Menu.Item key="contact">Blog</Menu.Item>
             </Menu>
           </div>
         </>
