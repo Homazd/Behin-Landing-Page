@@ -22,7 +22,7 @@ function MainContainer() {
       <h1 className="text-center text-[23px] desktop:text-[46px] font-bold">
         Core Network Products
       </h1>
-      <div className="w-[1200px] mx-auto px-[220px]">
+      <div className="desktop:w-[1200px] mx-auto desktop:px-[220px]">
       <span className="text-[12px] desktop:text-[22px] mt-[10px] text-gray-500">
         As a Prominent Core Network Provider, BBDH is commited to delivering the
         highly customizable Core Network and best customer experience.
