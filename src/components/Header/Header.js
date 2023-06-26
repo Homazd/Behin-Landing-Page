@@ -10,7 +10,6 @@ import { DownOutlined } from "@ant-design/icons";
 
 function Header() {
   const [open, setOpen] = useState(false);
-  // const [isFullScreen, setIsFullScreen] = useState(false);
   const [placement, setPlacement] = useState("left");
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
   const [isLargeLaptop, setIsLargeLaptop] = useState(window.innerWidth >= 1440);
@@ -68,35 +67,6 @@ function Header() {
   const onClose = () => {
     setOpen(false);
   };
-  // const handleOnCompany = (e) => {
-  //   e.preventDefault();
-  //   setIsFullScreen(true);
-  // };
-  // const menu = (
-  //   <Menu>
-  //     <Menu.Item>
-  //       {isFullScreen && (
-  //         <div className="fixed top-0 left-0 w-full h-full bg-gray-900 opacity-75 z-50">
-  //           <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-  //             <div className="bg-white rounded-lg p-8 shadow-lg">
-  //               <h1 className="text-2xl font-bold mb-4">Full Screen Content</h1>
-  //               <p className="text-gray-500">
-  //                 This is some content that takes up the full screen.
-  //               </p>
-  //               <button
-  //                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-  //                 onClick={() => setIsFullScreen(false)}
-  //               >
-  //                 Close
-  //               </button>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       )}
-  //     </Menu.Item>
-  //   </Menu>
-  // );
-
   return (
     <>
       {isLargeLaptop && (
