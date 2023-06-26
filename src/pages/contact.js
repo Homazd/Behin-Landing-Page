@@ -12,29 +12,6 @@ const { Option } = Select;
 const { TextArea } = Input;
 
 const ContactPage = () => {
-  const [form] = Form.useForm();
-
-  const onCompanyChange = (value) => {
-    switch (value) {
-      case "Company":
-        form.setFieldsValue({
-          note: "Hi, man!",
-        });
-        break;
-      case "Freelancer":
-        form.setFieldsValue({
-          note: "Hi, lady!",
-        });
-        break;
-      case "other":
-        form.setFieldsValue({
-          note: "Hi there!",
-        });
-        break;
-      default:
-    }
-  };
-
   return (
     <>
       <Header />
@@ -52,10 +29,13 @@ const ContactPage = () => {
               Operation and R&D Center Address:
             </div>
             <div className="text-[16px] laptop:text-[20px]">
-              Number 68, Second Floor, Elm va San'at St., Hengam St.,Tehran, Iran
+              Number 68, Second Floor, Elm va San'at St., Hengam St.,Tehran,
+              Iran
             </div>
             <div className="mt-[30px]">
-              <p className="text-[16px] laptop:text-[22px] font-semibold">Contact Information:</p>
+              <p className="text-[16px] laptop:text-[22px] font-semibold">
+                Contact Information:
+              </p>
               <p className="text-[16px] laptop:text-[22px]">
                 Email:
                 <span className="text-[18px] laptop:text-[22px] font-bold text-blue-800 underline">
@@ -97,9 +77,7 @@ const ContactPage = () => {
           <Form layout="vertical" className="mt-5 laptop:col-span-1">
             <FormItem
               label={
-                <span className="text-gray-500  text-[16px]">
-                  Full name
-                </span>
+                <span className="text-gray-500  text-[16px]">Full name</span>
               }
               name="fullname"
               required="true"
@@ -108,7 +86,10 @@ const ContactPage = () => {
             </FormItem>
             <FormItem
               label={
-                <span className="text-gray-500  text-[16px]" style={{ padding: 0 }}>
+                <span
+                  className="text-gray-500  text-[16px]"
+                  style={{ padding: 0 }}
+                >
                   Products/Solutions
                 </span>
               }
@@ -122,7 +103,9 @@ const ContactPage = () => {
             >
               <Input placeholder="" />
             </FormItem>
-            <FormItem label={<span className="text-gray-500 text-[16px]">Phone</span>}>
+            <FormItem
+              label={<span className="text-gray-500 text-[16px]">Phone</span>}
+            >
               <Input placeholder="" />
             </FormItem>
             <FormItem
@@ -130,11 +113,7 @@ const ContactPage = () => {
               label={<span className="text-gray-500 text-[16px]">Company</span>}
               required="true"
             >
-              <Select
-                placeholder="Company"
-                onChange={onCompanyChange}
-                allowClear
-              >
+              <Select placeholder="Company" allowClear>
                 <Option value="Company">Company</Option>
                 <Option value="Freelancer">Freelancer</Option>
               </Select>
