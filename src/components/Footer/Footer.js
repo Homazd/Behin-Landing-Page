@@ -1,11 +1,7 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
-// Antd Components
-import { Collapse } from "antd";
-import { CaretRightOutlined, CaretDownOutlined } from "@ant-design/icons";
+// Components
 import Contact from "./components/ContactFooter";
-// Footer Image
-import Pexel1 from "../../images/pexels1.jpg";
+
 // import LazyBGImage from "./LazyBackgroundImage/LazyBGImage";
 
 const products = [
@@ -36,106 +32,33 @@ const products = [
   },
 ];
 
-const customHeader = (panelProps) => {
-  const { children } = panelProps;
-  const headerStyles = `text-slate-50 text-[22px]`;
-  return <div className={headerStyles}>{children}</div>;
-};
-
 function Footer() {
-  const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
-  const { Panel } = Collapse;
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsTablet(window.innerWidth >= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const customExpandIcon = ({ isActive }) => {
-    return isActive ? (
-      <CaretDownOutlined style={{ color: "#f8fafc", fontSize: "1rem" }} />
-    ) : (
-      <CaretRightOutlined
-        style={{ color: "#f8fafc", fontSize: "1rem", marginTop: "10px" }}
-      />
-    );
-  };
-
   return (
     <>
-      {/* <LazyBGImage src="../../images/pexels1.jpg">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-2xl font-bold mb-2">
-            Footer Heading
-          </div>
-          <div className="text-gray-400 mb-4">
-            This is a paragraph of text that can provide more information about my website.
-          </div>
-          <a className="text-white hover:text-gray-400" href="#">Learn more</a>
-        </div>
-      </LazyBGImage> */}
-      {!isTablet && (
-        <footer
-          className="bg-local bg-cover bg-center mt-[85px] pt-[36px]"
-          style={{ backgroundImage: `url(${Pexel1})` }}
-        >
-          <div className="px-[15px]">
-            <Collapse
-              ghost
-              expandIconPosition="left"
-              expandIcon={customExpandIcon}
-            >
-              {products.map((item, index) => (
-                <Panel header={item.header} key={index} header={customHeader}>
-                  {item.groupSubs.map((element) => (
-                    <p className="text-slate-50 underline hover:no-underline">
-                      {element}
-                    </p>
-                  ))}
-                </Panel>
+      <footer className="mt-[85px] pt-[36px] bg-blue-900">
+        <div className="grid tablet:grid-cols-2 gap-2  px-[15px] tablet:px-[30px] laptop:grid-cols-4 desktop:w-[1170px] desktop:mx-auto">
+          {products.map((product) => (
+            <div className="mt-[10px] leading-loose">
+              <p className="text-[12px] tablet:text-[20px] text-white font-bold font-myFont mb-[10px]">
+                {product.header}
+              </p>
+              {product.groupSubs.map((item, index) => (
+                <a
+                  href="www.google.com"
+                  className="block text-[12px] tablet:text-[14px] underline text-gray-400 font-normal font-sans"
+                  key={index}
+                >
+                  {item}
+                </a>
               ))}
-            </Collapse>
-            <Contact />
-            <p className="mt-[50px] text-sm text-white">
-              ©️BBDH, 2023. All rights reserved
-            </p>
-          </div>
-        </footer>
-      )}
-
-      {isTablet && (
-        <footer
-          className="bg-local bg-cover bg-center mt-[85px] pt-[36px]"
-          style={{ backgroundImage: `url(${Pexel1})` }}
-        >
-          <div className="grid grid-cols-2 gap-2  px-[15px] laptop:grid-cols-4">
-            {products.map((product) => (
-              <div className="mt-[10px] leading-loose">
-                <p className="text-[20px] text-white font-bold font-myFont mb-[10px]">
-                  {product.header}
-                </p>
-                {product.groupSubs.map((item) => (
-                  <a
-                    href="www.google.com"
-                    className="block text-[14px] underline text-white font-normal font-sans"
-                  >
-                    {item}
-                  </a>
-                ))}
-              </div>
-            ))}
-            <Contact />
-            <p className="mt-[50px] text-sm text-white">
-              ©️BBDH, 2023. All rights reserved
-            </p>
-          </div>
-        </footer>
-      )}
+            </div>
+          ))}
+          <Contact />
+          <p className="mt-[50px] text-sm text-white">
+            ©️BBDH, 2023. All rights reserved
+          </p>
+        </div>
+      </footer>
     </>
   );
 }

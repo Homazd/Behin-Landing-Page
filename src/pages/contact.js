@@ -15,21 +15,29 @@ const ContactPage = () => {
         <Link to="/">Home</Link>
       </p>
       <div className="px-[15px]">
-        <h1 className="font-bold mb-[30px] mt-[30px] text-[22px]">
+        <h1 className="font-medium mb-[30px] mt-[30px] text-[22px]">
           BBDH Iran Branch
         </h1>
-        <div className="grid grid-cols-4 gap-1 mb-[33px] font-semibold content-center">
-          <img src={location} alt="location" className="col-span-1 w-[30px] h-[30px] text-blue-400 justify-self-center" />
+        <div className="grid grid-cols-4 gap-1 mb-[33px] content-center">
+          <Link to="/">
+            <img
+              src={location}
+              alt="location"
+              className="col-span-1 w-[30px] h-[30px] text-blue-400 justify-self-center"
+            />
+          </Link>
           <div className="col-span-1 text-[12px] ">Address:</div>
-          <div className="col-span-2 text-[12px]">Tehran, Iran</div>
+          <div className="col-span-2 text-[12px]">
+            No.68, Second Floor, Elm va San'at St., Hengam St.,Tehran, Iran
+          </div>
         </div>
-        <div className="grid grid-cols-4 gap-1 font-semibold">
+        <div className="grid grid-cols-4 gap-1">
           <div className="col-start-2 col-span-1 mb-[33px] text-[12px]">
             Phone:
           </div>
-          <div className="col-span-2 text-[12px]">+98 21 3310 4958</div>
+          <div className="col-span-2 text-[12px]">+98 21 3523 8535</div>
         </div>
-        <div className="grid grid-cols-4 gap-1 font-semibold">
+        <div className="grid grid-cols-4 gap-1">
           <div className="col-start-2 col-span-1 mb-[33px] text-[12px]">
             Email:
           </div>

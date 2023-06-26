@@ -5,23 +5,25 @@ import Mail from "../../../images/mail-outline.svg";
 function Contact() {
   return (
     <div>
-      <h3 className="mt-[17px] pb-[27px] text-slate-50 font-bold text-[20px]">
+      <h3 className="mt-[17px] pb-[27px] text-slate-50 font-bold text-[16px] tablet:text-[20px]">
         Contacts
       </h3>
       <div className="flex">
-        <Phone className="w-6 h-6 mt-[5px] text-slate-50" />
-        <span className="text-slate-50 ml-[15px] text-[22px] font-bold">
-          +98 21 33104958
+        <Phone className="w-4 h-4 mt-[3px] text-slate-50" />
+        <span className="text-slate-50 ml-[15px] text-[16px] ">
+          +98 21 3523 8535
         </span>
       </div>
       <div className="flex mt-[38px]">
-        <Mail className="w-6 h-6 mt-[5px] text-slate-50" />
-        <span className="text-slate-50 ml-[15px] text-[22px] font-bold underline">
+        <Mail className="w-4 h-4 mt-[3px] text-slate-50" />
+        <span className="text-slate-50 ml-[15px] text-[16px] underline">
           sales@bbdh.com
         </span>
       </div>
-      <p className="text-slate-50 underline mt-[20px] ml-[56px]">LinkedIN</p>
-      <p className="underline text-slate-50 ml-[56px] mt-[21px]">
+      <p className="text-slate-50 underline text-[14px] mt-[20px] ml-[56px]">
+        LinkedIN
+      </p>
+      <p className="underline text-slate-50  text-[14px] ml-[56px] mt-[21px]">
         All contacts
       </p>
     </div>
