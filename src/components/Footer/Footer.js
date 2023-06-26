@@ -39,13 +39,13 @@ function Footer() {
         <div className="grid tablet:grid-cols-2 gap-2  px-[15px] tablet:px-[30px] laptop:grid-cols-4 desktop:w-[1170px] desktop:mx-auto">
           {products.map((product) => (
             <div className="mt-[10px] leading-loose">
-              <p className="text-[12px] tablet:text-[20px] text-white font-bold font-myFont mb-[10px]">
+              <p className="text-[12px] tablet:text-[20px] text-white font-bold mb-[10px]">
                 {product.header}
               </p>
               {product.groupSubs.map((item, index) => (
                 <a
                   href="www.google.com"
-                  className="block text-[12px] tablet:text-[14px] underline text-gray-400 font-normal font-sans"
+                  className="block text-[12px] tablet:text-[14px] underline text-gray-400 font-normal"
                   key={index}
                 >
                   {item}

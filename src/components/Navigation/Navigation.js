@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Link } from "gatsby";
+
 // Antd Components
 import { Menu, Divider } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
@@ -30,11 +32,13 @@ function Navigation() {
         <>
           <div className="grid grid-cols-9 place-content-center w-[1170px] h-[80px] shadow-sm mx-auto">
             <div className="col-start-1 col-end-4 flex">
+              <Link to="/">
               <img
                 className="w-[70px] h-[70px] text-center"
                 src={logo}
                 alt="logo"
               />
+              </Link>
               <Divider type="vertical"/>
               <span className="text-blue-800 text-[14px] font-bold self-center">end-to-end Network Solution</span>
             </div>
@@ -74,11 +78,13 @@ function Navigation() {
             </div>
 
             <div className="text-center col-span-1 grid justify-items-center">
+              <Link to="/">
               <img
                 className="w-15 h-14 text-center tablet:w-[60px] tablet:h-[60px]"
                 src={logo}
                 alt="logo"
               />
+              </Link>
             </div>
           </div>
 
