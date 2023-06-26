@@ -8,23 +8,6 @@ import Contact from "./components/ContactFooter";
 import Pexel1 from "../../images/pexels1.jpg";
 // import LazyBGImage from "./LazyBackgroundImage/LazyBGImage";
 
-const items = [
-  {
-    key: "1",
-    header: <h3 className="text-slate-50 text-[22px] font-sans">Solutions</h3>,
-    children: <p className="text-slate-50">Content of Panel 1</p>,
-  },
-  {
-    key: "2",
-    header: <h3 className="text-slate-50 text-[22px] font-sans">Products</h3>,
-    children: <p className="text-slate-50">Content of Panel 1</p>,
-  },
-  {
-    key: "3",
-    header: <h3 className="text-slate-50 text-[22px] font-sans">Company</h3>,
-    children: <p className="text-slate-50">Content of Panel 1</p>,
-  },
-];
 const products = [
   {
     header: "Solutions",
@@ -56,11 +39,7 @@ const products = [
 const customHeader = (panelProps) => {
   const { children } = panelProps;
   const headerStyles = `text-slate-50 text-[22px]`;
-  return (
-    <div className={headerStyles}>
-      {children}
-    </div>
-  );
+  return <div className={headerStyles}>{children}</div>;
 };
 
 function Footer() {
@@ -113,17 +92,16 @@ function Footer() {
             >
               {products.map((item, index) => (
                 <Panel header={item.header} key={index} header={customHeader}>
-                  {
-                    item.groupSubs.map(element => (
-                      
-                      <p className="text-slate-50 underline hover:no-underline">{element}</p>
-                    ))
-                  }
+                  {item.groupSubs.map((element) => (
+                    <p className="text-slate-50 underline hover:no-underline">
+                      {element}
+                    </p>
+                  ))}
                 </Panel>
               ))}
             </Collapse>
             <Contact />
-             <p className="mt-[50px] text-sm text-white">
+            <p className="mt-[50px] text-sm text-white">
               ©️BBDH, 2023. All rights reserved
             </p>
           </div>

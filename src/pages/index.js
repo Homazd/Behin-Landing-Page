@@ -7,7 +7,6 @@ import Hero from "../components/Hero/Hero";
 import MainContainer from "../components/MainContainer/MainContainer";
 import AboutProduct from "../components/AboutProduct/AboutProduct";
 import ProductList from "../components/ProductList/ProductList";
-import Clients from '../components/Clients/Clients'
 import Footer from "../components/Footer/Footer"
 const IndexPage = () => {
   return (
@@ -18,7 +17,6 @@ const IndexPage = () => {
       <MainContainer />
       <AboutProduct />
       <ProductList />
-      <Clients />
       <Footer />
     </>
   );

@@ -5,7 +5,7 @@ function Hero() {
   return (
     <div
       className="pt-[56px] bg-center bg-cover desktop:w-[1170px] desktop:mx-auto desktop:rounded-lg"
-      style={{ backgroundImage: `url(${wave})` }}
+      // style={{ backgroundImage: `url(${wave})` }}
     >
       <div className="px-[15px] tablet:text-center">
         <p className="font-bold text-center text-[26px] tablet:text-[38px] font-sans text-blue-900 mb-[24px]">
