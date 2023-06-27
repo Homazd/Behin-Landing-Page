@@ -6,6 +6,7 @@ import Navigation from "../components/Navigation/Navigation";
 import Hero from "../components/Hero/Hero";
 import MainContainer from "../components/MainContainer/MainContainer";
 import ProductList from "../components/ProductList/ProductList";
+import Build5G from "../components/Build5G/Build5G"
 
 // Lazy Loading Components
 const WhyChooseUsLazy = React.lazy(() =>
@@ -17,7 +18,10 @@ const AboutProductLazy = React.lazy(() =>
 const FooterLazy = React.lazy(() => import("../components/Footer/Footer"));
 
 const IndexPage = () => {
+  
+  /* check whether the component is Server side rendered, because code could break if executed without the isSSR guard */
   const isSSR = typeof window === "undefined";
+
   return (
     <>
       <Header />
@@ -34,6 +38,7 @@ const IndexPage = () => {
           <WhyChooseUsLazy />
         </React.Suspense>
       )}
+      <Build5G />
       <ProductList />
       {!isSSR && (
         <React.Suspense fallback={<div />}>
