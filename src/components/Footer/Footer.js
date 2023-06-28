@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link } from "gatsby";
-
 // Components
 import Contact from "./components/ContactFooter";
+// Assets
 import { products } from "../Assets/Products";
 
 function Footer() {

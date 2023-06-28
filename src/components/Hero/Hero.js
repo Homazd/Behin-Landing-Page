@@ -19,9 +19,9 @@ function Hero() {
           </p>
         </div>
         <div className="tablet:flex tablet:justify-center laptop:mt-[50px]">
-          <div className="bg-blue-700 h-[50px] text-white text-md hover:shadow-xl mb-[15px] rounded-lg font-semibold tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0">
+          <div className="bg-blue-700 cursor-pointer h-[50px] text-white text-md hover:shadow-xl mb-[15px] rounded-lg font-semibold tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0">
             <p className="text-[16px] py-[15px] px-[20px] b-1 text-center">
-              Products
+              <Link to="/products">Products</Link>
             </p>
           </div>
           <div className="bg-slate-50 cursor-pointer text-blue-900 hover:bg-blue-900 hover:text-white h-[54px] text-md mb-[15px] shadow-xl rounded-lg font-semibold border-2 border-sky-600 tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0">
