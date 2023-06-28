@@ -1,5 +1,6 @@
 import { Button } from "antd";
 import * as React from "react";
+// Images
 import fiveGImage from "../../images/fiveG.webp"
 
 function Build5G() {

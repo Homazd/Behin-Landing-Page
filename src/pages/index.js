@@ -10,7 +10,7 @@ import Build5G from "../components/Build5G/Build5G"
 
 // Lazy Loading Components
 const WhyChooseUsLazy = React.lazy(() =>
-  import("../components/Why/WhyChooseUs")
+  import("../components/WhyChooseUs/WhyChooseUs")
 );
 const AboutProductLazy = React.lazy(() =>
   import("../components/AboutProduct/AboutProduct")

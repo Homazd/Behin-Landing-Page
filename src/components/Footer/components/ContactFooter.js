@@ -5,7 +5,7 @@ import Mail from "../../../images/mail-outline.svg";
 function Contact() {
   return (
     <div>
-      <h3 className="mt-[17px] pb-[27px] text-slate-50 font-bold text-[12px] tablet:text-[14px] tablet:text-[20px]">
+      <h3 className="mt-[17px] pb-[27px] text-slate-50 font-bold text-[12px] tablet:text-[14px] laptop:text-[20px]">
         Contacts
       </h3>
       <div className="flex">

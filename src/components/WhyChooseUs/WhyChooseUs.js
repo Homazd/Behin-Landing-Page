@@ -1,4 +1,5 @@
 import * as React from "react";
+// Images
 import activation from "../../images/activation.png";
 import NWFeature from "../../images/NWFeature.png";
 import siteDeploy from "../../images/siteDeploy.png";

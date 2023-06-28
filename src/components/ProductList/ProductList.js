@@ -1,54 +1,11 @@
 import * as React from "react";
+import { Link } from "gatsby";
 // Antd Components
 import { Collapse } from "antd";
 // Hooks
 import { useState, useEffect } from "react";
-
-const products = [
-  {
-    header: "CS Core",
-    subItems: [
-      "Equipment Identity Register (EIR)",
-      "Gateway Mobile Switching Center",
-      "Home Location Register",
-      "STP (Signaling Transfer Point",
-      "Evolved Packet Core",
-      "GGSN/PDN GW",
-    ],
-  },
-  {
-    header: "Roaming",
-    subItems: [
-      "Boarder Roaming Gateway",
-      "Gateway Location Register (GLR)",
-      "Multi IMSI Roaming Gateway",
-      "Roaming Optimisation",
-    ],
-  },
-  {
-    header: "NGN/IMS Equipment",
-    subItems: [
-      "Trunk VoIP Gateway",
-      "High-capacity Access Gateway",
-      "Small-capacity Access Gateway",
-      "STP (Signaling Transfer Point",
-      "IMS Core",
-    ],
-  },
-  {
-    header: "Messaging",
-    subItems: [
-      "Bulk SMS-MMS Platform",
-      "Cell Broadcast Center",
-      "USSD Server",
-      "STP (Signaling Transfer Point",
-    ],
-  },
-  {
-    header: "Intelligent Network & VAS",
-    subItems: ["Call Back", "Call Collect", "Location Based Services Platform"],
-  },
-];
+// Assets
+import { products } from "../Assets/Products";
 
 const { Panel } = Collapse;
 
@@ -76,9 +33,9 @@ function ProductList() {
                 header={element.header}
                 key={index}
               >
-                {element.subItems.map((item) => (
+                {element.groupSubs.map((item) => (
                   <p className="leading-loose underline text-gray-500 hover:no-underline hover:text-blue-400">
-                    {item}
+                    <link to={item.link}>{item.title}</link>
                   </p>
                 ))}
               </Panel>
@@ -95,13 +52,13 @@ function ProductList() {
             {products.map((item) => (
               <div className="mb-[30px]">
                 <p className="text-[18px] font-bold font-sans">{item.header}</p>
-                {item.subItems.map((subItem) => (
-                  <a
+                {item.groupSubs.map((subItem) => (
+                  <Link
                     className="text-[14px] underline text-slate-700 font-normal block hover:text-blue-400 hover:no-underline"
-                    href="www.google.com"
+                    to={subItem.link}
                   >
-                    {subItem}
-                  </a>
+                    {subItem.title}
+                  </Link>
                 ))}
               </div>
             ))}
