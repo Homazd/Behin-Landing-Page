@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Link } from "gatsby";
+
 import bg1 from "../../images/bg1.png";
 
 function Hero() {
@@ -22,9 +24,9 @@ function Hero() {
               Products
             </p>
           </div>
-          <div className="bg-slate-50 text-blue-900 hover:bg-blue-900 hover:text-white h-[54px] text-md mb-[15px] shadow-xl rounded-lg font-semibold border-2 border-sky-600 tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0">
+          <div className="bg-slate-50 cursor-pointer text-blue-900 hover:bg-blue-900 hover:text-white h-[54px] text-md mb-[15px] shadow-xl rounded-lg font-semibold border-2 border-sky-600 tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0">
             <p className="text-[16px] py-[15px] px-[20px] b-1 text-center tablet:pt-[12px]">
-              About us
+              <Link to="/about">About us</Link>
             </p>
           </div>
         </div>

@@ -7,6 +7,9 @@ import SidebarMenu from "./components/SidebarMenu";
 // antd components
 import { Dropdown, Drawer, Button, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
+// Assets
+import { products } from "../Assets/Products";
+
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -14,34 +17,7 @@ function Header() {
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
   const [isLargeLaptop, setIsLargeLaptop] = useState(window.innerWidth >= 1440);
 
-  const products = [
-    {
-      header: "Solutions",
-      groupSubs: [
-        "For Mobile Operators",
-        "Private LTE/5G",
-        "Fixed Line FWA",
-        "For MVNO/MNO Solutions",
-        "Offline/Online Charging",
-        "OCS",
-      ],
-    },
-    {
-      header: "Products",
-      groupSubs: [
-        "5GC",
-        "EPC",
-        "IMS Core",
-        "BBU",
-        "Monitoring",
-        "Customer Care",
-      ],
-    },
-    {
-      header: "Company",
-      groupSubs: ["About Us", "Our Partners"],
-    },
-  ];
+
   useEffect(() => {
     const handleResize = () => {
       setIsTablet(window.innerWidth >= 768);
@@ -88,12 +64,12 @@ function Header() {
                               <p className="text-[18px] font-bold mb-[20px]">
                                 {product.header}
                                 {product.groupSubs.map((item) => (
-                                  <a
-                                    href="www.google.com"
+                                  <Link
+                                    to={item.link}
                                     className="block text-[14px] underline text-gray-400 font-normal"
                                   >
-                                    {item}
-                                  </a>
+                                    {item.title}
+                                  </Link>
                                 ))}
                               </p>
                             </div>
@@ -142,12 +118,12 @@ function Header() {
                             <p className="text-[16px] font-bold mb-[20px]">
                               {product.header}
                               {product.groupSubs.map((item) => (
-                                <a
-                                  href="www.google.com"
+                                <Link
+                                  to={item.link}
                                   className="block text-[12px] laptop:text-[14px] underline text-gray-400 font-normal"
                                 >
-                                  {item}
-                                </a>
+                                  {item.title}
+                                </Link>
                               ))}
                             </p>
                           </div>

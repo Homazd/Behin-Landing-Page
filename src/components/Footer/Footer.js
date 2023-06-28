@@ -1,36 +1,9 @@
 import * as React from "react";
+import { Link } from "gatsby";
+
 // Components
 import Contact from "./components/ContactFooter";
-
-// import LazyBGImage from "./LazyBackgroundImage/LazyBGImage";
-
-const products = [
-  {
-    header: "Solutions",
-    groupSubs: [
-      "For Mobile Operators",
-      "For Fixed Line Operators",
-      "For MVNO/IMS Solutions",
-      "Smart City",
-      "NGN/IMS Solutions",
-    ],
-  },
-  {
-    header: "Products",
-    groupSubs: [
-      "CS Core",
-      "Intelligent Network & VAS",
-      "Messaging",
-      "NGN/IMS Equipment",
-      "Roaming",
-      "Customer Care",
-    ],
-  },
-  {
-    header: "Company",
-    groupSubs: ["About Us", "Our Partners"],
-  },
-];
+import { products } from "../Assets/Products";
 
 function Footer() {
   return (
@@ -43,13 +16,13 @@ function Footer() {
                 {product.header}
               </p>
               {product.groupSubs.map((item, index) => (
-                <a
-                  href="www.google.com"
+                <Link
+                  to={item.link}
                   className="block text-[12px] tablet:text-[14px] underline text-gray-400 font-normal"
                   key={index}
                 >
-                  {item}
-                </a>
+                  {item.title}
+                </Link>
               ))}
             </div>
           ))}
