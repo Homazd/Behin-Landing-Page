@@ -37,7 +37,7 @@ function AboutProduct() {
         </div>
         </div>
         <div className="mt-8 px-[15px] tablet:mt-0 tablet:order-first">
-          <img src={SIEM} alt="SIEM Functions" />
+          <img src={SIEM} alt="SIEM Functions" loading="lazy" />
         </div>
       
     </div>
