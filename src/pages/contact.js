@@ -1,17 +1,57 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import axios from "axios";
 // Components
 import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
 import Footer from "../components/Footer/Footer";
 // Ant design components
-import { Button, Form, Input, Select } from "antd";
+import { Button, Input, notification } from "antd";
+// Validation
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
-const FormItem = Form.Item;
-const { Option } = Select;
+const items = ["Name", "Email", "Phone"];
+const validationSchema = Yup.object().shape({
+  Name: Yup.string().required("Please enter your name"),
+  Email: Yup.string()
+    .email("Please enter a valid email adrees.")
+    .required("Please enter your email address."),
+  Phone: Yup.string()
+    .matches(/^[0-9]+$/, "Please enter a valid phone number.")
+    .required("Please enter your phone number."),
+  message: Yup.string().required("Please enter your message."),
+});
+
 const { TextArea } = Input;
 
 const ContactPage = () => {
+  const initialValues = {
+    Name: "",
+    email: "",
+    phone: "",
+    message: "",
+  };
+  const handleSubmit = async (values, { resetForm }) => {
+    try {
+      await axios.post("/api/contact", values);
+      resetForm();
+      // Show a success message to the user
+      notification.success({
+        message: "Form submission successful",
+        description:
+          "Thank you for contacting us! We will get back to you as soon as possible.",
+      });
+    } catch (error) {
+      console.error(error);
+      // Show an error message to the user
+      notification.error({
+        message: 'Form submission failed',
+        description: 'There was an error submitting the form. Please try again later.',
+      });
+    }
+  };
+
   return (
     <>
       <Header />
@@ -74,62 +114,78 @@ const ContactPage = () => {
             Please directly talk to us and we will contact you as soon as
             possible.
           </p>
-          <Form layout="vertical" className="mt-5 laptop:col-span-1">
-            <FormItem
-              label={
-                <span className="text-gray-500  text-[16px]">Full name</span>
-              }
-              name="fullname"
-              required="true"
-            >
-              <Input />
-            </FormItem>
-            <FormItem
-              label={
-                <span
-                  className="text-gray-500  text-[16px]"
-                  style={{ padding: 0 }}
-                >
-                  Products/Solutions
-                </span>
-              }
-            >
-              <Input placeholder="" />
-            </FormItem>
-            <FormItem
-              label={<span className="text-gray-500  text-[16px]">Email</span>}
-              required="true"
-              style={{ padding: 0 }}
-            >
-              <Input placeholder="" />
-            </FormItem>
-            <FormItem
-              label={<span className="text-gray-500 text-[16px]">Phone</span>}
-            >
-              <Input placeholder="" />
-            </FormItem>
-            <FormItem
-              name="Company"
-              label={<span className="text-gray-500 text-[16px]">Company</span>}
-              required="true"
-            >
-              <Select placeholder="Company" allowClear>
-                <Option value="Company">Company</Option>
-                <Option value="Freelancer">Freelancer</Option>
-              </Select>
-            </FormItem>
-            <FormItem
-              label={<span className="text-gray-500 text-[16px]">Message</span>}
-              required="true"
-            >
-              <TextArea rows={4} />
-            </FormItem>
-            <div className="flex justify-center">
-              <Button className="bg-blue-800 justify-center text-white hover:bg-blue-600">
-                Submit
-              </Button>
-            </div>
-          </Form>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
+          >
+            {({ errors, touched, isSubmitting }) => (
+              <Form className="mt-5 laptop:col-span-1">
+                {items.map((item, index) => (
+                  <div className="mb-4" key={index}>
+                    <label
+                      htmlFor={item}
+                      className="block mb-2 font-bold text-gray-700"
+                    >
+                      {item}
+                    </label>
+                    <Field
+                      name={item}
+                      type={item}
+                      className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                        touched.item && errors.item ? "border-red-500" : ""
+                      }`}
+                    />
+
+                    <ErrorMessage
+                      name={item}
+                      component="p"
+                      className="text-red-500 text-xs italic mt-1"
+                    />
+                  </div>
+                ))}
+                <div className="mb-4">
+                  <label
+                    htmlFor="message"
+                    className="block mb-2 font-bold text-gray-700"
+                  >
+                    Message
+                  </label>
+                  <Field name="message">
+                    {({ field }) => (
+                      <TextArea
+                        {...field}
+                        autoSize={{ minRows: 3, maxRows: 6 }}
+                        className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                          touched.message && errors.message
+                            ? "border-red-500"
+                            : ""
+                        }`}
+                      />
+                    )}
+                  </Field>
+                  <ErrorMessage
+                    name="message"
+                    component="p"
+                    className="text-red-500 text-xs italic mt-1"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <Button
+                    htmlType="submit"
+                    className="bg-blue-800 justify-center text-white hover:bg-blue-600"
+                    disabled={
+                      isSubmitting ||
+                      Object.keys(touched).length === 0 ||
+                      Object.keys(errors).length !== 0
+                    }
+                  >
+                    {isSubmitting ? "Submitting..." : "Submit"}
+                  </Button>
+                </div>
+              </Form>
+            )}
+          </Formik>
         </div>
       </div>
       <Footer />
