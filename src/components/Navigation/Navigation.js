@@ -33,21 +33,25 @@ function Navigation() {
           <div className="grid grid-cols-9 place-content-center w-[1170px] h-[80px] shadow-sm mx-auto">
             <div className="col-start-1 col-end-4 flex">
               <Link to="/">
-              <img
-                className="w-[70px] h-[70px] text-center"
-                src={logo}
-                alt="logo"
-              />
+                <img
+                  className="w-[70px] h-[70px] text-center"
+                  src={logo}
+                  alt="logo"
+                />
               </Link>
-              <Divider type="vertical"/>
-              <span className="text-blue-800 text-[14px] font-bold self-center">end-to-end Network Solution</span>
+              <Divider type="vertical" />
+              <span className="text-blue-800 text-[14px] font-bold self-center">
+                end-to-end Network Solution
+              </span>
             </div>
             <div className="col-end-10 col-span-3 grid grid-cols-5 gap-4 place-content-center text-blue-800 font-semibold ">
               <div className="col-start-3 col-span-1 hover:text-cyan-400 ">
                 <span>5G</span>
               </div>
               <div className="col-span-1 flex hover:text-cyan-400 ">
-                <span>Home</span>
+                <Link to="/">
+                  <span>Home</span>
+                </Link>
               </div>
               <div className="col-span-1 flex hover:text-cyan-400 ">
                 <span>Blog</span>
@@ -65,25 +69,13 @@ function Navigation() {
                 onClick={toggleCollapsed}
               />
             </div>
-            <div className="hidden md:block">
-              <Menu
-                theme="light"
-                mode="horizontal"
-                defaultSelectedKeys={["home"]}
-              >
-                <Menu.Item key="home">Blog</Menu.Item>
-                <Menu.Item key="about">For Enterprises</Menu.Item>
-                <Menu.Item key="contact">For Integrated Safety</Menu.Item>
-              </Menu>
-            </div>
-
             <div className="text-center col-span-1 grid justify-items-center">
               <Link to="/">
-              <img
-                className="w-15 h-14 text-center tablet:w-[60px] tablet:h-[60px]"
-                src={logo}
-                alt="logo"
-              />
+                <img
+                  className="w-15 h-14 text-center tablet:w-[60px] tablet:h-[60px]"
+                  src={logo}
+                  alt="logo"
+                />
               </Link>
             </div>
           </div>
@@ -91,7 +83,9 @@ function Navigation() {
           <div className={`md:hidden ${collapsed ? "hidden" : "block"}`}>
             <Menu theme="light" mode="vertical" defaultSelectedKeys={["home"]}>
               <Menu.Item key="home">5G</Menu.Item>
-              <Menu.Item key="about">Home</Menu.Item>
+              <Menu.Item key="about">
+                <Link to="/">Home</Link>
+              </Menu.Item>
               <Menu.Item key="contact">Blog</Menu.Item>
             </Menu>
           </div>
