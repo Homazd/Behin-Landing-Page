@@ -1,3 +1,6 @@
+import * as React from "react";
+import { Link } from "gatsby";
+
 export const products = [
   {
     header: "Solutions",
@@ -17,7 +20,7 @@ export const products = [
       { title: "EPC", link: "" },
       { title: "IMS Core", link: "" },
       { title: "BBU", link: "" },
-      { title: "Monitoring", link: "" },
+      { title: "Monitoring", link: "/products/monitoring" },
       { title: "Customer Care", link: "" },
     ],
   },

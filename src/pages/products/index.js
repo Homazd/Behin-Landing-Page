@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Link } from "gatsby";
 // Components
-import Navigation from "../components/Navigation/Navigation";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import Navigation from "../../components/Navigation/Navigation";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 // Images
-import productsImage from "../images/product-header.png";
+import productsImage from "../../images/product-header.png";
 
 const ProductsPage = () => {
   return (
