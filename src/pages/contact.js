@@ -10,6 +10,21 @@ import { Button, Input, notification } from "antd";
 // Validation
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+// CreateRemoteFileNode
+const { createRemoteFileNode } = require("gatsby-source-filesystem");
+
+const fileNode = await createRemoteFileNode({
+  url: "https://example.com/image.jpg",
+  parentNodeId: "1234",
+  createNode: actions.createNode,
+  createNodeId: createNodeId,
+  cache,
+  store,
+});
+
+if (fileNode) {
+  // Do something with the created node
+}
 
 const items = ["Name", "Email", "Phone"];
 const validationSchema = Yup.object().shape({
