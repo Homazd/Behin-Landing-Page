@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import axios from "axios";
+import { useStaticQuery, graphql } from "gatsby";
+import postData from "../services/api";
 // Components
 import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
@@ -10,22 +11,34 @@ import { Button, Input, notification } from "antd";
 // Validation
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 // CreateRemoteFileNode
 const { createRemoteFileNode } = require("gatsby-source-filesystem");
 
-const fileNode = await createRemoteFileNode({
-  url: "https://example.com/image.jpg",
-  parentNodeId: "1234",
-  createNode: actions.createNode,
-  createNodeId: createNodeId,
-  cache,
-  store,
-});
+// export const createRemoteFileNode = async ({ node, getNode, actions }) => {
+//   const { data } = await axios.post(
+//     "https://jsonplaceholder.typicode.com/posts",
+//     {},
+//     {
+//       headers: {
+//         Authorization: `Bearer ${process.env.GATSBY_TOKEN}`,
+//       },
+//     }
+//   );
+//   const fileNode = createRemoteFileNode({
+//     node,
+//     data,
+//     getNode,
+//     actions,
+//   });
 
-if (fileNode) {
-  // Do something with the created node
-}
+//   return fileNode;
+// };
 
+// createRemoteFileNode({
+//   // The source url of the remote file
+//   url: `192.168.0.3:5001/v1/ticket`,
+// });
 const items = ["Name", "Email", "Phone"];
 const validationSchema = Yup.object().shape({
   Name: Yup.string().required("Please enter your name"),
@@ -41,13 +54,20 @@ const validationSchema = Yup.object().shape({
 const { TextArea } = Input;
 
 const ContactPage = () => {
-  const initialValues = {
+  const data = {
     Name: "",
     email: "",
     phone: "",
     message: "",
   };
   const handleSubmit = async (values, { resetForm }) => {
+    const url = "192.168.0.3:5001/v1/ticket";
+
+    // const response = await axios.post(url, {
+    //   input: inputValue,
+    // })
+    // console.log(response.data)
+
     try {
       await axios.post("192.168.0.3:5001/v1/ticket", values);
       resetForm();
@@ -61,8 +81,9 @@ const ContactPage = () => {
       console.error(error);
       // Show an error message to the user
       notification.error({
-        message: 'Form submission failed',
-        description: 'There was an error submitting the form. Please try again later.',
+        message: "Form submission failed",
+        description:
+          "There was an error submitting the form. Please try again later.",
       });
     }
   };
@@ -130,7 +151,7 @@ const ContactPage = () => {
             possible.
           </p>
           <Formik
-            initialValues={initialValues}
+            initialValues={data}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
