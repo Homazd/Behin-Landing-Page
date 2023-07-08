@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { useStaticQuery, graphql } from "gatsby";
 // Components
 import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
