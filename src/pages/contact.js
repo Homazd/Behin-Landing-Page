@@ -34,7 +34,7 @@ const ContactPage = () => {
   };
   const handleSubmit = async (values, { resetForm }) => {
     try {
-      await axios.post("/api/contact", values);
+      await axios.post("192.168.0.3:5001/v1/ticket", values);
       resetForm();
       // Show a success message to the user
       notification.success({
