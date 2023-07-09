@@ -10,16 +10,14 @@ import { Button, Input, notification } from "antd";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-// CreateRemoteFileNode
-const { createRemoteFileNode } = require("gatsby-source-filesystem");
 
-const items = ["Name", "Email", "Phone"];
+const items = ["name", "email", "phone"];
 const validationSchema = Yup.object().shape({
-  Name: Yup.string().required("Please enter your name"),
-  Email: Yup.string()
+  name: Yup.string().required("Please enter your name"),
+  email: Yup.string()
     .email("Please enter a valid email adrees.")
     .required("Please enter your email address."),
-  Phone: Yup.string()
+  phone: Yup.string()
     .matches(/^[0-9]+$/, "Please enter a valid phone number.")
     .required("Please enter your phone number."),
   message: Yup.string().required("Please enter your message."),
@@ -27,23 +25,24 @@ const validationSchema = Yup.object().shape({
 
 const { TextArea } = Input;
 
+const Axios = axios.create({
+  baseURL: "http://192.168.0.3:1337",
+  withCredentials: true,
+});
+
 const ContactPage = () => {
   const data = {
-    Name: "",
+    name: "",
     email: "",
     phone: "",
     message: "",
   };
-  const handleSubmit = async (values, { resetForm }) => {
-    const url = "192.168.0.3:5001/v1/ticket";
 
-    // const response = await axios.post(url, {
-    //   input: inputValue,
-    // })
-    // console.log(response.data)
+  const handleSubmit = async (values, { resetForm }) => {
+    const apiUrl = "/contact/";
 
     try {
-      await axios.post("192.168.0.3:5001/v1/ticket", values);
+      await Axios.post(apiUrl, values);
       resetForm();
       // Show a success message to the user
       notification.success({
@@ -52,7 +51,7 @@ const ContactPage = () => {
           "Thank you for contacting us! We will get back to you as soon as possible.",
       });
     } catch (error) {
-      console.error(error);
+      console.error("error is:", error);
       // Show an error message to the user
       notification.error({
         message: "Form submission failed",
