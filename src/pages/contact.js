@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import axios from "axios";
 // Components
 import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
@@ -9,9 +10,11 @@ import { Button, Input, notification } from "antd";
 // Validation
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
 
 const items = ["name", "email", "phone"];
+
+// Validation using YUP
+
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Please enter your name"),
   email: Yup.string()
