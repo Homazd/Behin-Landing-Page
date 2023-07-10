@@ -13,7 +13,7 @@ export const products = [
   {
     header: "Products",
     groupSubs: [
-      { title: "5GC", link: "" },
+      { title: "5GC", link: "/products/fiveGC" },
       { title: "EPC", link: "" },
       { title: "IMS Core", link: "" },
       { title: "BBU", link: "/products/bbu" },
