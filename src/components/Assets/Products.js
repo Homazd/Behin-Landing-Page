@@ -14,8 +14,8 @@ export const products = [
     header: "Products",
     groupSubs: [
       { title: "5GC", link: "/products/fiveGC" },
-      { title: "EPC", link: "" },
-      { title: "IMS Core", link: "" },
+      { title: "EPC", link: "/products/epc" },
+      { title: "IMS Core", link: "/products/ims-core" },
       { title: "BBU", link: "/products/bbu" },
       { title: "Monitoring", link: "/products/monitoring" },
       { title: "Customer Care", link: "" },

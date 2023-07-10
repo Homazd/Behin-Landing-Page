@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import axios from "axios";
+// import { useEffect } from "react";
 // Components
 import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
@@ -40,12 +41,21 @@ const ContactPage = () => {
     phone: "",
     message: "",
   };
+  const baseURL = "http://192.168.0.3:1337";
+
+  // useEffect(() => {
+  //   axios.get(`${baseURL} /contact/`).then((response) => {
+  //     console.log("response data is", response.data);
+  //   });
+  // }, []);
 
   const handleSubmit = async (values, { resetForm }) => {
     const apiUrl = "/contact/";
 
     try {
-      await Axios.post(apiUrl, values);
+      await Axios.post(apiUrl, values, {
+        mode: 'no-cors'
+      });
       resetForm();
       // Show a success message to the user
       notification.success({
