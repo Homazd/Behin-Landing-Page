@@ -46,7 +46,7 @@ const BBUPage = () => {
         <Link to="/">Home</Link> / <Link to="/products/">Products</Link> /{" "}
         <Link to="/products/bbu">BBU</Link>
       </p>
-      <div className="px-[15px] tablet:px-[30px] mt-5 place-content-center grid tablet:grid-cols-2 gap-4">
+      <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center grid tablet:grid-cols-2 gap-4">
         <div className="col-span-1 grid place-content-center">
           <h1 className="font-bold text-[14px] tablet:text-[18px] mt-6 laptop:text-[30px]">
             BaseBanc Unit (BBU){" "}
@@ -65,7 +65,7 @@ const BBUPage = () => {
           </ul>
         </div>
         <div className="col-span-1 grid place-content-center">
-          <img className="w-[550px] h-auto border-solid border-4 border-sky-500" src={bbuImage} alt="BBU image" />
+          <img className="w-[550px] h-auto border-solid border-4 border-sky-500" src={bbuImage} alt="BBU" />
         </div>
       </div>
 

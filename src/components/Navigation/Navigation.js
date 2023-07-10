@@ -46,7 +46,10 @@ function Navigation() {
             </div>
             <div className="col-end-10 col-span-3 grid grid-cols-5 gap-4 place-content-center text-blue-800 font-semibold ">
               <div className="col-start-3 col-span-1 hover:text-cyan-400 ">
-                <span>5G</span>
+                <Link to="/products/fiveGC">
+                  {" "}
+                  <span>5G</span>
+                </Link>
               </div>
               <div className="col-span-1 flex hover:text-cyan-400 ">
                 <Link to="/">

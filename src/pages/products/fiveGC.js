@@ -29,8 +29,8 @@ const FiveGCPage = () => {
           <h1 className="font-bold text-[14px] tablet:text-[18px] mt-6 laptop:text-[30px] p-2">
             5GC Core
           </h1>
-          <span className="text-[12px] laptop:text-[14px] desktop:text-[18px]">
-            5G Core (5GC) is the core network architecture of 5G,It is a
+          <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose">
+            5G Core (5GC) is the core network architecture of 5G, It is a
             fundamental component that enables the advanced features and
             capabilities of 5G networks. The 5G Core network is designed to be
             more flexible, scalable, and efficient compared to previous
@@ -40,7 +40,7 @@ const FiveGCPage = () => {
             and massive connectivity. The 5G Core network comprises several
             network functions, including the Access and Mobility Management
             Function (AMF), Session Management Function (SMF), User Plane
-            Function (UPF), Network Slice Selection Function (NSSF), and others,
+            Function (UPF), Network Slice Selection Function (NSSF), etc.
             which work together to provide enhanced connectivity and enable new
             use cases in the 5G ecosystem.
           </span>
@@ -49,7 +49,7 @@ const FiveGCPage = () => {
           <img
             className="w-[400px] h-auto border-solid border-4 border-sky-500"
             src={fiveGC}
-            alt="5GC core image"
+            alt="5GC core"
           />
         </div>
       </div>
