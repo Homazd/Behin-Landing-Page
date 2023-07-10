@@ -16,7 +16,7 @@ export const products = [
       { title: "5GC", link: "" },
       { title: "EPC", link: "" },
       { title: "IMS Core", link: "" },
-      { title: "BBU", link: "" },
+      { title: "BBU", link: "/products/bbu" },
       { title: "Monitoring", link: "/products/monitoring" },
       { title: "Customer Care", link: "" },
     ],
