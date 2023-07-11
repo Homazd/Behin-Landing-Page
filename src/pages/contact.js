@@ -30,9 +30,7 @@ const validationSchema = Yup.object().shape({
 const { TextArea } = Input;
 
 const Axios = axios.create({
-  baseURL: "http://192.168.0.3:1337",
-  withCredentials: true,
-});
+  baseURL: "http://192.168.0.205:1337",});
 
 const ContactPage = () => {
   const data = {
@@ -41,7 +39,7 @@ const ContactPage = () => {
     phone: "",
     message: "",
   };
-  const baseURL = "http://192.168.0.3:1337";
+  // const baseURL = "http://192.168.0.3:1337";
 
   // useEffect(() => {
   //   axios.get(`${baseURL} /contact/`).then((response) => {
