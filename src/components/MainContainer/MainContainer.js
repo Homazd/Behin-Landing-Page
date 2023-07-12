@@ -48,7 +48,9 @@ function MainContainer() {
             An agile and virtualized session vIMS core, support variety of voice
             applications such as VoLTE, ...
           </span>
-          <button className="cursor-pointer text-[12px]">Learn More</button>
+          <Link to="/products/imscore">
+            <button className="cursor-pointer text-[12px]">Learn More</button>
+          </Link>
         </div>
         <div className="desktop:col-span-1 w-[226px] h-[293px] tablet:w-[531px] tablet:h-[297px] desktop:w-[361px] desktop:h-[352px] mx-auto animate__animated animate__bounceInRight rounded-md shadow-xl bg-slate-10 mt-[28px] grid justify-items-center pt-[46px] px-[26px]">
           <img

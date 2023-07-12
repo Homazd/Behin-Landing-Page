@@ -40,7 +40,7 @@ const AboutPage = () => {
         </div>
         <div className="col-span-1 content-center mt-14 flex justify-center">
           <img
-            className="w-[400px] h-auto laptop:h-[280px] border-solid border-4 border-sky-500"
+            className="w-[400px] h-auto laptop:h-[280px]"
             src={fiveGMillimeter}
             alt="5GC core"
           />
