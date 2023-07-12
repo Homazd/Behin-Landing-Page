@@ -39,13 +39,6 @@ const ContactPage = () => {
     phone: "",
     message: "",
   };
-  // const baseURL = "http://192.168.0.3:1337";
-
-  // useEffect(() => {
-  //   axios.get(`${baseURL} /contact/`).then((response) => {
-  //     console.log("response data is", response.data);
-  //   });
-  // }, []);
 
   const handleSubmit = async (values, { resetForm }) => {
     const apiUrl = "/contact/";
