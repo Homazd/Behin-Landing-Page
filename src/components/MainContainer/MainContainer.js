@@ -3,6 +3,7 @@ import React from "react";
 import epc from "../../images/EPC.webp";
 import ims from "../../images/ims.webp";
 import fiveG from "../../images/5g.webp";
+import { Link } from "gatsby";
 
 function MainContainer() {
   return (
@@ -30,7 +31,9 @@ function MainContainer() {
             High scalable 4G LTE EPC Core Network platform, Easy to deploy for a
             wide range of application
           </span>
-          <button className="cursor-pointer text-[12px]">Learn More</button>
+          <Link to="/products/epc">
+            <button className="cursor-pointer text-[12px]">Learn More</button>
+          </Link>
         </div>
         <div className="desktop:col-span-1 w-[226px] h-[293px] tablet:w-[531px] tablet:h-[297px] desktop:w-[361px] desktop:h-[352px] animate__animated animate__bounce mx-auto rounded-md shadow-xl bg-slate-10 mt-[28px] grid justify-items-center pt-[46px] px-[26px]">
           <img
@@ -60,7 +63,9 @@ function MainContainer() {
             Cloud-native, Highly integrated and Simplified design 5GC for mobile
             industry
           </span>
-          <button className="cursor-pointer text-[12px]">Learn More</button>
+          <Link to="/products/fiveGC">
+            <button className="cursor-pointer text-[12px]">Learn More</button>
+          </Link>
         </div>
       </div>
     </div>
