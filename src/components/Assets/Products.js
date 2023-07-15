@@ -1,33 +1,48 @@
 export const products = [
   {
-    header: "Products",
+    header: "5GC Core",
     groupSubs: [
-      { title: "5GC Core", link: "/products/fiveGC" },
-      { title: "EPC", link: "/products/epc" },
-      { title: "IMS Core", link: "/products/imscore" },
-      { title: "BBU", link: "/products/bbu" },
-      { title: "MME", link: "" },
-      { title: "HSS", link: "" },
-      { title: "Monitoring", link: "/products/monitoring" },
-      { title: "PCF/PCRF", link: "/products/monitoring" },
-      { title: "NRF", link: "/products/monitoring" },
+      { title: "NRF", link: "/products/fiveGC" },
+      { title: "SCP", link: "/products/imscore" },
+      { title: "AMF", link: "/products/epc" },
+      { title: "SMF", link: "/products/bbu" },
+      { title: "UPF", link: "" },
+      { title: "AUSF", link: "" },
+      { title: "UDM", link: "/products/monitoring" },
+      { title: "UDR", link: "/products/monitoring" },
+      { title: "PCF", link: "/products/monitoring" },
       { title: "NSSF", link: "/products/monitoring" },
+      { title: "BSF", link: "/products/monitoring" },
     ],
   },
   {
-    header: "Products",
+    header: "EPC",
+    groupSubs: [
+      { title: "MME", link: "" },
+      { title: "HSS", link: "" },
+      { title: "PCRF", link: "" },
+      { title: "SGW-c", link: "" },
+      { title: "SGW-u", link: "" },
+      { title: "PGW/UPF", link: "/products/volte" },
+    ],
+  },
+  {
+    header: "IMS Core",
     groupSubs: [
     
-      { title: "AMF", link: "" },
-      { title: "SMF", link: "" },
-      { title: "UPF", link: "" },
-      { title: "UDR", link: "" },
-      { title: "UDM", link: "" },
-      { title: "VoLTE", link: "/products/volte" },
+      { title: "VoLTE", link: "" },
       { title: "ViLTE", link: "" },
       { title: "VoNR", link: "" },
-      { title: "AUSF", link: "" },
-      { title: "NSSF", link: "" },
+      { title: "ViNR", link: "" },
+    ],
+  },
+  {
+    header: "Network Monitoring",
+    groupSubs: [
+    
+      { title: "SIEM", link: "" },
+      { title: "VoNR", link: "" },
+      { title: "ViNR", link: "" },
     ],
   },
   {

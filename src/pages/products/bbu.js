@@ -12,9 +12,9 @@ import productsImage from "../../images/product-header.png";
 const data = [
   "LTE Release 14",
   "2G/4G Supported",
-  `SISO & MIMO 2 \u00D7 2`,
+  `SISO & MIMO 2\u00D72`,
   "Maxixmum Throughput 75 Mbps (SISO) and 150 Mbps (MIMO) for one sector",
-  `Maximum Throughput 450 Mbps (3 \u00D7 sectors)`,
+  `Maximum Throughput 450 Mbps (3\u00D7sectors)`,
   "CS-Fallback enabled, 4G-to-4G and 4G-to-2G voice call and SMS",
   "SRVCC & VoLTE",
   "4G Internet",
@@ -24,7 +24,7 @@ const data = [
   "256 concurrent users and 1000 users totally",
   "cell-re-selection in cells and sectors",
   "CQI and PMI",
-  `3 \u00D7 4G sectors and 3 \u00D7 2G sectors supported (MIMO mode)`,
+  `3\u00D74G sectors and 3\u00D72G sectors supported (MIMO mode)`,
   "Industrial RRU supported (ALCATEL, BENETEL)",
   "Full Software-based",
   "Inter-RAT and Inter cell Handover",
@@ -46,7 +46,7 @@ const BBUPage = () => {
         <Link to="/">Home</Link> / <Link to="/products/">Products</Link> /{" "}
         <Link to="/products/bbu">BBU</Link>
       </p>
-      <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center grid tablet:grid-cols-2 gap-4">
+      <div className="w-[300px] tablet:w-[730px] laptop:w-[900px] desktop:w-[1300px] mx-auto mt-5 place-content-center grid tablet:grid-cols-2 gap-4">
         <div className="col-span-1 grid place-content-center">
           <h1 className="font-bold text-[14px] tablet:text-[18px] mt-6 laptop:text-[30px]">
             BaseBanc Unit (BBU){" "}
@@ -56,7 +56,7 @@ const BBUPage = () => {
               <>
                 <li
                   key={index}
-                  className="p-1 mt-1 laptop:mt-3 text-gray-700 text-[10px] tablet:text-[12px] font-normal laptop:text-[18px]"
+                  className="p-1 mt-1 laptop:mt-3 text-gray-700 text-[8px] tablet:text-[10px] font-normal laptop:text-[12px] desktop:text-[16px]"
                 >
                   {item}
                 </li>
