@@ -57,7 +57,7 @@ function Header() {
                 <Dropdown
                   dropdownRender={(menu) => (
                     <div className="flex items-stretch">
-                      <div className="self-center w-[1000px] mx-auto h-72 relative place-self-center top-[77px] bg-white">
+                      <div className="self-center w-[1200px] mx-auto h-96 relative place-self-center top-[77px] bg-white">
                         <div className="grid grid-cols-3 gap-4 relative px-[80px] mx-auto">
                           {products.map((product) => (
                             <div className="mt-[50px] leading-loose">
