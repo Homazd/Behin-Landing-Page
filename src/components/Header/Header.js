@@ -5,18 +5,16 @@ import { useState, useEffect } from "react";
 // Components
 import SidebarMenu from "./components/SidebarMenu";
 // antd components
-import { Dropdown, Drawer, Button, Space } from "antd";
+import { Dropdown, Drawer, Button, Space, Menu } from "antd";
 import { DownOutlined } from "@ant-design/icons";
+
 // Assets
 import { products } from "../Assets/Products";
 
-
 function Header() {
   const [open, setOpen] = useState(false);
-  const [placement, setPlacement] = useState("left");
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
   const [isLargeLaptop, setIsLargeLaptop] = useState(window.innerWidth >= 1440);
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,9 +39,7 @@ function Header() {
   const showDrawer = () => {
     setOpen(true);
   };
-  const onClose = () => {
-    setOpen(false);
-  };
+
   return (
     <>
       {isLargeLaptop && (
@@ -164,16 +160,7 @@ function Header() {
               </>
             )}
           </div>
-          <Drawer
-            placement={placement}
-            closable={false}
-            onClose={onClose}
-            open={open}
-            key={placement}
-            width="250px"
-          >
-            <SidebarMenu />
-          </Drawer>
+          <SidebarMenu />
           <div className="flex-none w-[74px]  text-center border-x border-x-slate-100 px-[5px]">
             <span className="text-[14px] tablet:text-[14px]">
               <Link to="/contact">Contacts</Link>
