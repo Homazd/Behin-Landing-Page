@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 // Components
 import SidebarMenu from "./components/SidebarMenu";
 // antd components
-import { Dropdown, Drawer, Button, Space, Menu } from "antd";
+import { Dropdown, Space} from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 // Assets
@@ -35,11 +35,6 @@ function Header() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const showDrawer = () => {
-    setOpen(true);
-  };
-
   return (
     <>
       {isLargeLaptop && (
@@ -106,9 +101,9 @@ function Header() {
             {isTablet && (
               <Dropdown
                 dropdownRender={(menu) => (
-                  <div className="flex justify-center relative tablet:max-w-screen mx-auto tablet:w-[600px] laptop:w-[1000px] h-72 laptop:h-78">
+                  <div className="justify-center relative tablet:max-w-screen mx-auto tablet:w-[750px] laptop:w-[1000px] h-96 laptop:h-78">
                     <div className="bg-white relative top-[85px] px-[80px]">
-                      <div className="grid grid-cols-3 gap-6">
+                      <div className="grid grid-cols-5 gap-6">
                         {products.map((product) => (
                           <div className="py-[10px] leading-loose">
                             <p className="text-[16px] font-bold mb-[20px]">
@@ -140,27 +135,8 @@ function Header() {
                 </a>
               </Dropdown>
             )}
-            {!isTablet && (
-              <>
-                <div className="pt-[3px] flex">
-                  <Button
-                    type="text"
-                    className="text-slate-50 h-[26.28px] text-[12px] flex p-0 b-0"
-                    onClick={showDrawer}
-                  >
-                    <p>Company</p>
-                  </Button>
-                  <div className="grid place-items-center h-[24px]">
-                    <DownOutlined
-                      className="pl-[8px]"
-                      style={{ fontSize: "10px" }}
-                    />
-                  </div>
-                </div>
-              </>
-            )}
+            {!isTablet && <SidebarMenu />}
           </div>
-          <SidebarMenu />
           <div className="flex-none w-[74px]  text-center border-x border-x-slate-100 px-[5px]">
             <span className="text-[14px] tablet:text-[14px]">
               <Link to="/contact">Contacts</Link>
