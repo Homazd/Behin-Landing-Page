@@ -21,7 +21,7 @@ function Footer() {
                   className="block text-[12px] tablet:text-[14px] underline text-gray-400 font-normal"
                   key={index}
                 >
-                  {item.title}
+                  {item.header}
                 </Link>
               ))}
             </div>
