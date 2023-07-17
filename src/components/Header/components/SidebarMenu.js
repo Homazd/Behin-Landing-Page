@@ -1,25 +1,11 @@
 import * as React from "react";
 import { Link } from "gatsby";
-
 // Ant Design Components
 import { Menu, Drawer, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-
 // Hooks
 import { useState } from "react";
 import { products } from "../../Assets/Products";
-
-const drawerMenuItems = [
-  {
-    key: "Products",
-    title: "Products",
-    groupSubs: [
-      { key: "5GC Core", title: "5GC Core", link: "/products/fiveGC" },
-      { key: "EPC", title: "EPC", link: "/products/epc" },
-    ],
-  },
-  { key: "Company", title: "Company", link: "/" },
-];
 
 const SidebarMenu = () => {
   const [open, setOpen] = useState(false);

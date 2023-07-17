@@ -2,9 +2,9 @@ export const products = [
   {
     header: "5GC Core",
     groupSubs: [
-      { header: "NRF", link: "/products/fiveGC" },
-      { header: "SCP", link: "/products/imscore" },
-      { header: "AMF", link: "/products/epc" },
+      { header: "NRF", link: "/fiveGC/nrf" },
+      { header: "SCP", link: "/fiveGC/scp" },
+      { header: "AMF", link: "/fiveGC/amf" },
       { header: "SMF", link: "/products/bbu" },
       { header: "UPF", link: "" },
       { header: "AUSF", link: "" },

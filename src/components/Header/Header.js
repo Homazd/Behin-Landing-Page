@@ -12,7 +12,6 @@ import { DownOutlined } from "@ant-design/icons";
 import { products } from "../Assets/Products";
 
 function Header() {
-  const [open, setOpen] = useState(false);
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
   const [isLargeLaptop, setIsLargeLaptop] = useState(window.innerWidth >= 1440);
 
