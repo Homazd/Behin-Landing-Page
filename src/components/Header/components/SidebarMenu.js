@@ -9,7 +9,7 @@ import { products } from "../../Assets/Products";
 
 const SidebarMenu = () => {
   const [open, setOpen] = useState(false);
-  const [placement, setPlacement] = useState("left");
+  const placement = "left";
 
   const onClose = () => {
     setOpen(false);

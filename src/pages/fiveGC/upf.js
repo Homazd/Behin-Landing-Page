@@ -26,10 +26,10 @@ const UPFPage = () => {
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center">
         <div className="grid place-content-center">
           <h1 className="font-bold text-[23px] tablet:text-[18px] mt-6 laptop:text-[30px] desktop:text-[46px] text-blue-600 p-2">
-          UPF
+            UPF
           </h1>
           <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose text-justify">
-            In the context of 5G core, UPF stands for User Plane Function. The
+          UPF stands for User Plane Function. The
             UPF is a network function that is responsible for handling the user
             data plane in the 5G core network. The UPF performs several key
             functions, including:
@@ -61,6 +61,16 @@ const UPFPage = () => {
                 </li>
               </ol>
             </div>
+            The UPF communicates with other network functions in the 5G core
+            network, such as the SMF and AMF (Access and Mobility Management
+            Function), to enable end-to-end services for the UE. For example,
+            when a UE requests to establish a new data session, the SMF
+            communicates with the UPF to establish the data path for the
+            session. In summary, the UPF is a critical network function in the
+            5G core network that is responsible for handling the user data
+            plane. It performs packet routing, QoS management, traffic
+            inspection, and other user data plane functions to ensure that user
+            data is delivered securely and efficiently.
           </span>
         </div>
         {/* <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">

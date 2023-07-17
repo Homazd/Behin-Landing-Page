@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
 
-const NRFPage = () => {
+const PCFPage = () => {
   return (
     <>
       <Header />
@@ -17,37 +17,37 @@ const NRFPage = () => {
         className="max-w-screen w-80 h-52 bg-center bg-cover tablet:w-screen tablet:h-80"
         style={{ backgroundImage: `url(${productsImage})` }}
       >
-        Products
+        5GC
       </div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
-        <Link to="/">Home</Link> / <Link to="/products/">Products</Link> /{" "}
-        <Link to="/products/volte">VoLTE</Link>
+        <Link to="/">Home</Link> / <Link to="/fiveGC/">5GC</Link> /{" "}
+        <Link to="/fiveGC/pcf">PCF</Link>
       </p>
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center">
         <div className="grid place-content-center">
           <h1 className="font-bold text-[23px] tablet:text-[18px] mt-6 laptop:text-[30px] desktop:text-[46px] text-blue-600 p-2">
-            NF Repository Function
+           Policy and Charging Function (PCF)
           </h1>
           <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose text-justify">
-            In the context of 5G core, NRF stands for Network Repository
-            Function. It is a network function that provides information about
-            the network topology, network functions, and other network-related
-            information to other network functions in the 5G core network. The
-            NRF acts as a central repository for network information and
-            provides a standardized interface for network functions to query and
-            discover information about other network functions. It enables
-            dynamic service discovery and network function selection based on
-            the requirements of a particular service or application. The NRF is
-            responsible for maintaining and updating the information in the
-            Network Repository Database (NRD), which contains information about
-            network functions, their capabilities, and their associated
-            resources. The NRD is a distributed database that is shared between
-            NRF instances in different network slices and across different
-            administrative domains. In summary, the NRF plays a crucial role in
-            enabling the dynamic and flexible nature of the 5G core network by
-            providing a centralized repository for network information and
-            enabling network functions to discover and select other network
-            functions based on their capabilities and requirements.
+            Policy and Charging Function (PCF) is a functional entity defined in
+            the 3GPP architecture for 4G and 5G mobile networks. The PCF is
+            responsible for policy control and charging functions in the
+            network. The policy control function of the PCF is responsible for
+            defining and enforcing policies for network resources and services.
+            This includes policies related to quality of service (QoS), access
+            control, and traffic management. The PCF communicates with other
+            network functions, such as the policy and charging enforcement
+            function (PCEF) and the application function (AF), to enforce these
+            policies. The charging function of the PCF is responsible for
+            collecting and managing charging information for the network. This
+            includes tracking usage of network resources, calculating charges
+            for those resources, and generating charging records. The PCF
+            communicates with other network functions, such as the charging data
+            function (CDF) and the online charging system (OCS), to perform
+            these functions. Overall, the PCF plays a critical role in ensuring
+            that network resources are used efficiently, that users have
+            appropriate access to services, and that charges for network usage
+            are accurately calculated and collected.
           </span>
         </div>
         {/* <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
@@ -59,5 +59,5 @@ const NRFPage = () => {
   );
 };
 
-export default NRFPage;
-export const Head = () => <title>NRF</title>;
+export default PCFPage;
+export const Head = () => <title>PCF</title>;

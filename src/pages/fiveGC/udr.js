@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
 
-const NRFPage = () => {
+const UDRPage = () => {
   return (
     <>
       <Header />
@@ -17,37 +17,34 @@ const NRFPage = () => {
         className="max-w-screen w-80 h-52 bg-center bg-cover tablet:w-screen tablet:h-80"
         style={{ backgroundImage: `url(${productsImage})` }}
       >
-        Products
+        5GC
       </div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
-        <Link to="/">Home</Link> / <Link to="/products/">Products</Link> /{" "}
-        <Link to="/products/volte">VoLTE</Link>
+        <Link to="/">Home</Link> / <Link to="/products/">5GC</Link> /{" "}
+        <Link to="/fiveGC/udr">UDR</Link>
       </p>
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center">
         <div className="grid place-content-center">
           <h1 className="font-bold text-[23px] tablet:text-[18px] mt-6 laptop:text-[30px] desktop:text-[46px] text-blue-600 p-2">
-            NF Repository Function
+            UDR
           </h1>
-          <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose text-justify">
-            In the context of 5G core, NRF stands for Network Repository
-            Function. It is a network function that provides information about
-            the network topology, network functions, and other network-related
-            information to other network functions in the 5G core network. The
-            NRF acts as a central repository for network information and
-            provides a standardized interface for network functions to query and
-            discover information about other network functions. It enables
-            dynamic service discovery and network function selection based on
-            the requirements of a particular service or application. The NRF is
-            responsible for maintaining and updating the information in the
-            Network Repository Database (NRD), which contains information about
-            network functions, their capabilities, and their associated
-            resources. The NRD is a distributed database that is shared between
-            NRF instances in different network slices and across different
-            administrative domains. In summary, the NRF plays a crucial role in
-            enabling the dynamic and flexible nature of the 5G core network by
-            providing a centralized repository for network information and
-            enabling network functions to discover and select other network
-            functions based on their capabilities and requirements.
+          <span className="text-[12px] laptop:text-[14px] desktop:text-[22px] leading-loose text-justify">
+            Unified Data Repository (UDR) is a centralized repository that is
+            designed to store and manage data from multiple sources in a unified
+            manner. It is similar to Unified Data Management (UDM), but it
+            specifically refers to the storage and management of data in a
+            repository. A UDR is typically used in large organizations that have
+            a lot of data from multiple sources and need to manage it all in one
+            place. It provides a single point of access to all the data, making
+            it easier to manage and analyze. The UDR can store different types
+            of data, such as structured and unstructured data, and it can be
+            used to support various data-related activities, such as data
+            integration, data warehousing, and data analytics. In order to
+            create a UDR, organizations need to use a combination of
+            technologies and tools, including data integration tools, data
+            modeling tools, and data governance tools. The data in the UDR is
+            typically stored in a standardized format, which makes it easier to
+            analyze and use.
           </span>
         </div>
         {/* <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
@@ -59,5 +56,5 @@ const NRFPage = () => {
   );
 };
 
-export default NRFPage;
-export const Head = () => <title>NRF</title>;
+export default UDRPage;
+export const Head = () => <title>UDR</title>;

@@ -20,7 +20,7 @@ const AMFPage = () => {
         Products
       </div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
-        <Link to="/">Home</Link> / <Link to="/products/">5GC</Link> /{" "}
+        <Link to="/">Home</Link> / <Link to="/fiveGC/">5GC</Link> /{" "}
         <Link to="/fiveGC/amf">AMF</Link>
       </p>
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center">
