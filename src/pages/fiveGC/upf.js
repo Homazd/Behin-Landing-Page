@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
 
-const NRFPage = () => {
+const UPFPage = () => {
   return (
     <>
       <Header />
@@ -17,37 +17,50 @@ const NRFPage = () => {
         className="max-w-screen w-80 h-52 bg-center bg-cover tablet:w-screen tablet:h-80"
         style={{ backgroundImage: `url(${productsImage})` }}
       >
-        Products
+        5GC
       </div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
-        <Link to="/">Home</Link> / <Link to="/products/">Products</Link> /{" "}
-        <Link to="/products/volte">VoLTE</Link>
+        <Link to="/">Home</Link> / <Link to="/fiveGC/">5GC</Link> /{" "}
+        <Link to="/fiveGC/upf">UPF</Link>
       </p>
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center">
         <div className="grid place-content-center">
           <h1 className="font-bold text-[23px] tablet:text-[18px] mt-6 laptop:text-[30px] desktop:text-[46px] text-blue-600 p-2">
-            NF Repository Function
+          UPF
           </h1>
           <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose text-justify">
-            In the context of 5G core, NRF stands for Network Repository
-            Function. It is a network function that provides information about
-            the network topology, network functions, and other network-related
-            information to other network functions in the 5G core network. The
-            NRF acts as a central repository for network information and
-            provides a standardized interface for network functions to query and
-            discover information about other network functions. It enables
-            dynamic service discovery and network function selection based on
-            the requirements of a particular service or application. The NRF is
-            responsible for maintaining and updating the information in the
-            Network Repository Database (NRD), which contains information about
-            network functions, their capabilities, and their associated
-            resources. The NRD is a distributed database that is shared between
-            NRF instances in different network slices and across different
-            administrative domains. In summary, the NRF plays a crucial role in
-            enabling the dynamic and flexible nature of the 5G core network by
-            providing a centralized repository for network information and
-            enabling network functions to discover and select other network
-            functions based on their capabilities and requirements.
+            In the context of 5G core, UPF stands for User Plane Function. The
+            UPF is a network function that is responsible for handling the user
+            data plane in the 5G core network. The UPF performs several key
+            functions, including:
+            <div className="mt-2">
+              <ol className="list-decimal list-inside">
+                <li className="mb-4">
+                  Packet routing: The UPF receives user data packets from the
+                  SMF (Session Management Function) and routes them to the
+                  appropriate destination, based on the destination IP address
+                  and other factors.
+                </li>
+                <li className="mb-4">
+                  Quality of Service (QoS) management: The UPF manages the QoS
+                  of user data packets, ensuring that they are delivered with
+                  the appropriate priority and latency. This includes applying
+                  policies for traffic shaping, packet marking, and other
+                  QoS-related functions.
+                </li>
+                <li className="mb-4">
+                  Traffic inspection: The UPF inspects user data packets to
+                  ensure that they conform to network policies and security
+                  requirements. This includes checking for viruses, spam, and
+                  other forms of malicious traffic.
+                </li>
+                <li className="mb-4">
+                  User data plane function: The UPF provides a range of user
+                  data plane functions, including protocol translation, packet
+                  filtering, and traffic optimization.
+                </li>
+              </ol>
+            </div>
           </span>
         </div>
         {/* <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
@@ -59,5 +72,5 @@ const NRFPage = () => {
   );
 };
 
-export default NRFPage;
-export const Head = () => <title>NRF</title>;
+export default UPFPage;
+export const Head = () => <title>UPF</title>;
