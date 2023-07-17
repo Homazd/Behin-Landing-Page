@@ -7,12 +7,13 @@ import { DownOutlined } from "@ant-design/icons";
 
 // Hooks
 import { useState } from "react";
+import { products } from "../../Assets/Products";
 
 const drawerMenuItems = [
   {
     key: "Products",
     title: "Products",
-    children: [
+    groupSubs: [
       { key: "5GC Core", title: "5GC Core", link: "/products/fiveGC" },
       { key: "EPC", title: "EPC", link: "/products/epc" },
     ],
@@ -33,17 +34,17 @@ const SidebarMenu = () => {
     console.log("open the Drawer", open);
   };
 
-  // RenderMenuItems function that recursively renders menu items and sub-menu items using a Menu.Item component for leaf nodes and a Menu.SubMenu component for nodes with children.
+  // RenderMenuItems function that recursively renders menu items and sub-menu items using a Menu.Item component for leaf nodes and a Menu.SubMenu component for nodes with groupSubs.
 
-  const renderMenuItems = (items) =>
-    items.map((item) =>
-      item.children ? (
-        <Menu.SubMenu key={item.key} title={item.title}>
-          {renderMenuItems(item.children)}
+  const renderMenuItems = (products) =>
+    products.map((item) =>
+      item.groupSubs ? (
+        <Menu.SubMenu key={item.header} title={item.header}>
+          {renderMenuItems(item.groupSubs)}
         </Menu.SubMenu>
       ) : (
-        <Menu.Item key={item.key}>
-          <Link to={item.link}>{item.title}</Link>
+        <Menu.Item key={item.header}>
+          <Link to={item.link}>{item.header}</Link>
         </Menu.Item>
       )
     );
@@ -71,7 +72,7 @@ const SidebarMenu = () => {
         width="250px"
       >
         <Menu mode="inline" defaultSelectedKeys={["products"]}>
-          {renderMenuItems(drawerMenuItems)}
+          {renderMenuItems(products)}
         </Menu>
       </Drawer>
     </>
