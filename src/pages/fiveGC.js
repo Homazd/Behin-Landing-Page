@@ -21,8 +21,7 @@ const FiveGCPage = () => {
         Products
       </div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
-        <Link to="/">Home</Link> / <Link to="/products/">Products</Link> /{" "}
-        <Link to="/products/5GC">5GC</Link>
+        <Link to="/">Home</Link> / <Link to="/5GC">5GC</Link>
       </p>
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1100px] mx-auto mt-5 place-content-center grid tablet:grid-cols-2 gap-4">
         <div className="col-span-1 grid place-content-center">
@@ -40,9 +39,9 @@ const FiveGCPage = () => {
             and massive connectivity. The 5G Core network comprises several
             network functions, including the Access and Mobility Management
             Function (AMF), Session Management Function (SMF), User Plane
-            Function (UPF), Network Slice Selection Function (NSSF), etc.
-            which work together to provide enhanced connectivity and enable new
-            use cases in the 5G ecosystem.
+            Function (UPF), Network Slice Selection Function (NSSF), etc. which
+            work together to provide enhanced connectivity and enable new use
+            cases in the 5G ecosystem.
           </span>
         </div>
         <div className="col-span-1 grid place-content-center">
