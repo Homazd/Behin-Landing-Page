@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 // Images
-import SIEM from "../../images/SIEM-1.png";
+import aboutImage from "../../images/about.png";
 
 function AboutProduct() {
   return (
@@ -40,8 +40,8 @@ function AboutProduct() {
           </button>
         </div>
       </div>
-      <div className="mt-8 px-[15px] tablet:mt-0 tablet:order-first">
-        <img src={SIEM} alt="SIEM Functions" loading="lazy" />
+      <div className="mt-8 w-auto px-[15px] tablet:mt-0 tablet:order-first ">
+        <img className="rounded-2xl" src={aboutImage} alt="Network and IOT" loading="lazy" />
       </div>
     </div>
   );
