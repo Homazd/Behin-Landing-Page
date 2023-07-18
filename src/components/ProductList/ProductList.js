@@ -35,7 +35,7 @@ function ProductList() {
               >
                 {element.groupSubs.map((item) => (
                   <p className="leading-loose underline text-gray-500 hover:no-underline hover:text-blue-400">
-                    <link to={item.link}>{item.title}</link>
+                    <link to={item.link}>{item.header}</link>
                   </p>
                 ))}
               </Panel>
@@ -57,7 +57,7 @@ function ProductList() {
                     className="text-[14px] underline text-slate-700 font-normal block hover:text-blue-400 hover:no-underline"
                     to={subItem.link}
                   >
-                    {subItem.title}
+                    {subItem.header}
                   </Link>
                 ))}
               </div>
