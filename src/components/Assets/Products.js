@@ -23,7 +23,6 @@ export const products = [
       { header: "PCRF", link: "/epc/pcrf" },
       { header: "SGW-c", link: "/epc/sgwc" },
       { header: "SGW-u", link: "/epc/sgwu" },
-      { header: "PGW/UPF", link: "/epc/pgw-upf" },
     ],
   },
   {
@@ -32,7 +31,7 @@ export const products = [
       { header: "VoLTE", link: "/ims/volte" },
       { header: "ViLTE", link: "/ims/vilte" },
       { header: "VoNR", link: "/ims/vonr" },
-      { header: "ViNR", link: "ims/vinr" },
+      { header: "ViNR", link: "/ims/vinr" },
     ],
   },
   {

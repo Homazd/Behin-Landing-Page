@@ -6,7 +6,7 @@ import Navigation from "../../components/Navigation/Navigation";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
-import productsImage from "../../images/product-header.png";
+import imsImage from "../../images/ipsystem-header.png";
 
 const VoltePage = () => {
   return (
@@ -14,19 +14,19 @@ const VoltePage = () => {
       <Header />
       <Navigation />
       <div
-        className="max-w-screen w-80 h-52 bg-center bg-cover tablet:w-screen tablet:h-80"
-        style={{ backgroundImage: `url(${productsImage})` }}
+        className="max-w-screen w-80 h-auto bg-center bg-cover tablet:w-screen tablet:h-80"
+        style={{ backgroundImage: `url(${imsImage})` }}
       >
-        Products
+        IMS Core
       </div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
-        <Link to="/">Home</Link> / <Link to="/products/">Products</Link> /{" "}
-        <Link to="/products/volte">VoLTE</Link>
+        <Link to="/">Home</Link> / <Link to="/ims/">IMS</Link> /{" "}
+        <Link to="/ims/volte">VoLTE</Link>
       </p>
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center">
         <div className="grid place-content-center">
           <h1 className="font-bold text-[23px] tablet:text-[18px] mt-6 laptop:text-[30px] desktop:text-[46px] text-blue-600 p-2">
-            VoLTE
+            Voice over LTE (VoLTE)
           </h1>
           <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose text-justify">
             VoLTE stands for Voice over LTE. It is a technology that enables
