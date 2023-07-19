@@ -52,12 +52,14 @@ function Navigation() {
                 </Link>
               </div>
               <div className="col-span-1 flex hover:text-cyan-400 ">
-                <Link to="/">
-                  <span>Home</span>
+                <Link to="/bbu">
+                  <span>BBU</span>
                 </Link>
               </div>
               <div className="col-span-1 flex hover:text-cyan-400 ">
-                <span>Blog</span>
+                <Link to="/">
+                  <span>Home</span>
+                </Link>
               </div>
             </div>
           </div>

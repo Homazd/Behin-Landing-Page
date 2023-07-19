@@ -43,8 +43,7 @@ const BBUPage = () => {
         Products
       </div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
-        <Link to="/">Home</Link> / <Link to="/products/">Products</Link> /{" "}
-        <Link to="/products/bbu">BBU</Link>
+        <Link to="/">Home</Link> /<Link to="/bbu">BBU</Link>
       </p>
       <div className="w-[300px] tablet:w-[730px] laptop:w-[900px] desktop:w-[1300px] mx-auto mt-5 place-content-center grid tablet:grid-cols-2 gap-4">
         <div className="col-span-1 grid place-content-center">
@@ -65,7 +64,11 @@ const BBUPage = () => {
           </ul>
         </div>
         <div className="col-span-1 grid place-content-center">
-          <img className="w-[550px] h-auto border-solid border-4 border-sky-500" src={bbuImage} alt="BBU" />
+          <img
+            className="w-[550px] h-auto border-solid border-4 border-sky-500"
+            src={bbuImage}
+            alt="BBU"
+          />
         </div>
       </div>
 
