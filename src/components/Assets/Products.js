@@ -38,8 +38,8 @@ export const products = [
     header: "Network Monitoring",
     groupSubs: [
       { header: "SIEM", link: "/monitoring/siem" },
-      { header: "VoNR", link: "/monitoring/log" },
-      { header: "ViNR", link: "/monitoring/siem" },
+      { header: "Monitoring Tools", link: "/monitoring/tools" },
+      { header: "Log Monitoring", link: "/monitoring/log" },
     ],
   },
   {

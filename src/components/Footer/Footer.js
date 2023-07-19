@@ -15,6 +15,7 @@ function Footer() {
               <p className="text-[12px] tablet:text-[20px] text-white font-bold mb-[10px]">
                 {product.header}
               </p>
+
               {product.groupSubs.map((item, index) => (
                 <Link
                   to={item.link}
