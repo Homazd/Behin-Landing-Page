@@ -31,10 +31,13 @@ function ProductList() {
               <Panel
                 className="bg-slate-100"
                 header={element.header}
+                key={element.id}
               >
                 {element.groupSubs.map((item) => (
                   <p className="leading-loose underline text-gray-500 hover:no-underline hover:text-blue-400">
-                    <link to={item.link} key={item.id}>{item.header}</link>
+                    <Link to={item.link} key={item.id}>
+                      {item.header}
+                    </Link>
                   </p>
                 ))}
               </Panel>
@@ -49,7 +52,7 @@ function ProductList() {
           </h1>
           <div className="grid grid-cols-2 gap-3 px-[20px] laptop:grid-cols-4">
             {products.map((item) => (
-              <div className="mb-[30px]">
+              <div className="mb-[30px]" key={item.id}>
                 <p className="text-[18px] font-bold font-sans">{item.header}</p>
                 {item.groupSubs.map((subItem) => (
                   <Link
