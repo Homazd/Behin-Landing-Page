@@ -30,7 +30,6 @@ const IndexPage = () => {
   useEffect(() => {
     // Add event listener for scroll event
     window.addEventListener("scroll", handleScroll);
-
     // Remove event listener on cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);

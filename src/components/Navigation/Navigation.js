@@ -26,6 +26,24 @@ function Navigation() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // First I used Menu.Item but browser warns that: [antd: Menu] `children` will be removed in next major version. Please use `items` instead.
+  // So it's changed to menuItems and a prop called items
+
+  const menuItems = [
+    {
+      key: "Homa",
+      label: <Link to="/">Home</Link>,
+    },
+    {
+      key: "5G",
+      label: "5G",
+    },
+    {
+      key: "BBU",
+      label: "BBU",
+    },
+  ];
   return (
     <>
       {isDesktop && (
@@ -46,21 +64,20 @@ function Navigation() {
             </div>
             <div className="col-end-10 col-span-3 grid grid-cols-5 gap-4 place-content-center text-blue-800 font-semibold ">
               <div className="col-start-3 col-span-1 hover:text-cyan-400 ">
-                <Link to="/fiveGC">
-                  {" "}
-                  <span>5G</span>
-                </Link>
-              </div>
-              <div className="col-span-1 flex hover:text-cyan-400 ">
-                <Link to="/bbu">
-                  <span>BBU</span>
-                </Link>
-              </div>
-              <div className="col-span-1 flex hover:text-cyan-400 ">
                 <Link to="/">
                   <span>Home</span>
                 </Link>
               </div>
+              <div className="col-span-1 flex hover:text-cyan-400 ">
+                <Link to="/fiveGC">
+                  {" "}
+                  <span>5G</span>
+                </Link>
+                <Link to="/bbu">
+                  <span>BBU</span>
+                </Link>
+              </div>
+              <div className="col-span-1 flex hover:text-cyan-400 "></div>
             </div>
           </div>
         </>
@@ -86,12 +103,17 @@ function Navigation() {
           </div>
 
           <div className={`md:hidden ${collapsed ? "hidden" : "block"}`}>
-            <Menu theme="light" mode="vertical" defaultSelectedKeys={["home"]}>
-              <Menu.Item key="home">5G</Menu.Item>
+            <Menu
+              theme="light"
+              mode="vertical"
+              defaultSelectedKeys={["home"]}
+              items={menuItems}
+            >
+              {/* <Menu.Item key="home">5G</Menu.Item>
               <Menu.Item key="about">
                 <Link to="/">Home</Link>
               </Menu.Item>
-              <Menu.Item key="contact">Blog</Menu.Item>
+              <Menu.Item key="contact">Blog</Menu.Item> */}
             </Menu>
           </div>
         </>

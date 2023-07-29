@@ -16,11 +16,11 @@ function Footer() {
                 {product.header}
               </p>
 
-              {product.groupSubs.map((item, index) => (
+              {product.groupSubs.map((item) => (
                 <Link
                   to={item.link}
                   className="block text-[12px] tablet:text-[14px] underline text-gray-400 font-normal"
-                  key={index}
+                  key={item.id}
                 >
                   {item.header}
                 </Link>

@@ -7,36 +7,42 @@ import { DownOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { products } from "../../Assets/Products";
 
+function getItem(label, key, children) {
+  return {
+    key,
+    children,
+    label,
+  };
+}
+
 const SidebarMenu = () => {
   const [open, setOpen] = useState(false);
   const placement = "left";
 
   const onClose = () => {
     setOpen(false);
+    console.log("open is:", open);
   };
 
   const showDrawer = () => {
     setOpen(true);
-    console.log("open the Drawer", open);
   };
 
-  // RenderMenuItems function that recursively renders menu items and sub-menu items using a Menu.Item component for leaf nodes and a Menu.SubMenu component for nodes with groupSubs.
-
-  const renderMenuItems = (products) =>
-    products.map((item) =>
-      item.groupSubs ? (
-        <Menu.SubMenu key={item.header} title={item.header}>
-          {renderMenuItems(item.groupSubs)}
-        </Menu.SubMenu>
-      ) : (
-        <Menu.Item key={item.header}>
-          <Link to={item.link}>{item.header}</Link>
-        </Menu.Item>
+  const items = products.map((productItem) =>
+    getItem(
+      productItem.header,
+      productItem.id,
+      productItem.groupSubs.map((innerItem) =>
+        getItem(
+          <Link to={innerItem.link}>{innerItem.header}</Link>,
+          innerItem.header
+        )
       )
-    );
+    )
+  );
+
   return (
     <>
-      {console.log("in mobile view")}
       <div className="pt-[3px] flex">
         <Button
           type="text"
@@ -57,9 +63,12 @@ const SidebarMenu = () => {
         key={placement}
         width="250px"
       >
-        <Menu mode="inline" defaultSelectedKeys={["products"]}>
-          {renderMenuItems(products)}
-        </Menu>
+        <Menu
+          defaultSelectedKeys={["1"]}
+          defaultOpenKeys={["1"]}
+          mode="inline"
+          items={items}
+        />
       </Drawer>
     </>
   );

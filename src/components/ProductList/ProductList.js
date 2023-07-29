@@ -27,15 +27,14 @@ function ProductList() {
         <div className="mt-[77px] mx-[15px]">
           <h1 className="text-[22px] font-bold mb-[27px]">BBDH Product Line</h1>
           <Collapse>
-            {products.map((element, index) => (
+            {products.map((element) => (
               <Panel
                 className="bg-slate-100"
                 header={element.header}
-                key={index}
               >
                 {element.groupSubs.map((item) => (
                   <p className="leading-loose underline text-gray-500 hover:no-underline hover:text-blue-400">
-                    <link to={item.link}>{item.header}</link>
+                    <link to={item.link} key={item.id}>{item.header}</link>
                   </p>
                 ))}
               </Panel>
@@ -56,6 +55,7 @@ function ProductList() {
                   <Link
                     className="text-[14px] underline text-slate-700 font-normal block hover:text-blue-400 hover:no-underline"
                     to={subItem.link}
+                    key={subItem.id}
                   >
                     {subItem.header}
                   </Link>

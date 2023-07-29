@@ -57,6 +57,7 @@ function Header() {
                                   <Link
                                     to={item.link}
                                     className="block text-[14px] underline text-gray-400 font-normal"
+                                    key={item.id}
                                   >
                                     {item.header}
                                   </Link>
@@ -111,6 +112,7 @@ function Header() {
                                 <Link
                                   to={item.link}
                                   className="block text-[12px] laptop:text-[14px] underline text-gray-400 font-normal"
+                                  key={item.id}
                                 >
                                   {item.header}
                                 </Link>
