@@ -37,11 +37,11 @@ function Navigation() {
     },
     {
       key: "5G",
-      label: "5G",
+      label: <Link to="/fiveGC">5G</Link>,
     },
     {
       key: "BBU",
-      label: "BBU",
+      label: <Link to="/bbu">BBU</Link>,
     },
   ];
   return (
@@ -64,20 +64,23 @@ function Navigation() {
             </div>
             <div className="col-end-10 col-span-3 grid grid-cols-5 gap-4 place-content-center text-blue-800 font-semibold ">
               <div className="col-start-3 col-span-1 hover:text-cyan-400 ">
-                <Link to="/">
-                  <span>Home</span>
-                </Link>
+                <div className="col-span-1 flex hover:text-cyan-400">
+                  <Link to="/">
+                    <span>Home</span>
+                  </Link>
+                </div>
+                <div className="col-span-1 flex hover:text-cyan-400">
+                  <Link to="/fiveGC">
+                    {" "}
+                    <span>5G</span>
+                  </Link>
+                </div>
+                <div className="col-span-1 flex hover:text-cyan-400">
+                  <Link to="/bbu">
+                    <span>BBU</span>
+                  </Link>
+                </div>
               </div>
-              <div className="col-span-1 flex hover:text-cyan-400 ">
-                <Link to="/fiveGC">
-                  {" "}
-                  <span>5G</span>
-                </Link>
-                <Link to="/bbu">
-                  <span>BBU</span>
-                </Link>
-              </div>
-              <div className="col-span-1 flex hover:text-cyan-400 "></div>
             </div>
           </div>
         </>

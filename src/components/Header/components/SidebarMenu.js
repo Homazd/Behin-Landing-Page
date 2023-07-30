@@ -27,7 +27,7 @@ const SidebarMenu = () => {
   const showDrawer = () => {
     setOpen(true);
   };
-
+  
   const items = products.map((productItem) =>
     getItem(
       productItem.header,

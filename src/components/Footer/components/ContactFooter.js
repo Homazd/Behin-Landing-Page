@@ -4,8 +4,8 @@ import Mail from "../../../images/mail-outline.svg";
 
 function Contact() {
   return (
-    <div>
-      <h3 className="mt-[17px] pb-[27px] text-slate-50 font-bold text-[12px] tablet:text-[14px] laptop:text-[20px]">
+    <div className="grid place-content-center">
+      <h3 className="mt-[17px] text-center pb-[27px] text-slate-50 font-bold text-[12px] tablet:text-[20px] laptop:text-[20px]">
         Contacts
       </h3>
       <div className="flex">
@@ -20,10 +20,12 @@ function Contact() {
           sales@bbdh.com
         </span>
       </div>
-      <p className="text-slate-50 underline text-[12px] tablet:text-[14px] mt-[20px] ml-[56px]">
-        LinkedIN
+      <p className="text-slate-50 underline text-center text-[12px] tablet:text-[14px] mt-[20px] cursor-pointer">
+        <a href="https://www.linkedin.com/company/behin-baygan-dadeh-hoonam/mycompany/">
+          LinkedIN
+        </a>
       </p>
-      <p className="underline text-slate-50  text-[12px] tablet:text-[14px] ml-[56px] mt-[21px]">
+      <p className="underline text-slate-50 text-center text-[12px] tablet:text-[14px] mt-[21px]">
         All contacts
       </p>
     </div>

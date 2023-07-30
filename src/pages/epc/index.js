@@ -21,15 +21,16 @@ const EPC = () => {
         Products
       </div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
-        <Link to="/">Home</Link> / <Link to="/products/">Products</Link> /{" "}
-        <Link to="/products/EPC">EPC</Link>
+        <Link to="/">Home</Link> / <Link to="/EPC">EPC</Link>
       </p>
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1100px] mx-auto mt-5 place-content-center grid tablet:grid-cols-2 gap-4">
         <div className="col-span-1 grid place-content-center">
           <h1 className="font-bold text-[14px] tablet:text-[18px] mt-6 laptop:text-[30px] p-2">
             EPC
           </h1>
-          <span className="text-gray-500">Fully virtualized EPC, Easy Depoloyment & Management</span>
+          <span className="text-gray-500">
+            Fully virtualized EPC, Easy Depoloyment & Management
+          </span>
           <span className="text-[12px] mt-4 laptop:text-[14px] desktop:text-[18px] leading-loose">
             EPC stands for Evolved Packet Core. It is the core network
             architecture used in 4G LTE (Long-Term Evolution) wireless

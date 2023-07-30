@@ -31,7 +31,7 @@ function MainContainer() {
             High scalable 4G LTE EPC Core Network platform, Easy to deploy for a
             wide range of application
           </span>
-          <Link to="/products/epc">
+          <Link to="/epc">
             <button className="cursor-pointer text-[12px]">Learn More</button>
           </Link>
         </div>
@@ -48,7 +48,7 @@ function MainContainer() {
             An agile and virtualized session vIMS core, support variety of voice
             applications such as VoLTE, ...
           </span>
-          <Link to="/products/imscore">
+          <Link to="/ims">
             <button className="cursor-pointer text-[12px]">Learn More</button>
           </Link>
         </div>
@@ -65,7 +65,7 @@ function MainContainer() {
             Cloud-native, Highly integrated and Simplified design 5GC for mobile
             industry
           </span>
-          <Link to="/products/fiveGC">
+          <Link to="/fiveGC">
             <button className="cursor-pointer text-[12px]">Learn More</button>
           </Link>
         </div>

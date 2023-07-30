@@ -15,7 +15,6 @@ import * as Yup from "yup";
 const items = ["name", "email", "phone"];
 
 // Validation using YUP
-
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Please enter your name"),
   email: Yup.string()
