@@ -1,4 +1,5 @@
 import * as React from "react";
+// Components
 import Phone from "../../../images/call-outline.svg";
 import Mail from "../../../images/mail-outline.svg";
 

@@ -62,9 +62,9 @@ function Navigation() {
                 end-to-end Network Solution
               </span>
             </div>
-            <div className="col-end-10 col-span-3 grid grid-cols-5 gap-4 place-content-center text-blue-800 font-semibold ">
-              <div className="col-start-3 col-span-1 hover:text-cyan-400 ">
-                <div className="col-span-1 flex hover:text-cyan-400">
+            <div className="grid col-end-10 col-span-3 gap-4 content-center text-blue-800 font-semibold ">
+              <div className="grid grid-cols-3">
+                <div className="col-span-1 hover:text-cyan-400">
                   <Link to="/">
                     <span>Home</span>
                   </Link>
