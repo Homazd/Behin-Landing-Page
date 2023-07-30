@@ -6,6 +6,7 @@ import Contact from "./components/ContactFooter";
 const items = [
   {
     header: "Products",
+    id: "1",
     products: [
       { title: "Evolved Packet Core", id: 1, link: "/epc" },
       { title: "IP Multimedia Subsystem", id: 2, link: "/ims" },
@@ -20,7 +21,7 @@ function Footer() {
       <footer className="mt-[85px] pt-[36px] bg-blue-900">
         <div className="grid laptop:grid-cols-2 gap-2  px-[15px] tablet:px-[30px] laptop:w-[800px] desktop:w-[1200px] laptop:mx-auto">
           {items.map((item) => (
-            <div className="mt-[10px] leading-loose text-center">
+            <div className="mt-[10px] leading-loose text-center" key={item.id}>
               <p className="text-[12px] tablet:text-[20px] text-white font-bold mb-[10px]">
                 {item.header}
               </p>

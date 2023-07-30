@@ -10,25 +10,35 @@ import bbuImage from "../images/bbu.png";
 import productsImage from "../images/product-header.png";
 
 const data = [
-  "LTE Release 14",
-  "2G/4G Supported",
-  `SISO & MIMO 2\u00D72`,
-  "Maxixmum Throughput 75 Mbps (SISO) and 150 Mbps (MIMO) for one sector",
-  `Maximum Throughput 450 Mbps (3\u00D7sectors)`,
-  "CS-Fallback enabled, 4G-to-4G and 4G-to-2G voice call and SMS",
-  "SRVCC & VoLTE",
-  "4G Internet",
-  "CPRI @ fronthaul Interface",
-  "Monitoring Software",
-  "USSD over 4G",
-  "256 concurrent users and 1000 users totally",
-  "cell-re-selection in cells and sectors",
-  "CQI and PMI",
-  `3\u00D74G sectors and 3\u00D72G sectors supported (MIMO mode)`,
-  "Industrial RRU supported (ALCATEL, BENETEL)",
-  "Full Software-based",
-  "Inter-RAT and Inter cell Handover",
-  "AEC, 3Gsnow and A5 Algorithms supported",
+  { id: 1, title: "LTE Release 14" },
+  { id: 2, title: "2G/4G Supported" },
+  { id: 3, title: "SISO & MIMO 2\u00D72" },
+  {
+    id: 4,
+    title:
+      "Maxixmum Throughput 75 Mbps (SISO) and 150 Mbps (MIMO) for one sector",
+  },
+  { id: 5, title: "Maximum Throughput 450 Mbps (3\u00D7sectors)" },
+  {
+    id: 6,
+    title: "CS-Fallback enabled, 4G-to-4G and 4G-to-2G voice call and SMS",
+  },
+  { id: 7, title: "SRVCC & VoLTE" },
+  { id: 8, title: "4G Internet" },
+  { id: 9, title: "CPRI @ fronthaul Interface" },
+  { id: 10, title: "Monitoring Software" },
+  { id: 11, title: "USSD over 4G" },
+  { id: 12, title: "256 concurrent users and 1000 users totally" },
+  { id: 13, title: "cell-re-selection in cells and sectors" },
+  { id: 14, title: "CQI and PMI" },
+  {
+    id: 15,
+    title: "3\u00D74G sectors and 3\u00D72G sectors supported (MIMO mode)",
+  },
+  { id: 16, title: "Industrial RRU supported (ALCATEL, BENETEL)" },
+  { id: 17, title: "Full Software-based" },
+  { id: 18, title: "Inter-RAT and Inter cell Handover" },
+  { id: 19, title: "AEC, 3Gsnow and A5 Algorithms supported" },
 ];
 
 const BBUPage = () => {
@@ -51,13 +61,13 @@ const BBUPage = () => {
             BaseBanc Unit (BBU){" "}
           </h1>
           <ul className="list-disc list-inside">
-            {data.map((item, index) => (
+            {data.map((item) => (
               <>
                 <li
-                  key={index}
+                  key={item.id}
                   className="p-1 mt-1 laptop:mt-3 text-gray-700 text-[8px] tablet:text-[10px] font-normal laptop:text-[12px] desktop:text-[16px]"
                 >
-                  {item}
+                  {item.title}
                 </li>
               </>
             ))}
