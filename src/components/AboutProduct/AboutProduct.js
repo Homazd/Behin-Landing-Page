@@ -10,7 +10,7 @@ function AboutProduct() {
         <div className="mb-[20px]">
           <p className=" text-[18px] font-normal">
             <span className="text-blue-900 font-bold">
-              BBDH/Behin Baygan Dade Hoonam{" "}
+             SIZ-Tel/Behin Baygan Dade Hoonam{" "}
             </span>
             develops and provides innovative software and hardware solutions for
             telecommunication industry.

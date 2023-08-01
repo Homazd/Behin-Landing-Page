@@ -48,7 +48,7 @@ function ProductList() {
       {isTablet && (
         <div className="mt-[191px]  laptop:w-[984px] desktop:w-[1170px] mx-auto">
           <h1 className="text-[30px] font-bold font-sans mb-[66px] px-[20px]">
-            BBDH Product Line
+            SIZ-Tel Product Line
           </h1>
           <div className="grid grid-cols-2 gap-3 px-[20px] laptop:grid-cols-4">
             {products.map((item) => (

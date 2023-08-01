@@ -10,7 +10,7 @@ export const products = [
       { id: "5", header: "UPF", link: "/fiveGC/upf" },
       { id: "6", header: "AUSF", link: "/fiveGC/ausf" },
       { id: "7", header: "UDM", link: "/fiveGC/udm" },
-      { id: '8', header: "UDR", link: "/fiveGC/udr" },
+      { id: "8", header: "UDR", link: "/fiveGC/udr" },
       { id: "9", header: "PCF", link: "/fiveGC/pcf" },
       { id: "10", header: "NSSF", link: "/fiveGC/nssf" },
       { id: "11", header: "BSF", link: "/fiveGC/bsf" },
@@ -31,10 +31,10 @@ export const products = [
     id: "3",
     header: "IMS Core",
     groupSubs: [
-      { id: '17', header: "VoLTE", link: "/ims/volte" },
-      { id: '18', header: "ViLTE", link: "/ims/vilte" },
+      { id: "17", header: "VoLTE", link: "/ims/volte" },
+      { id: "18", header: "ViLTE", link: "/ims/vilte" },
       { id: "19", header: "VoNR", link: "/ims/vonr" },
-      { id: '20', header: "ViNR", link: "/ims/vinr" },
+      { id: "20", header: "ViNR", link: "/ims/vinr" },
     ],
   },
   {
@@ -43,15 +43,14 @@ export const products = [
     groupSubs: [
       { id: "21", header: "SIEM", link: "/monitoring/siem" },
       { id: "22", header: "Monitoring Tools", link: "/monitoring/tools" },
-      { id: "23", header: "Log Monitoring", link: "/monitoring/log" },
     ],
   },
   {
     id: "5",
     header: "Company",
     groupSubs: [
-      { id: "24", header: "About Us", link: "/about" },
-      { id: "25", header: "Our Partners", link: "" },
+      { id: "23", header: "About Us", link: "/about" },
+      { id: "24", header: "Our Partners", link: "" },
     ],
   },
 ];

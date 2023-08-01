@@ -7,7 +7,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
-import fiveGC from "../../images/5GC-FieldProven.png";
+import CoreEpc from "../../images/core-epc.png"
 
 const EPC = () => {
   return (
@@ -49,8 +49,8 @@ const EPC = () => {
         </div>
         <div className="col-span-1 grid place-content-center">
           <img
-            className="w-[400px] h-auto border-solid border-4 border-sky-500"
-            src={fiveGC}
+            className="w-[450px] h-auto border-solid"
+            src={CoreEpc}
             alt="5GC core"
           />
         </div>

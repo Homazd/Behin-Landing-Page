@@ -28,7 +28,7 @@ const AboutPage = () => {
             Who we are
           </h1>
           <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose">
-            Behin Baygan Dade Hoonam is a Software company, where we strive to
+            SIZ-Tel is a Software company, where we strive to
             provide our customers with the best possible communication
             solutions. We are a young and dynamic company, established in 2022,
             and have already made significant progress in the industry. We offer
@@ -52,7 +52,7 @@ const AboutPage = () => {
         </div>
         <div className="mt-[20px] text-center text-[12px] desktop:text-[20px]">
           to provide cutting-edge technology and exceptional customer service to
-          ensure our customers stay connected. Behin Baygan Dade Hoonam is
+          ensure our customers stay connected. SIZ-Tel is
           committed to evolve your network and support your revenue growth.
         </div>
       </div>

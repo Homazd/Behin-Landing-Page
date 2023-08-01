@@ -11,7 +11,7 @@ function Hero() {
     >
       <div className="px-[15px] tablet:text-center">
         <p className="font-bold text-center text-[26px] tablet:text-[38px] font-sans text-white mb-[24px]">
-          BBDH
+          SIZ-Tel
         </p>
         <div className="mb-[24px]">
           <p className="text-[14px] tablet:text-[18px] laptop:text-[20px] pt-[20px] text-gray-300">

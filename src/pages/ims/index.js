@@ -7,7 +7,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
-import imsCore from "../../images/ims-core.webp";
+import imsCore from "../../images/ims-architecture.png";
 
 const IMSCorePage = () => {
   return (

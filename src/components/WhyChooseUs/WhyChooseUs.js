@@ -8,7 +8,7 @@ import subscriberRatio from "../../images/SubscriberRatio.png";
 function WhyChooseUs() {
   return (
     <div className="px-[5px] mt-[47px] desktop:mt-[98px]">
-      <h1 className="text-[23px] laptop:text-[33px] desktop:text-[46px] font-semibold text-center">Why Choose BBDH</h1>
+      <h1 className="text-[23px] laptop:text-[33px] desktop:text-[46px] font-semibold text-center">Why Choose SIZ-Tel</h1>
       <span className="block text-center text-[14px] laptop:text-[18px] desktop:text-[22px] text-gray-500">
         New Way to operate
       </span>
