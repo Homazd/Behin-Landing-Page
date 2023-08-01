@@ -7,7 +7,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
 import networkManagement from "../../images/network-management.webp";
-import siem from "../../images/SIEM-1.png"
+import siem from "../../images/SIEM-1.png";
 
 const SiemPage = () => {
   return (
@@ -15,7 +15,7 @@ const SiemPage = () => {
       <Header />
       <Navigation />
       <div
-        className="max-w-screen w-80 h-auto bg-center bg-cover tablet:w-screen tablet:h-80"
+        className="h-52 bg-center bg-cover w-screen tablet:h-80"
         style={{ backgroundImage: `url(${networkManagement})` }}
       ></div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
@@ -63,7 +63,11 @@ const SiemPage = () => {
           </span>
         </div>
         <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
-          <img className="w-auto h-[400px]" src={siem} alt="siem" />
+          <img
+            className="w-[250px] h-[200px] tablet:w-auto tablet:h-[400px]"
+            src={siem}
+            alt="siem"
+          />
         </div>
       </div>
       <Footer />

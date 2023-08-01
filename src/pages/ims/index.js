@@ -6,7 +6,7 @@ import Navigation from "../../components/Navigation/Navigation";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
-import productsImage from "../../images/product-header.png";
+import imsImage from "../../images/ipsystem-header.png";
 import imsCore from "../../images/ims-architecture.png";
 
 const IMSCorePage = () => {
@@ -15,8 +15,8 @@ const IMSCorePage = () => {
       <Header />
       <Navigation />
       <div
-        className="max-w-screen w-80 h-52 bg-center bg-cover tablet:w-screen tablet:h-80"
-        style={{ backgroundImage: `url(${productsImage})` }}
+        className="h-52 bg-center bg-cover w-screen tablet:h-80"
+        style={{ backgroundImage: `url(${imsImage})` }}
       >
         Products
       </div>

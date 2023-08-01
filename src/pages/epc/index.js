@@ -15,7 +15,7 @@ const EPC = () => {
       <Header />
       <Navigation />
       <div
-        className="max-w-screen h-52 bg-center bg-cover tablet:w-screen tablet:h-80"
+        className="h-52 bg-center bg-cover w-screen tablet:h-80"
         style={{ backgroundImage: `url(${productsImage})` }}
       >
         Products
