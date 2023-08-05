@@ -10,16 +10,26 @@ import { products } from "../Assets/Products";
 const { Panel } = Collapse;
 
 function ProductList() {
-  const [isTablet, setisTablet] = useState(window.innerWidth >= 768);
+  const [isTablet, setisTablet] = useState(
+    typeof window !== "undefined" ? window.innerWidth >= 768 : false
+  );
 
   useEffect(() => {
     const handleResize = () => {
       setisTablet(window.innerWidth >= 768);
     };
 
-    window.addEventListener("resize", handleResize);
+    // Add the event listener
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+    }
+    // Clean up the event listener on component unmount
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
   }, []);
   return (
     <>

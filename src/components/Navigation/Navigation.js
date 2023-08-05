@@ -10,7 +10,9 @@ import { useState, useEffect } from "react";
 import logo from "../../images/logo.jpeg";
 
 function Navigation() {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1440);
+  const [isDesktop, setIsDesktop] = useState(
+    typeof window !== "undefined" ? window.innerWidth >= 1440 : false
+  );
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleCollapsed = () => {
@@ -22,14 +24,19 @@ function Navigation() {
       setIsDesktop(window.innerWidth >= 1440);
     };
 
-    window.addEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+    }
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
+  });
+  
   // First I used Menu.Item but browser warns that: [antd: Menu] `children` will be removed in next major version. Please use `items` instead.
   // So it's changed to menuItems and a prop called items
-
   const menuItems = [
     {
       key: "Homa",

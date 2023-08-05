@@ -5,24 +5,34 @@ import { useState, useEffect } from "react";
 // Components
 import SidebarMenu from "./components/SidebarMenu";
 // antd components
-import { Dropdown, Space} from "antd";
+import { Dropdown, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 // Assets
 import { products } from "../Assets/Products";
 
 function Header() {
-  const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
-  const [isLargeLaptop, setIsLargeLaptop] = useState(window.innerWidth >= 1440);
+  const [isTablet, setIsTablet] = useState(
+    typeof window !== "undefined" ? window.innerWidth >= 768 : false
+  );
+  const [isLargeLaptop, setIsLargeLaptop] = useState(
+    typeof window !== "undefined" ? window.innerWidth >= 1440 : false
+  );
 
   useEffect(() => {
     const handleResize = () => {
       setIsTablet(window.innerWidth >= 768);
     };
 
-    window.addEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+    }
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -30,9 +40,15 @@ function Header() {
       setIsLargeLaptop(window.innerWidth >= 1440);
     };
 
-    window.addEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+    }
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
   }, []);
   return (
     <>
