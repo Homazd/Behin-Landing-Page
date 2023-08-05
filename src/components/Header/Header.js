@@ -117,7 +117,7 @@ function Header() {
             {isTablet && (
               <Dropdown
                 dropdownRender={(menu) => (
-                  <div className="justify-center relative tablet:max-w-screen mx-auto tablet:w-[750px] laptop:w-[900px] h-96 laptop:h-78">
+                  <div className="justify-center relative tablet:w-[600px] laptop:w-[900px] h-[800px] laptop:h-78">
                     <div className="bg-white bg-opacity-90 relative top-[85px] px-[80px]">
                       <div className="grid grid-cols-5 gap-6">
                         {products.map((product) => (
