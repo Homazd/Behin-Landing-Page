@@ -7,7 +7,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
-import fiveGC from "../../images/5GC-FieldProven.png";
+import fiveGC from "../../images/5g-image.webp";
 
 const FiveGCPage = () => {
   return (
@@ -29,7 +29,7 @@ const FiveGCPage = () => {
             5GC Core
           </h1>
           <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose">
-            5G Core (5GC) is the core network architecture of 5G, It is a
+            5G Core (5GC) is the core network architecture of 5G. It is a
             fundamental component that enables the advanced features and
             capabilities of 5G networks. The 5G Core network is designed to be
             more flexible, scalable, and efficient compared to previous
@@ -45,11 +45,7 @@ const FiveGCPage = () => {
           </span>
         </div>
         <div className="col-span-1 grid place-content-center">
-          <img
-            className="w-[400px] h-auto border-solid border-4 border-sky-500"
-            src={fiveGC}
-            alt="5GC core"
-          />
+          <img className="w-[400px] h-[260px]" src={fiveGC} alt="5GC core" />
         </div>
       </div>
       <Footer />
