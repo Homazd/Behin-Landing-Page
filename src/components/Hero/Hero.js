@@ -22,8 +22,10 @@ function Hero() {
         <div className="tablet:flex tablet:justify-center laptop:mt-[50px]">
           <div
             role="button"
-            className="bg-blue-700 cursor-pointer h-[50px] text-white text-md hover:shadow-xl mb-[15px] rounded-lg font-semibold tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0"
+            onKeyDown={() => scrollTo("#targetElement")}
             onClick={() => scrollTo("#targetElement")}
+            tabIndex={0}
+            className="bg-blue-700 cursor-pointer h-[50px] text-white text-md hover:shadow-xl mb-[15px] rounded-lg font-semibold tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0"
           >
             <p className="text-[16px] py-[15px] px-[20px] b-1 text-center" b>
               Products
