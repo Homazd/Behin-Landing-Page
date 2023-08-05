@@ -3,6 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
+    siteUrl: "https://siz-tel.com",
     title: `Behin Landing Page`,
   },
   plugins: [
