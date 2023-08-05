@@ -6,7 +6,8 @@ import Navigation from "../../components/Navigation/Navigation";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
-import networkManagement from "../../images/network-management.webp";
+import networkManagement from "../../images/network-management.webp"
+import networkMonitoring from "../../images/monitoring.png";
 import logMonitor from "../../images/log-monitor.png";
 
 const data = [
@@ -18,7 +19,7 @@ const data = [
       "Real-time monitoring of network throughput, including equipment-specific rates for all networks or provinces",
       "Monitoring temperature, latency, and quality of each communication port in the entire network",
     ],
-    image: networkManagement,
+    image: networkMonitoring,
   },
   {
     header: "Log Monitoring Management Tools",
@@ -43,13 +44,13 @@ const ToolsPage = () => {
       ></div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
         <Link to="/">Home</Link> /
-        <Link to="/products/monitoring">Monitoring</Link>
+        <Link to="/monitoring/tools">Monitoring</Link>
       </p>
 
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center ">
         <ul className="list-disc list-inside">
           {data.map((item, index) => (
-            <div className="grid tablet:grid-cols-2 gap-4 tablet:mt-[50px] desktop:mt-[150px]">
+            <div className="grid tablet:grid-cols-2 gap-4 tablet:mt-[50px] desktop:mt-[100px]">
               <div className="col-span-1">
                 <h1 className="font-bold text-[14px] mt-6 desktop:text-[23px]">
                   {item.header}

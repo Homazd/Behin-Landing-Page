@@ -20,8 +20,8 @@ const SGWUPage = () => {
         IMS
       </div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
-        <Link to="/">Home</Link> / <Link to="/ims/">IMS</Link> /{" "}
-        <Link to="/ims/sgwu">SGW-u</Link>
+        <Link to="/">Home</Link> / <Link to="/epc/">EPC</Link> /{" "}
+        <Link to="/epc/sgwu">SGW-u</Link>
       </p>
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center">
         <div className="grid place-content-center">
