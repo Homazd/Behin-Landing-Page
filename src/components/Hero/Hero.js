@@ -1,7 +1,9 @@
-import * as React from "react";
+import React from "react";
 import { Link } from "gatsby";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import bg1 from "../../images/bg1.png";
+
 
 function Hero() {
   return (
@@ -19,9 +21,13 @@ function Hero() {
           </p>
         </div>
         <div className="tablet:flex tablet:justify-center laptop:mt-[50px]">
-          <div className="bg-blue-700 cursor-pointer h-[50px] text-white text-md hover:shadow-xl mb-[15px] rounded-lg font-semibold tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0">
-            <p className="text-[16px] py-[15px] px-[20px] b-1 text-center">
-              <Link to="/products">Products</Link>
+          <div
+          role="button"
+            className="bg-blue-700 cursor-pointer h-[50px] text-white text-md hover:shadow-xl mb-[15px] rounded-lg font-semibold tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0"
+            onClick={() => scrollTo('#targetElement')}
+          >
+            <p className="text-[16px] py-[15px] px-[20px] b-1 text-center" b>
+              Products
             </p>
           </div>
           <div className="bg-slate-50 cursor-pointer text-blue-900 hover:bg-blue-900 hover:text-white h-[54px] text-md mb-[15px] shadow-xl rounded-lg font-semibold border-2 border-sky-600 tablet:w-[225px] tablet:h-[50px] tablet:mx-[10px] tablet:my-0">

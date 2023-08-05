@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Link } from "gatsby";
 // Antd Components
 import { Collapse } from "antd";
@@ -24,7 +24,7 @@ function ProductList() {
   return (
     <>
       {!isTablet && (
-        <div className="mt-[77px] mx-[15px]">
+        <div className="mt-[77px] mx-[15px]" id="targetElement">
           <h1 className="text-[22px] font-bold mb-[27px]">BBDH Product Line</h1>
           <Collapse>
             {products.map((element) => (
@@ -46,7 +46,10 @@ function ProductList() {
         </div>
       )}
       {isTablet && (
-        <div className="mt-[191px]  laptop:w-[984px] desktop:w-[1170px] mx-auto">
+        <div
+          className="mt-[191px]  laptop:w-[984px] desktop:w-[1170px] mx-auto"
+          id="targetElement"
+        >
           <h1 className="text-[30px] font-bold font-sans mb-[66px] px-[20px]">
             SIZ-Tel Product Line
           </h1>

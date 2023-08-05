@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-postcss",
+    "gatsby-plugin-smoothscroll",
     `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-react-svg",
