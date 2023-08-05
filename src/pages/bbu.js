@@ -6,7 +6,7 @@ import Navigation from "../components/Navigation/Navigation";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 // Images
-import bbuImage from "../images/bbu.png";
+import bbuImage from "../images/bbu-image.png";
 import productsImage from "../images/product-header.png";
 
 const data = [
@@ -75,7 +75,7 @@ const BBUPage = () => {
         </div>
         <div className="col-span-1 grid place-content-center">
           <img
-            className="w-[550px] h-auto border-solid border-4 border-sky-500"
+            className="w-[550px] h-auto border-solid "
             src={bbuImage}
             alt="BBU"
           />

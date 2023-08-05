@@ -53,7 +53,7 @@ const IMSCorePage = () => {
           </span>
         </div>
         <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
-          <img className="w-auto h-[400px]" src={imsCore} alt="5GC core" />
+          <img className="w-auto h-auto tablet:h-[400px]" src={imsCore} alt="5GC core" />
         </div>
       </div>
       <Footer />

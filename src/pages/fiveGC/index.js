@@ -21,7 +21,7 @@ const FiveGCPage = () => {
         Products
       </div>
       <p className="text-gray-500 text-[14px] desktop:text-[20px] underline mt-[20px] pl-[15px] laptop:pl-[30px] desktop:w-[1200px] desktop:mx-auto">
-        <Link to="/">Home</Link> / <Link to="/5GC">5GC</Link>
+        <Link to="/">Home</Link> / <Link to="/fiveGC">5GC</Link>
       </p>
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1100px] mx-auto mt-5 place-content-center grid tablet:grid-cols-2 gap-4">
         <div className="col-span-1 grid place-content-center">
