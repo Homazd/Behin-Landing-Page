@@ -26,7 +26,7 @@ const VinrPage = () => {
       <div className="w-[300px] tablet:w-[700px] laptop:w-[800px] desktop:w-[1200px] mx-auto mt-5 place-content-center">
         <div className="grid place-content-center">
           <h1 className="font-bold text-[23px] tablet:text-[18px] mt-6 laptop:text-[30px] desktop:text-[46px] text-blue-600 p-2">
-           Voice over New Radio (ViNR)
+           Video over New Radio (ViNR)
           </h1>
           <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose text-justify">
             ViNR, or Video over New Radio, is a feature of 5G that enables

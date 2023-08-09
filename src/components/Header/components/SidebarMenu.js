@@ -52,7 +52,7 @@ const SidebarMenu = () => {
           <p>Company</p>
         </Button>
         <div className="grid place-items-center h-[24px]">
-          <DownOutlined className="pl-[8px]" style={{ fontSize: "10px" }} />
+          <DownOutlined className="pl-[8px]" style={{ fontSize: "8px" }} />
         </div>
       </div>
       <Drawer

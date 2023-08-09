@@ -72,7 +72,7 @@ function Header() {
                                 {product.groupSubs.map((item) => (
                                   <Link
                                     to={item.link}
-                                    className="block text-[14px] underline text-gray-400 font-normal"
+                                    className="block text-[11px] underline text-gray-400 font-normal"
                                     key={item.id}
                                   >
                                     {item.header}
@@ -127,7 +127,7 @@ function Header() {
                               {product.groupSubs.map((item) => (
                                 <Link
                                   to={item.link}
-                                  className="block text-[12px] laptop:text-[14px] underline text-gray-400 font-normal"
+                                  className="block text-[10px] laptop:text-[14px] underline text-gray-400 font-normal"
                                   key={item.id}
                                 >
                                   {item.header}
@@ -155,7 +155,7 @@ function Header() {
             {!isTablet && <SidebarMenu />}
           </div>
           <div className="flex-none w-[74px]  text-center border-x border-x-slate-100 px-[5px]">
-            <span className="text-[14px] tablet:text-[14px]">
+            <span className="text-[10x] tablet:text-[14px]">
               <Link to="/contact">Contacts</Link>
             </span>
           </div>
