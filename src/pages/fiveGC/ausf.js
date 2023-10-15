@@ -29,54 +29,77 @@ const AUSFPage = () => {
             AUSF
           </h1>
           <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose text-justify">
-           AUSF stands for Authentication Server
-            Function. The AUSF is a network function in the 5G core network that
-            is responsible for authenticating and authorizing User Equipments
-            (UEs) and providing security-related information to other network
-            functions. The AUSF performs several key functions, including:
+            AUSF In the context of 5G networks, AUSF stands for Authentication
+            Server Function (AUSF). It is a critical network function within the
+            5G Core (5GC) architecture responsible for authentication,
+            authorization, and key management for subscribers accessing the 5G
+            network. Here's a detailed description of AUSF and its functions:
             <div className="mt-2">
               <ol className="list-decimal list-inside">
                 <li className="mb-4">
-                  Authentication and authorization of UEs: The AUSF is
-                  responsible for authenticating and authorizing UEs before they
-                  can access the network. This involves validating the UE's
-                  security credentials, such as the Subscriber Identity Module
-                  (SIM) card information or digital certificates, and verifying
-                  the UE's authorization to access specific network services.
+                  <span className="font-bold">
+                    Authentication and Authorization:
+                  </span>{" "}
+                  The AUSF is responsible for authenticating and authorizing
+                  users who want to access the 5G network. It validates the
+                  identity of the user, ensuring that they have the necessary
+                  credentials and permissions to access the network.
                 </li>
                 <li className="mb-4">
-                  Key management: The AUSF is responsible for generating and
-                  distributing security keys to other network functions, such as
-                  the Access and Mobility Management Function (AMF) and the
-                  Security Edge Protection Proxy (SEPP). These keys are used to
-                  protect the confidentiality and integrity of user data.
+                  <span className="font-bold">Security Functions:</span> AUSF is
+                  involved in implementing security functions such as generating
+                  and validating security keys for secure communication between
+                  the user equipment (UE) and the network. These keys are
+                  crucial for establishing secure communication sessions.
                 </li>
                 <li className="mb-4">
-                  Security context management: The AUSF is responsible for
-                  managing the security context of UEs, including the generation
-                  and distribution of security parameters, such as the User
-                  Plane (UP) security context and the Application Protocol (AP)
-                  security context.
+                <span className="font-bold">Subscription Information Handling:</span> AUSF manages
+                  subscription-related information for each user, including
+                  authentication data, security keys, and user profile data. It
+                  retrieves and processes this information to enable secure
+                  access and services for the user.
                 </li>
                 <li className="mb-4">
-                  Subscription information management: The AUSF is responsible
-                  for managing the subscription information of UEs, including
-                  the UE's profile and the network services that the UE is
-                  authorized to access.
+                <span className="font-bold">Interactions with Other Functions:</span> AUSF interacts with various
+                  network functions within the 5G Core, including the
+                  Authentication Management Function (AMF) and the Unstructured
+                  Supplementary Service Data (USSD) Function, to facilitate
+                  authentication processes and ensure a seamless user
+                  experience.
+                </li>
+                <li className="mb-4">
+                <span className="font-bold">UE Authentication:</span> When a user equipment (UE) attempts to
+                  connect to the 5G network, AUSF authenticates the UE by
+                  verifying its identity and credentials, ensuring the UE is
+                  authorized to access the network.
+                </li>
+                <li className="mb-4">
+                <span className="font-bold">Authentication Vector Generation:</span> AUSF generates
+                  authentication vectors, which include authentication keys and
+                  related parameters necessary for securing the communication
+                  between the UE and the network during the authentication
+                  process.
+                </li>
+                <li className="mb-4">
+                <span className="font-bold">Key Generation and Distribution:</span> AUSF is involved in
+                  generating encryption keys and distributing them securely to
+                  the UE and other relevant network functions to establish
+                  secure communication channels.
+                </li>
+                <li className="mb-4">
+                <span className="font-bold">Integration with Authentication Management Function (AMF):</span>
+                  AUSF closely collaborates with the AMF to coordinate
+                  authentication processes and exchange authentication-related
+                  information. This ensures a streamlined and secure
+                  authentication procedure.
                 </li>
               </ol>
             </div>
-            The AUSF communicates with other network functions in the 5G core
-            network, such as the AMF and the SEPP, to enable end-to-end security
-            for the UE. For example, when a UE requests to establish a new data
-            session, the AMF communicates with the AUSF to authenticate and
-            authorize the UE, and with the SEPP to establish secure
-            communication between the UE and the network. In summary, the AUSF
-            is a critical network function in the 5G core network that is
-            responsible for authenticating and authorizing UEs, managing
-            security keys and security contexts, and managing subscription
-            information. It plays a key role in ensuring the security and
-            privacy of user data in the 5G network.
+            The Authentication Server Function (AUSF) is a crucial element
+            within the 5G Core network, ensuring that only authorized users can
+            access the 5G network securely. It plays a pivotal role in the
+            security and integrity of the 5G communication, providing a
+            foundation for secure and reliable connectivity for 5G users.
           </span>
         </div>
         {/* <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
