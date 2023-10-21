@@ -7,6 +7,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
+import nssf from "../../images/NSSF.jpg";
 
 const NSSFPage = () => {
   return (
@@ -37,6 +38,8 @@ const NSSFPage = () => {
             virtualized and independent slices, each catering to specific
             service requirements. Here's a detailed description of NSSF and its
             functions:
+            <br/>
+            <div className="mt-3 pl-5">
             <ol className="list-decimal">
               <li>
                 <span className="font-bold">Network Slice Management:</span>{" "}
@@ -64,6 +67,13 @@ const NSSFPage = () => {
                 service and selects a network slice that complies with the
                 required security protocols and measures.
               </li>
+              <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
+                <img
+                  className="w-[600px] h-[400px]"
+                  src={nssf}
+                  alt="5GC core"
+                />
+              </div>
               <li>
                 <span className="font-bold">Dynamic Slice Adaptation:</span>
                 NSSF is capable of dynamically adapting the network slice based
@@ -104,11 +114,9 @@ const NSSFPage = () => {
             other factors, NSSF ensures that users and applications receive an
             optimized and tailored network slice that meets their specific
             needs, enhancing the overall 5G experience.
+          </div>
           </span>
         </div>
-        {/* <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
-          <img className="w-auto h-[400px]" src={imsCore} alt="5GC core" />
-        </div> */}
       </div>
       <Footer />
     </>

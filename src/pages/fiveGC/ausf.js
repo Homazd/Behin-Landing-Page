@@ -7,6 +7,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
+import ausf from "../../images/AUSF.jpg";
 
 const AUSFPage = () => {
   return (
@@ -34,7 +35,8 @@ const AUSFPage = () => {
             5G Core (5GC) architecture responsible for authentication,
             authorization, and key management for subscribers accessing the 5G
             network. Here's a detailed description of AUSF and its functions:
-            <div className="mt-2">
+            <br/>
+            <div className="mt-3 pl-5">
               <ol className="list-decimal list-inside">
                 <li className="mb-4">
                   <span className="font-bold">
@@ -53,41 +55,55 @@ const AUSFPage = () => {
                   crucial for establishing secure communication sessions.
                 </li>
                 <li className="mb-4">
-                <span className="font-bold">Subscription Information Handling:</span> AUSF manages
-                  subscription-related information for each user, including
-                  authentication data, security keys, and user profile data. It
-                  retrieves and processes this information to enable secure
-                  access and services for the user.
+                  <span className="font-bold">
+                    Subscription Information Handling:
+                  </span>{" "}
+                  AUSF manages subscription-related information for each user,
+                  including authentication data, security keys, and user profile
+                  data. It retrieves and processes this information to enable
+                  secure access and services for the user.
                 </li>
                 <li className="mb-4">
-                <span className="font-bold">Interactions with Other Functions:</span> AUSF interacts with various
-                  network functions within the 5G Core, including the
-                  Authentication Management Function (AMF) and the Unstructured
-                  Supplementary Service Data (USSD) Function, to facilitate
-                  authentication processes and ensure a seamless user
-                  experience.
+                  <span className="font-bold">
+                    Interactions with Other Functions:
+                  </span>{" "}
+                  AUSF interacts with various network functions within the 5G
+                  Core, including the Authentication Management Function (AMF)
+                  and the Unstructured Supplementary Service Data (USSD)
+                  Function, to facilitate authentication processes and ensure a
+                  seamless user experience.
+                </li>
+                <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
+                  <img className="w-[600px] h-[400px]" src={ausf} alt="5GC core" />
+                </div>
+                <li className="mb-4">
+                  <span className="font-bold">UE Authentication:</span> When a
+                  user equipment (UE) attempts to connect to the 5G network,
+                  AUSF authenticates the UE by verifying its identity and
+                  credentials, ensuring the UE is authorized to access the
+                  network.
                 </li>
                 <li className="mb-4">
-                <span className="font-bold">UE Authentication:</span> When a user equipment (UE) attempts to
-                  connect to the 5G network, AUSF authenticates the UE by
-                  verifying its identity and credentials, ensuring the UE is
-                  authorized to access the network.
+                  <span className="font-bold">
+                    Authentication Vector Generation:
+                  </span>{" "}
+                  AUSF generates authentication vectors, which include
+                  authentication keys and related parameters necessary for
+                  securing the communication between the UE and the network
+                  during the authentication process.
                 </li>
                 <li className="mb-4">
-                <span className="font-bold">Authentication Vector Generation:</span> AUSF generates
-                  authentication vectors, which include authentication keys and
-                  related parameters necessary for securing the communication
-                  between the UE and the network during the authentication
-                  process.
+                  <span className="font-bold">
+                    Key Generation and Distribution:
+                  </span>{" "}
+                  AUSF is involved in generating encryption keys and
+                  distributing them securely to the UE and other relevant
+                  network functions to establish secure communication channels.
                 </li>
                 <li className="mb-4">
-                <span className="font-bold">Key Generation and Distribution:</span> AUSF is involved in
-                  generating encryption keys and distributing them securely to
-                  the UE and other relevant network functions to establish
-                  secure communication channels.
-                </li>
-                <li className="mb-4">
-                <span className="font-bold">Integration with Authentication Management Function (AMF):</span>
+                  <span className="font-bold">
+                    Integration with Authentication Management Function (AMF):
+                  </span>
                   AUSF closely collaborates with the AMF to coordinate
                   authentication processes and exchange authentication-related
                   information. This ensures a streamlined and secure
@@ -102,9 +118,6 @@ const AUSFPage = () => {
             foundation for secure and reliable connectivity for 5G users.
           </span>
         </div>
-        {/* <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
-          <img className="w-auto h-[400px]" src={imsCore} alt="5GC core" />
-        </div> */}
       </div>
       <Footer />
     </>
