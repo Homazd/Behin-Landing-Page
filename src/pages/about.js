@@ -28,7 +28,7 @@ const AboutPage = () => {
             Who we are
           </h1>
           <span className="text-[12px] laptop:text-[14px] desktop:text-[18px] leading-loose">
-            SIZ-Tel is a Software company, where we strive to
+            Siz-Tel is a Software company, where we strive to
             provide our customers with the best possible communication
             solutions. We are a young and dynamic company, established in 2022,
             and have already made significant progress in the industry. We offer

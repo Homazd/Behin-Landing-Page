@@ -5,7 +5,7 @@ import { Menu, Drawer, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 // Hooks
 import { useState } from "react";
-import { products } from "../../Assets/Products";
+import { headerProducts } from "../../Assets/Products";
 
 function getItem(label, key, children) {
   return {
@@ -28,7 +28,7 @@ const SidebarMenu = () => {
     setOpen(true);
   };
   
-  const items = products.map((productItem) =>
+  const items = headerProducts.map((productItem) =>
     getItem(
       productItem.header,
       productItem.id,

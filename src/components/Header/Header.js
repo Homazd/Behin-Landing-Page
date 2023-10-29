@@ -9,7 +9,7 @@ import { Dropdown, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 // Assets
-import { products } from "../Assets/Products";
+import { headerProducts } from "../Assets/Products";
 
 function Header() {
   const [isTablet, setIsTablet] = useState(
@@ -65,14 +65,14 @@ function Header() {
                     <div className="flex items-stretch">
                       <div className="self-center bg-opacity-90 w-[1200px] mx-auto h-[400px] relative place-self-center top-[77px] bg-white">
                         <div className="grid grid-cols-5 gap-4 relative px-[80px] mx-auto">
-                          {products.map((product) => (
+                          {headerProducts.map((product) => (
                             <div className="mt-[50px] leading-loose">
                               <p className="text-[18px] font-bold mb-[20px]">
                                 {product.header}
                                 {product.groupSubs.map((item) => (
                                   <Link
                                     to={item.link}
-                                    className="block text-[11px] underline text-gray-400 font-normal"
+                                    className="block text-[13px] underline text-gray-400 font-normal"
                                     key={item.id}
                                   >
                                     {item.header}
@@ -120,7 +120,7 @@ function Header() {
                   <div className="justify-center relative tablet:w-[600px] laptop:w-[900px] h-[800px] laptop:h-78">
                     <div className="bg-white bg-opacity-90 relative top-[85px] px-[80px]">
                       <div className="grid grid-cols-5 gap-6">
-                        {products.map((product) => (
+                        {headerProducts.map((product) => (
                           <div className="py-[10px] leading-loose">
                             <p className="text-[16px] font-bold mb-[20px]">
                               {product.header}

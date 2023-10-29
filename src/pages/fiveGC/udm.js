@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "gatsby";
-
 // Components
 import Navigation from "../../components/Navigation/Navigation";
 import Header from "../../components/Header/Header";
@@ -123,7 +122,7 @@ const UDMPage = () => {
           </span>
         </div>
         
-      </div>
+      </div> 
       <Footer />
     </>
   );
