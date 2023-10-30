@@ -6,7 +6,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
-import AF from "../../images/AF.jpg"
+import AF from "../../images/AF.jpg";
 
 const AFPage = () => {
   return (
@@ -61,15 +61,17 @@ const AFPage = () => {
                 AMF AF controls and directs traffic flow based on predefined
                 policies and service requirements. It ensures that traffic is
                 routed efficiently and optimally through the network to meet the
-                specific needs of applications.
-                {" "}
+                specific needs of applications.{" "}
               </li>
               <li>
-                <span className="font-bold">QoS Enforcement:</span>{" "} The AF
+                <span className="font-bold">QoS Enforcement:</span> The AF
                 enforces quality of service (QoS) for applications by ensuring
                 that the network resources are allocated and managed in a way
                 that meets the QoS parameters specified for each application.{" "}
               </li>
+              <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
+                <img className="w-auto h-[400px]" src={AF} alt="5GC core" />
+              </div>
               <li>
                 <span className="font-bold">Interactions with PCF:</span> The AF
                 interacts with the Policy Control Function (PCF) to implement
@@ -88,7 +90,7 @@ const AFPage = () => {
                 interaction with applications and their corresponding services.{" "}
               </li>
               <li>
-                <span className="font-bold">Dynamic Policy Updates:{" "}</span> The
+                <span className="font-bold">Dynamic Policy Updates: </span> The
                 AF can dynamically update policies based on changes in
                 application requirements or network conditions. This
                 adaptability ensures that applications receive the required
@@ -114,9 +116,6 @@ const AFPage = () => {
               </li>
             </ol>
           </span>
-        </div>
-        <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
-          <img className="w-auto h-[400px]" src={AF} alt="5GC core" />
         </div>
       </div>
       <Footer />

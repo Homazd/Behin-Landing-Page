@@ -63,7 +63,7 @@ const BBUPage = () => {
       <div className="w-[300px] tablet:w-[730px] laptop:w-[900px] desktop:w-[1300px] mx-auto mt-5 place-content-center">
         <div className="grid place-content-center">
           <h1 className="font-bold text-[14px] tablet:text-[18px] mt-6 laptop:text-[30px]">
-            BaseBanc Unit (BBU){" "}
+            BaseBand Unit (BBU){" "}
           </h1>
           <ul className="list-disc list-inside grid tablet:grid-cols-2 tablet:h-[600px] tablet:w-[700px] laptop:w-[900px] desktop:w-[1300px] mt-8">
             {data.map((item) => (
