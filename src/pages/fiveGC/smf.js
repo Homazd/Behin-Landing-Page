@@ -7,6 +7,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
+import SMF from "../../images/SMF.jpg"
 
 const SMFPage = () => {
   return (
@@ -36,7 +37,7 @@ const SMFPage = () => {
             establishment, modification, and termination of sessions, as well as
             the management of data flows associated with those sessions. Here's
             a detailed description of SMF and its functions:
-            <ol className="list-decimal">
+            <ol className="list-decimal pl-5 mt-3">
               <li>
                 <span className="font-bold">
                   Session Establishment and Modification:{" "}
@@ -66,9 +67,9 @@ const SMFPage = () => {
                 handling. These policies may include QoS policies, security
                 policies, and charging policies, among others.{" "}
               </li>
-              {/* <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
-                <img className="w-auto h-[400px]" src={AF} alt="5GC core" />
-              </div> */}
+              <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
+                <img className="w-auto h-[400px]" src={SMF} alt="5GC core" />
+              </div>
               <li>
                 <span className="font-bold">Mobility Management:</span> SMF
                 assists in managing the mobility of the UE within the 5G
@@ -108,9 +109,6 @@ const SMFPage = () => {
             communication sessions.
           </span>
         </div>
-        {/* <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
-          <img className="w-auto h-[400px]" src={imsCore} alt="5GC core" />
-        </div> */}
       </div>
       <Footer />
     </>

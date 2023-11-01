@@ -37,7 +37,7 @@ const AFPage = () => {
             of service (QoS) control based on the specific needs and
             requirements of different applications. Here's a detailed
             description of AF and its functions:
-            <ol className="list-decimal">
+            <ol className="list-decimal pl-5 mt-3">
               <li>
                 <span className="font-bold">
                   Application Service Provision:{" "}
@@ -104,7 +104,7 @@ const AFPage = () => {
                 users and applications, ensuring secure and authorized access to
                 the network and services.{" "}
               </li>
-              <li>
+            </ol>
                 {" "}
                 In summary, the Application Function (AF) in a 5G network is a
                 critical component that acts as a bridge between the 5G core
@@ -113,8 +113,6 @@ const AFPage = () => {
                 QoS, and efficient resource usage for different applications,
                 contributing to an enhanced user experience and enabling a wide
                 range of diverse applications in the 5G ecosystem.
-              </li>
-            </ol>
           </span>
         </div>
       </div>

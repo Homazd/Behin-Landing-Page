@@ -39,8 +39,8 @@ const NSSFPage = () => {
             service requirements. Here's a detailed description of NSSF and its
             functions:
             <br/>
-            <div className="mt-3 pl-5">
-            <ol className="list-decimal">
+           
+            <ol className="list-decimal pl-5 mt-3">
               <li>
                 <span className="font-bold">Network Slice Management:</span>{" "}
                 NSSF manages the creation, orchestration, and management of
@@ -114,7 +114,7 @@ const NSSFPage = () => {
             other factors, NSSF ensures that users and applications receive an
             optimized and tailored network slice that meets their specific
             needs, enhancing the overall 5G experience.
-          </div>
+         
           </span>
         </div>
       </div>

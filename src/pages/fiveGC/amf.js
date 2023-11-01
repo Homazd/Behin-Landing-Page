@@ -36,7 +36,7 @@ const AMFPage = () => {
             for user equipment (UE) and ensuring seamless mobility of the
             devices within the network. Here's a detailed description of AMF and
             its functions:
-            <ol className="list-decimal">
+            <ol className="list-decimal pl-5 mt-3">
               <li>
                 <span className="font-bold">Access Control:</span> AMF is
                 responsible for controlling and managing access to the 5G
@@ -121,6 +121,11 @@ const AMFPage = () => {
                 communication services for user equipment within a 5G network.
               </li>
             </ol>
+            In summary, the Access and Mobility Management Function (AMF) is a
+            vital component of the 5G Core architecture, responsible for
+            controlling access to the network, managing mobility, enforcing
+            security measures, and ensuring the quality and continuity of
+            communication services for user equipment within a 5G network.
           </span>
         </div>
       </div>

@@ -7,6 +7,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 // Images
 import productsImage from "../../images/product-header.png";
+import PCF from "../../images/PCF.jpg";
 
 const PCFPage = () => {
   return (
@@ -35,7 +36,7 @@ const PCFPage = () => {
             Service (QoS), access control, and other aspects of session
             management within a 5G network. Here's a detailed description of PCF
             and its functions:
-            <ol className="list-decimal">
+            <ol className="list-decimal  pl-5 mt-3">
               <li>
                 <span className="font-bold">
                   Policy Decision and Enforcement:
@@ -68,6 +69,9 @@ const PCFPage = () => {
                 data flows to ensure accurate charging based on the service
                 usage, helping with billing and accounting processes.
               </li>
+              <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
+                <img className="w-auto h-[400px]" src={PCF} alt="5GC core" />
+              </div>
               <li>
                 <span className="font-bold">Policy Interworking:</span>
                 PCF interacts with other network functions, such as AMF (Access
@@ -100,8 +104,7 @@ const PCFPage = () => {
                 This allows third-party applications to request and influence
                 network policies for specific users or use cases.
               </li>
-            </ol>
-            {" "}
+            </ol>{" "}
             In summary, the Policy Control Function (PCF) is a vital component
             of the 5G Core architecture, responsible for defining, enforcing,
             and dynamically adapting policies related to QoS, access control,
@@ -111,9 +114,6 @@ const PCFPage = () => {
             and user requirements.
           </span>
         </div>
-        {/* <div className="content-center mt-14 flex justify-center animate__animated animate__fadeInUpBig">
-          <img className="w-auto h-[400px]" src={imsCore} alt="5GC core" />
-        </div> */}
       </div>
       <Footer />
     </>

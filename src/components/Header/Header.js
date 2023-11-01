@@ -63,10 +63,10 @@ function Header() {
                 <Dropdown
                   dropdownRender={(menu) => (
                     <div className="flex items-stretch">
-                      <div className="self-center bg-opacity-90 w-[1200px] mx-auto h-[400px] relative place-self-center top-[77px] bg-white">
+                      <div className="self-center bg-opacity-90 w-[1200px] mx-auto h-[400px] relative place-self-center top-[70px] bg-white">
                         <div className="grid grid-cols-5 gap-4 relative px-[80px] mx-auto">
                           {headerProducts.map((product) => (
-                            <div className="mt-[50px] leading-loose">
+                            <div className="mt-[20px] leading-loose">
                               <p className="text-[18px] font-bold mb-[20px]">
                                 {product.header}
                                 {product.groupSubs.map((item) => (

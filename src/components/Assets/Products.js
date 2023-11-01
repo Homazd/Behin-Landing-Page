@@ -4,17 +4,55 @@ export const products = [
     header: "5GC Core",
     groupSubs: [
       { id: "1.1", header: "Application Function(AF)", link: "/fiveGC/af" },
-      { id: "1", header: "Network Repository Function(NRF)", link: "/fiveGC/nrf" },
-      { id: "2", header: "Service Capability Exposure(SCP)", link: "/fiveGC/scp" },
-      { id: "3", header: "Access and Mobility Management(AMF)", link: "/fiveGC/amf" },
-      { id: "4", header: "Session Management Function(SMF)", link: "/fiveGC/smf" },
+      {
+        id: "1",
+        header: "Network Repository Function(NRF)",
+        link: "/fiveGC/nrf",
+      },
+      {
+        id: "2",
+        header: "Service Capability Exposure(SCP)",
+        link: "/fiveGC/scp",
+      },
+      {
+        id: "3",
+        header: "Access and Mobility Management(AMF)",
+        link: "/fiveGC/amf",
+      },
+      {
+        id: "3.5",
+        header: "Radio Access Network(RAN)",
+        link: "/fiveGC/ran",
+      },
+      {
+        id: "4",
+        header: "Session Management Function(SMF)",
+        link: "/fiveGC/smf",
+      },
       { id: "5", header: "User Plane Function(UPF)", link: "/fiveGC/upf" },
-      { id: "6", header: "Authentication Server Function(AUSF)", link: "/fiveGC/ausf" },
+      {
+        id: "6",
+        header: "Authentication Server Function(AUSF)",
+        link: "/fiveGC/ausf",
+      },
+      { id: "6.5", header: "NEF", link: "/fiveGC/nef" },
       { id: "7", header: "Unified Data Management(UDM)", link: "/fiveGC/udm" },
       { id: "8", header: "Unified Data Repository(UDR)", link: "/fiveGC/udr" },
-      { id: "9", header: "Policy and Charging Function(PCF)", link: "/fiveGC/pcf" },
-      { id: "10", header: "Network Slice Selection Function(NSSF)", link: "/fiveGC/nssf" },
-      { id: "11", header: "Binding Support Function(BSF)", link: "/fiveGC/bsf" },
+      {
+        id: "9",
+        header: "Policy and Charging Function(PCF)",
+        link: "/fiveGC/pcf",
+      },
+      {
+        id: "10",
+        header: "Network Slice Selection Function(NSSF)",
+        link: "/fiveGC/nssf",
+      },
+      {
+        id: "11",
+        header: "Binding Support Function(BSF)",
+        link: "/fiveGC/bsf",
+      },
     ],
   },
   {
@@ -23,9 +61,21 @@ export const products = [
     groupSubs: [
       { id: "12", header: "Mobility Management Entity(MME)", link: "/epc/mme" },
       { id: "13", header: "Home Subscriber Server(HSS)", link: "/epc/hss" },
-      { id: "14", header: "Policy and Charging Rules Function(PCRF)", link: "/epc/pcrf" },
-      { id: "15", header: "Serving Gateway ControlPlane(SGW-c)", link: "/epc/sgwc" },
-      { id: "16", header: "Serving Gateway UserPlane(SGW-u)", link: "/epc/sgwu" },
+      {
+        id: "14",
+        header: "Policy and Charging Rules Function(PCRF)",
+        link: "/epc/pcrf",
+      },
+      {
+        id: "15",
+        header: "Serving Gateway ControlPlane(SGW-c)",
+        link: "/epc/sgwc",
+      },
+      {
+        id: "16",
+        header: "Serving Gateway UserPlane(SGW-u)",
+        link: "/epc/sgwu",
+      },
     ],
   },
   {
@@ -42,7 +92,11 @@ export const products = [
     id: "4",
     header: "Network Monitoring",
     groupSubs: [
-      { id: "21", header: "Security Information and Event Management(SIEM)", link: "/monitoring/siem" },
+      {
+        id: "21",
+        header: "Security Information and Event Management(SIEM)",
+        link: "/monitoring/siem",
+      },
       { id: "22", header: "Monitoring Tools", link: "/monitoring/tools" },
     ],
   },
@@ -64,9 +118,15 @@ export const headerProducts = [
       { id: "1", header: "NRF", link: "/fiveGC/nrf" },
       { id: "2", header: "SCP", link: "/fiveGC/scp" },
       { id: "3", header: "AMF", link: "/fiveGC/amf" },
+      {
+        id: "3.5",
+        header: "RAN",
+        link: "/fiveGC/ran",
+      },
       { id: "4", header: "SMF", link: "/fiveGC/smf" },
       { id: "5", header: "UPF", link: "/fiveGC/upf" },
       { id: "6", header: "AUSF", link: "/fiveGC/ausf" },
+      { id: "6.5", header: "NEF", link: "/fiveGC/nef" },
       { id: "7", header: "UDM", link: "/fiveGC/udm" },
       { id: "8", header: "UDR", link: "/fiveGC/udr" },
       { id: "9", header: "PCF", link: "/fiveGC/pcf" },
