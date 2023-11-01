@@ -35,7 +35,7 @@ export const products = [
         header: "Authentication Server Function(AUSF)",
         link: "/fiveGC/ausf",
       },
-      { id: "6.5", header: "NEF", link: "/fiveGC/nef" },
+      { id: "6.5", header: "Network Exposure Function(NEF)", link: "/fiveGC/nef" },
       { id: "7", header: "Unified Data Management(UDM)", link: "/fiveGC/udm" },
       { id: "8", header: "Unified Data Repository(UDR)", link: "/fiveGC/udr" },
       {

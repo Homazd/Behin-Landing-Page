@@ -25,11 +25,11 @@ function AboutProduct() {
           </div>
           <div className="col-span-1 grid grid-cols-2">
             <span className="col-span-1 text-[38px] font-bold mr-[10px] text-blue-900">
-              250
+              100000
             </span>
             <div className="relative">
               <span className="col-span-1 text-xs absolute bottom-0">
-                mln Subscribers
+                Subscribers
               </span>
             </div>
           </div>
