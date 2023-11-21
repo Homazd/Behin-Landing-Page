@@ -81,7 +81,7 @@ const ContactPage = () => {
               Operation and R&D Center Address:
             </div>
             <div className="text-[16px] laptop:text-[20px]">
-              Number 68, Second Floor, Elm va San'at St., Hengam St.,Tehran,
+              Khaghan Building, Unit 16, Number 602, Qasem Soleimani Expressway, Resalat Square,Tehran,
               Iran
             </div>
             <div className="mt-[30px]">
@@ -91,25 +91,25 @@ const ContactPage = () => {
               <p className="text-[16px] laptop:text-[22px]">
                 Email:
                 <span className="text-[18px] laptop:text-[22px] font-bold text-blue-800 underline">
-                  sales@bbdh.com
+                  info@siz-tel.com
                 </span>
               </p>
-              <p className="text-[16px] laptop:text-[22px]">
+              {/* <p className="text-[16px] laptop:text-[22px]">
                 Phone:
                 <span className="text-[18px] laptop:text-[22px] font-bold text-blue-800">
-                  +98-21-3523-8535
+                 
                 </span>
-              </p>
-              <p className="text-[16px] laptop:text-[22px]">
+              </p> */}
+              {/* <p className="text-[16px] laptop:text-[22px]">
                 WhatsApp:
                 <span className="text-[18px] laptop:text-[22px] font-bold text-blue-800 underline">
-                  sales@bbdh.com
+                info@siz-tel.com
                 </span>
-              </p>
+              </p> */}
               <p className="text-[16px] laptop:text-[22px]">
                 Working hours:
                 <span className="text-[18px] laptop:text-[22px] font-bold text-blue-800">
-                  9:00 AM to 6:00 PM(UTC/GMT +3.5)
+                  8:00 AM to 5:00 PM(UTC/GMT +3.5)
                 </span>
               </p>
             </div>
